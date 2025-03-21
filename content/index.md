@@ -4,22 +4,23 @@ layout: home
 
 hero:
   name: "Pac Teaches"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "A Teaching Site"
+  tagline: Plein de super cours
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Acceder aux cours
+      link: /cours/dev-frontend/intro
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Non je ne veux pas
+      link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Developpement frontend
+    details: Connaissances generales sur le dev web
+    link: /cours/dev-frontend/intro
+  - title: Exercices frontend
+    details: Connaissances generales sur le dev web
+    link: /exercices/dev-frontend/vuejs
 ---
 
+![](https://media1.giphy.com/media/InYNY6SNHRQvih7Kl4/giphy.gif?cid=7941fdc6m8433t38n597rcz884fkalpp26p3ui6rwjxyqjo5&ep=v1_gifs_search&rid=giphy.gif&ct=g)
