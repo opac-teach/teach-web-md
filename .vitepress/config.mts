@@ -1,6 +1,5 @@
-import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
-// https://vitepress.dev/reference/site-config
+import structure from "./structure.mts";
 export default withMermaid({
   title: "Pac Teaches",
   description: "A teaching Site",
@@ -11,43 +10,16 @@ export default withMermaid({
   themeConfig: {
     nav: [
       { text: "Accueil", link: "/" },
-      { text: "Cours", link: "/cours/dev-frontend/intro" },
-      { text: "Exercices", link: "/exercices/dev-frontend/vuejs" },
+      {
+        text: "Cours",
+        items: structure.cours,
+      },
     ],
 
-    sidebar: {
-      "/cours": [
-        {
-          text: "Developpement Frontend",
-          items: [
-            { text: "Introduction", link: "/cours/dev-frontend/intro" },
-            { text: "Ecosystème", link: "/cours/dev-frontend/ecosysteme" },
-            { text: "Concepts", link: "/cours/dev-frontend/concepts" },
-            { text: "Rendering", link: "/cours/dev-frontend/rendering" },
-            { text: "Routing", link: "/cours/dev-frontend/routing" },
-            { text: "Hebergement", link: "/cours/dev-frontend/hebergement" },
-            { text: "SEO", link: "/cours/dev-frontend/seo" },
-            { text: "Approfondir", link: "/cours/dev-frontend/approfondir" },
-          ],
-        },
-        {
-          text: "Frameworks",
-          items: [{ text: "VueJS", link: "/cours/dev-frontend/vuejs" }],
-        },
-      ],
-      "/exercices": [
-        {
-          text: "Exercices",
-          items: [
-            { text: "VueJS", link: "/exercices/dev-frontend/vuejs" },
-            { text: "Nuxt", link: "/exercices/dev-frontend/nuxt" },
-          ],
-        },
-      ],
-    },
+    sidebar: structure.sidebar,
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/opac-teach/teach-press" },
+      { icon: "github", link: "https://github.com/opac-teach/teach-web-md" },
     ],
 
     outline: {
