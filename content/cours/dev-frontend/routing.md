@@ -14,7 +14,7 @@
 ```mermaid
 sequenceDiagram
     participant U as Navigateur
-    Note right of U: Demarrage de l'application
+    Note right of U: Démarrage de l'application
     participant R as Router (index.html)
     U->>R: /page_1
     create participant Page_1_Component
@@ -25,22 +25,22 @@ sequenceDiagram
     R->>Page_2_Component: Charge le composant affiché
 ```
 
-## Contre exemple
+## Contre-exemple
 
 ```mermaid
 sequenceDiagram
     participant U as Utilisateur
     participant R as CDN
-    Note right of U: Demarrage de l'application
+    Note right of U: Démarrage de l'application
     U->>R: /page_1.html
     create participant page_1.html
-    R->>page_1.html: Telecharge le fichier dans un nouveau contexte
+    R->>page_1.html: Télécharge le fichier dans un nouveau contexte
     U->>R: /page_2.html
-    Note right of U: Demarrage de l'application
+    Note right of U: Démarrage de l'application
     create participant page_2.html
-    R->>page_2.html: Telecharge le fichier dans un nouveau contexte
+    R->>page_2.html: Télécharge le fichier dans un nouveau contexte
 ```
 
 ## SSG
 
-Les application à rendu statique n'auront generalement pas besoin de routeur (comme ce site)
+Les applications à rendu statique n'auront généralement pas besoin de routeur (comme ce site).

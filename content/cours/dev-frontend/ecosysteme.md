@@ -1,79 +1,79 @@
 # Les langages de programmation
 
-## Le Javascript
+## Le JavaScript
 
-Javascript ayant été le premier language de programmation a être intégré dans un navigateur web, il est depuis resté le principal language pour developper des application web, et ce tout au long de la chaine (pages web, serveurs, outils, …)
+JavaScript ayant été le premier langage de programmation à être intégré dans un navigateur web, il est depuis resté le principal langage pour développer des applications web, et ce tout au long de la chaîne (pages web, serveurs, outils, etc.)
 
-Cela a grandement facilité le développement d’applications car ça a permis d’utiliser le même language sur une grande partie de la stack, permettant d’améliorer la qualité du code et la reutilisabilité.
+Cela a grandement facilité le développement d'applications car cela a permis d'utiliser le même langage sur une grande partie de la stack, permettant d'améliorer la qualité du code et la réutilisabilité.
 
-### Typescript
+### TypeScript
 
-Il est important de savoir que le Javascript a beaucoup évolué depuis sa création. Il a été amélioré au fur et a mesure du temps pour se moderniser et améliorer la qualité de code et l’experience développeur. Il n’est donc pas rare de trouver des exemples de code avec des anciennes pratiques qu’il ne faut plus reproduire.
+Il est important de savoir que le JavaScript a beaucoup évolué depuis sa création. Il a été amélioré au fur et à mesure du temps pour se moderniser et améliorer la qualité de code et l'expérience développeur. Il n'est donc pas rare de trouver des exemples de code avec des anciennes pratiques qu'il ne faut plus reproduire.
 
-Un des gros défauts de Javascript en tant que language de programmation est qu’il n’est pas typé: Il n’est pas nécessaire déclarer le type des variables et celui ci peut changer au cours de l’execution. Cela rend le language beaucoup plus simple à apprendre et à écrire, mais le rend très peu résiliant.
+Un des gros défauts de JavaScript en tant que langage de programmation est qu'il n'est pas typé : il n'est pas nécessaire de déclarer le type des variables et celui-ci peut changer au cours de l'exécution. Cela rend le langage beaucoup plus simple à apprendre et à écrire, mais le rend très peu résilient.
 
-Afin de palier ce manque, le language Typescript a été inventée pour améliorer la robustesse des programmes Javascript. Il est à noter que Typescript est un langage intermediaire et n’est pas directement executé. Un code en Typescript est d’abord _transpilé_ en Javascript puis executé.
+Afin de pallier ce manque, le langage TypeScript a été inventé pour améliorer la robustesse des programmes JavaScript. Il est à noter que TypeScript est un langage intermédiaire et n'est pas directement exécuté. Un code en TypeScript est d'abord _transpilé_ en JavaScript puis exécuté.
 
-Le fait d’écrire un programme en typescript permet de pré-valider que notre logique est correcte au moment du développement, mais à l’execution, rien ne garanti que les variables manipulées sont bien du type attendu (requetes API, librairies externes…)
+Le fait d'écrire un programme en TypeScript permet de pré-valider que notre logique est correcte au moment du développement, mais à l'exécution, rien ne garantit que les variables manipulées sont bien du type attendu (requêtes API, librairies externes, etc.)
 
-Cela permet tout de même d’améliorer grandement la fiabilité des programmes, car la plupart des bugs peuvent être détectés avant même l’execution du code, et nécessite moins de verifier que l’application fonctionne correctement à l’execution, à condition d’être rigoureux sur la définition des types et des variables.
+Cela permet tout de même d'améliorer grandement la fiabilité des programmes, car la plupart des bugs peuvent être détectés avant même l'exécution du code, et nécessite moins de vérifier que l'application fonctionne correctement à l'exécution, à condition d'être rigoureux sur la définition des types et des variables.
 
-Voici un example du meme code en Javascript et en Typescript:
+Voici un exemple du même code en JavaScript et en TypeScript :
 
 ```jsx
 function calculate_average(values) {
-    return values.reduce((s, v) => s+v, 0) / values.length;
+  return values.reduce((s, v) => s + v, 0) / values.length;
 }
 
 // Intended to be used with numbers
-const numbers = [10, 20, 30]
-console.log(calculate_average(numbers)) // ✅ Works fine: 20.0
+const numbers = [10, 20, 30];
+console.log(calculate_average(numbers)); // ✅ Works fine: 20.0
 
 // But what if we accidentally pass strings?
-const object = { n1: 10, n2, 20 }
-console.log(calculate_average(object)) // 🚨 Runtime error: unknown property 'reduce'
+const object = { n1: 10, n2: 20 };
+console.log(calculate_average(object)); // 🚨 Runtime error: unknown property 'reduce'
 ```
 
 ```tsx
 function calculate_average(values: Array<number>) {
-    return values.reduce((s, v) => s+v, 0) / values.length;
+  return values.reduce((s, v) => s + v, 0) / values.length;
 }
 
-const numbers = [10, 20, 30]
-console.log(calculate_average(numbers)) // ✅ Works fine: 20.0
+const numbers = [10, 20, 30];
+console.log(calculate_average(numbers)); // ✅ Works fine: 20.0
 
-const object = { n1: 10, n2, 20 }
-console.log(calculate_average(object)) // 🚨 Compilation error: expected Array<number>
+const object = { n1: 10, n2: 20 };
+console.log(calculate_average(object)); // 🚨 Compilation error: expected Array<number>
 ```
 
 ## Qualité de code
 
-**eslint**
+**ESLint**
 
-Afin de réduire au maximum les erreurs de code, on va utiliser des outils de verification automatique de qualité de code, en temps réel dans l’IDE et aussi juste avant l’execution des tests. Ceux-ci possèdent une liste de règles qui doivent être respectées et pointeront vers les bouts de code qui “sentent mauvais”.
+Afin de réduire au maximum les erreurs de code, on va utiliser des outils de vérification automatique de qualité de code, en temps réel dans l'IDE et aussi juste avant l'exécution des tests. Ceux-ci possèdent une liste de règles qui doivent être respectées et pointeront vers les bouts de code qui "sentent mauvais".
 
-Les retours de linting ne sont pas des erreurs de compilation: techniquement cela n’empêche pas le code de compiler et de s’executer, mais informe qu’il y aura certainement eu des problèmes à l’execution.
+Les retours de linting ne sont pas des erreurs de compilation : techniquement cela n'empêche pas le code de compiler et de s'exécuter, mais informe qu'il y aura certainement eu des problèmes à l'exécution.
 
-## Note sur l’IA
+## Note sur l'IA
 
-Les IA génératives sont aujourd’hui suffisamment performantes pour produire du code fonctionnel de grande qualité. Cependant, afin de les faire générer du code de la meilleure qualité possible, il est indispensable de leur fournir le maximum d’informations, notamment, leur un typage et des règles strictes.
+Les IA génératives sont aujourd'hui suffisamment performantes pour produire du code fonctionnel de grande qualité. Cependant, afin de les faire générer du code de la meilleure qualité possible, il est indispensable de leur fournir le maximum d'informations, notamment, leur typage et des règles strictes.
 
 > **Plus un langage est fortement typé, meilleure sera la qualité de code produite par une IA**
 
-Le fait que le compilateur donne des erreurs précises sur les problèmes rencontrés vont aider l’IA a produire un code de qualité optimale, et réduire les hallucinations.
+Le fait que le compilateur donne des erreurs précises sur les problèmes rencontrés va aider l'IA à produire un code de qualité optimale, et réduire les hallucinations.
 
 <aside>
 ⚠️
 
-> Poussez au maximum les exigences en terme de qualité de code (typage, linting, tests…), car cela ne ralentit plus la productivité aujourd’hui grâce à l’IA
+> Poussez au maximum les exigences en termes de qualité de code (typage, linting, tests, etc.), car cela ne ralentit plus la productivité aujourd'hui grâce à l'IA
 
 </aside>
 
 # Outils de développement
 
-Afin de nous aider dans le développement d’application, il existe une multitude d’outils qui vont nous faciliter le travail, de la création à la maintenance de celle ci, tel que la gestion des librairies externes, compilation, serveur de développement, hot-reload, minification,
+Afin de nous aider dans le développement d'applications, il existe une multitude d'outils qui vont nous faciliter le travail, de la création à la maintenance de celles-ci, tels que la gestion des librairies externes, compilation, serveur de développement, hot-reload, minification, etc.
 
-> Historiquement, la plupart de ces outils ont été codés en JavaScript pour garder une cohérence avec le code de l’app, mais une transition vers des langages plus rapides est en train de se faire et la plupart des outils sont en train d’être portés en Rust pour une expérience de développement (DX) plus fluide. (turbopack, swc,…)
+> Historiquement, la plupart de ces outils ont été codés en JavaScript pour garder une cohérence avec le code de l'app, mais une transition vers des langages plus rapides est en train de se faire et la plupart des outils sont en train d'être portés en Rust pour une expérience de développement (DX) plus fluide. (Turbopack, SWC, etc.)
 
 La dépendance principale de tout projet web sera NodeJS https://nodejs.org/.
 
@@ -88,16 +88,16 @@ La dépendance principale de tout projet web sera NodeJS https://nodejs.org/.
   ```bash
   npm init         # Initialiser un nouveau projet
   npm install      # Installer les dépendances
-  npm run SCRIPT        # Exécuter des scripts
+  npm run SCRIPT   # Exécuter des scripts
   ```
 
 **Alternatives**
 
-npm a été à un moment critiqué pour ses faiblesses (performances, fiabilité, fonctionnalités…) et de nombreuses alternatives ont étés créées, telles que yarn, pnpm, …
+NPM a été à un moment critiqué pour ses faiblesses (performances, fiabilité, fonctionnalités, etc.) et de nombreuses alternatives ont été créées, telles que Yarn, pnpm, etc.
 
-Leur fonctionnement est relativement similaire et les paquets restent compatible avec npm, et il est possible de passer d’un gestionnaire à un autre si besoin (nécessitant que de legeres modifications)
+Leur fonctionnement est relativement similaire et les paquets restent compatibles avec NPM, et il est possible de passer d'un gestionnaire à un autre si besoin (nécessitant de légères modifications).
 
-npm a évolué pour rattraper son retard et reste géneralement suffisant pour la plupart des projets
+NPM a évolué pour rattraper son retard et reste généralement suffisant pour la plupart des projets.
 
 **Le package.json**
 
@@ -131,19 +131,19 @@ Voici un exemple détaillé d'un fichier `package.json` typique pour un projet f
 }
 ```
 
-Ce fichier va définir:
+Ce fichier va définir :
 
-- Les informations générales (name, description, version…)
+- Les informations générales (name, description, version, etc.)
 - Des contraintes de version (engine, browserslist)
-- Des scripts (start, test, …) qui serviront régulièrement au développement de l’application
-- Des dépendances (paquets) dont l’application a besoin, avec leur version (dev dependencies → uniquement pour le développement, inutiles pour lancer l’application en production)
+- Des scripts (start, test, etc.) qui serviront régulièrement au développement de l'application
+- Des dépendances (paquets) dont l'application a besoin, avec leur version (dev dependencies → uniquement pour le développement, inutiles pour lancer l'application en production)
 
 ## Les outils de build
 
 ### Vite
 
 - Outil de build moderne et ultra-rapide
-- A privilegier, plus simple et rapidement configurable pour les outils modernes
+- À privilégier, plus simple et rapidement configurable pour les outils modernes
 - Développé par l'équipe Vue.js
 - Avantages :
   - Démarrage instantané
@@ -155,7 +155,7 @@ Ce fichier va définir:
 ### Webpack
 
 - Bundler le plus populaire et mature
-- Necessite du boilerplate code
+- Nécessite du boilerplate code
 - Fonctionnalités principales :
   - Regroupement des fichiers (bundling)
   - Minification du code
@@ -168,7 +168,7 @@ Ce fichier va définir:
 ### Jest
 
 - Framework de test JavaScript complet
-- Utilisé pour les tests unitaires (tester des morceaux de codes indépendamment
+- Utilisé pour les tests unitaires (tester des morceaux de codes indépendamment)
 - Caractéristiques :
   - Tests isolés et parallélisés
   - Couverture de code intégrée
@@ -183,7 +183,7 @@ test("addition de 2 nombres", () => {
 ### Cypress
 
 - Outil de test end-to-end (E2E) moderne
-- Permet de tester l'application comme un utilisateur réel, lance l’application dans un navigateur virtuel plutôt que d’executer uniquement des bouts de code
+- Permet de tester l'application comme un utilisateur réel, lance l'application dans un navigateur virtuel plutôt que d'exécuter uniquement des bouts de code
 - Avantages :
   - Interface visuelle intuitive
   - Tests en temps réel dans le navigateur
@@ -238,7 +238,7 @@ describe('Page d'accueil', () => {
   - Performance élevée
   - Flexibilité d'utilisation
   - Écosystème bien structuré (Pinia, Vue Router)
-  - Stabilité dans l’utilisation
+  - Stabilité dans l'utilisation
 
 ```html
 <template>
@@ -384,6 +384,6 @@ def page_2():
 
 ### Astro
 
-Astro est un framework permettant principalement d’exporter des sites statiques (SSG)
+Astro est un framework permettant principalement d'exporter des sites statiques (SSG)
 
-On peut l’utiliser avec differents framework comme React ou Vue, et il est plus efficace que Next ou Nuxt pour charger du contenu statique (Markdown, headless CMC) et rendre des sites statiques extremement performants. Le rendu n’est plus une SPA.
+On peut l'utiliser avec differents framework comme React ou Vue, et il est plus efficace que Next ou Nuxt pour charger du contenu statique (Markdown, headless CMC) et rendre des sites statiques extremement performants. Le rendu n'est plus une SPA.

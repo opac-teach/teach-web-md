@@ -1,43 +1,34 @@
-# VueJS
+# Vue.js
 
 ## Lien vers la documentation officielle
 
 ### Frameworks
 
-https://vuejs.org/
-
-https://nuxt.com/
+- [Vue.js](https://vuejs.org/)
+- [Nuxt.js](https://nuxt.com/)
 
 ### Outils
 
-https://vite.dev/
-
-https://router.vuejs.org/
-
-https://pinia.vuejs.org/
-
-https://vitest.dev/api/
+- [Vite](https://vite.dev/)
+- [Vue Router](https://router.vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Vitest](https://vitest.dev/api/)
 
 ### UI
 
-https://tailwindcss.com/
-
-https://daisyui.com/
-
-https://www.shadcn-vue.com/
-
-https://ui.nuxt.com/
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [shadcn-vue](https://www.shadcn-vue.com/)
+- [Nuxt UI](https://ui.nuxt.com/)
 
 ## Applications de démonstration
 
-### VueJS (CSR)
+### Vue.js (CSR)
 
-https://vuejs-demo-three.vercel.app/
-
-https://github.com/opac-teach/vue-demo
+- [Démo Vue.js](https://vuejs-demo-three.vercel.app/)
+- [Code source](https://github.com/opac-teach/vue-demo)
 
 ### Nuxt (SSR)
 
-https://nuxt-demo-blush.vercel.app/
-
-https://github.com/opac-teach/nuxt-demo
+- [Démo Nuxt](https://nuxt-demo-blush.vercel.app/)
+- [Code source](https://github.com/opac-teach/nuxt-demo)

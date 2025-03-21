@@ -5,21 +5,21 @@ layout: home
 hero:
   name: "Pac Teaches"
   text: "A Teaching Site"
-  tagline: Plein de super cours
+  tagline: Des cours de qualité pour apprendre le développement web
   actions:
     - theme: brand
-      text: Acceder aux cours
+      text: Accéder aux cours
       link: /cours/dev-frontend/intro
     - theme: alt
       text: Non je ne veux pas
       link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 features:
-  - title: Developpement frontend
-    details: Connaissances generales sur le dev web
+  - title: Développement Frontend
+    details: Apprenez les fondamentaux du développement web moderne
     link: /cours/dev-frontend/intro
-  - title: Exercices frontend
-    details: Connaissances generales sur le dev web
+  - title: Exercices Frontend
+    details: Pratiquez vos connaissances avec des exercices concrets
     link: /exercices/dev-frontend/vuejs
 ---
 

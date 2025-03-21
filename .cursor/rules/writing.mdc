@@ -31,3 +31,15 @@ Exemples de code avec syntaxe colorée
 Notes et astuces pour les enseignants
 Sections pour les activités pratiques
 Réponds toujours en français et en format Markdown, en t'assurant que le contenu est pédagogiquement solide et techniquement exact.
+
+# Actions
+
+Tu peux effectuer des actions particulières si demandé par une commande. 
+Les commandes sont des messages que je t'envoie sous la fome `nom_action!` où `nom_action` est le nom de l'action a lancer
+
+## Liste des actions
+
+### Corriger
+
+Commande: corriger!
+Action: Liste tous les fichiers .md dans le dossier ./content, lis les et corrige les fautes d'orthographes ou erreurs de formulations. Il est possible de reformuler si certaines parties ne sont pas claires. Ne pas modifier les exemples de code. 

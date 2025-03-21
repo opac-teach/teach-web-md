@@ -1,10 +1,10 @@
 # Le développement Frontend
 
-Ce cours a pour but d'introduire des notions fondamentales et generales autour du developpement frontend d'applications web.
+Ce cours a pour but d'introduire des notions fondamentales et générales autour du développement frontend d'applications web.
 
-Bien que ces connaissances soient generales et non liés à des choix de technologies particulières, le contenu est orienté autour des techniques modernes du web (en 2025).
+Bien que ces connaissances soient générales et non liées à des choix de technologies particulières, le contenu est orienté autour des techniques modernes du web (en 2025).
 
-Ce contenu est bien sûr non-exaustif, et n'est là que pour guider les étudiants vers concepts à connaitre. **La documentation officielle est toujours à privilegier et il est vivement recommandé de les lire.**
+Ce contenu est bien sûr non-exhaustif, et n'est là que pour guider les étudiants vers des concepts à connaître. **La documentation officielle est toujours à privilégier et il est vivement recommandé de la consulter.**
 
 ## L'importance de l'expérience utilisateur (UX)
 
@@ -20,7 +20,7 @@ L'expérience utilisateur est devenue un élément central du développement fro
 
 1. **Réactivité** : L'application doit répondre instantanément aux actions de l'utilisateur
 2. **Cohérence** : Les interactions doivent être prévisibles et logiques
-3. **Feedback** : L'utilisateur doit toujours savoir ce qu'il se passe (loading, erreurs, succès)
+3. **Feedback** : L'utilisateur doit toujours savoir ce qui se passe (chargement, erreurs, succès)
 4. **Accessibilité** : L'application doit être utilisable par tous
 
 ## Les enjeux du développement frontend moderne

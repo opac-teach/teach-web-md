@@ -42,14 +42,14 @@ graph TD
 // Manipulation directe (Real DOM)
 document.getElementById("monElement").innerHTML = "Nouveau contenu";
 
-// Ecoute des evenements
+// Écoute des événements
 document.getElementById("monBouton").on("click", () => alert("clic !"));
 
 // Avec un framework utilisant le Virtual DOM (React exemple)
 setState({ contenu: "Nouveau contenu" }); // Le framework optimise la mise à jour
 ```
 
-::: info A lire
+::: info À lire
 [https://vuejs.org/guide/extras/rendering-mechanism](https://vuejs.org/guide/extras/rendering-mechanism)
 
 :::
@@ -81,29 +81,29 @@ graph TD
 
 ```
 
-## Différents types de composant
+## Différents types de composants
 
-A l’échelle du framework, tous les composants sont similaires, cependant, pour garder un code de bonne qualité nous sépareront les composants selon leur usage:
+À l'échelle du framework, tous les composants sont similaires. Cependant, pour maintenir un code de qualité, nous séparons les composants selon leur usage :
 
 - **App**
 
-Le composant d’application est l’unique composant principal qui va charger l’application. Il aura le rôle de charger tous les modules nécessaires et c’est lui qui sera monté dans le DOM
+Le composant d'application est l'unique composant principal qui va charger l'application. Il a le rôle de charger tous les modules nécessaires et c'est lui qui sera monté dans le DOM.
 
 - **Layout**
 
-Le(s) composant(s) de layout serviront de squelette aux pages, afin que celles-ci aient un même format (header/footer/router, …)
+Le(s) composant(s) de layout servent de squelette aux pages, afin que celles-ci aient un même format (header/footer/router, etc.)
 
 - **Pages/Vues**
 
-Les pages, aussi appelées vues en Vue, servent de composant principal pour chaque route de l’application, chargés par le routeur généralement depuis le layout
+Les pages, aussi appelées vues en Vue, servent de composant principal pour chaque route de l'application, chargées par le routeur généralement depuis le layout.
 
 - **Data-fetching**
 
-Certains composants ont besoin de récupérer des données (via une API par exemple), et vont afficher ces données ou bien les redistribuer aux composants qu’il utilise, et peuvent potentiellement avoir des side-effect (comme modifier des données via une API)
+Certains composants ont besoin de récupérer des données (via une API par exemple), et vont afficher ces données ou bien les redistribuer aux composants qu'ils utilisent, et peuvent potentiellement avoir des effets de bord (comme modifier des données via une API).
 
 - **Composants de présentation**
 
-Certains composants seront uniquement utiles pour créer l’interface, ne feront pas d’appels API, n’auront pas d’effet de bord et changeront uniquement en fonction des proprietés qu’il leur sont envoyés (exemples: Button, Input, Calendar,… )
+Certains composants seront uniquement utiles pour créer l'interface, ne feront pas d'appels API, n'auront pas d'effets de bord et changeront uniquement en fonction des propriétés qui leur sont envoyées (exemples : Button, Input, Calendar, etc.)
 
 ## Communication entre composants
 
@@ -111,17 +111,17 @@ Certains composants seront uniquement utiles pour créer l’interface, ne feron
   - Passage de données parent vers enfant
   - Immutables dans le composant enfant
 - **Contexte**
-  - Données communes à toute l’application
+  - Données communes à toute l'application
 
 # Réactivité
 
-Une des raisons principale pour laquelle les framework on été inventés, en plus de la composabilité, est la réactivité. Cela signifie garantir que lorsqu’une donnée change de valeur, il faut que son affichage soit mis à jour partout ou elle est utilisée.
+Une des raisons principales pour lesquelles les frameworks ont été inventés, en plus de la composabilité, est la réactivité. Cela signifie garantir que lorsqu'une donnée change de valeur, son affichage doit être mis à jour partout où elle est utilisée.
 
-Le but d’un framework est de garantir cette mise à jour et de faire en sorte qu’elle soit le plus rapide possible, afin de pouvoir afficher un maximum d’information tout en restant fluide.
+Le but d'un framework est de garantir cette mise à jour et de faire en sorte qu'elle soit la plus rapide possible, afin de pouvoir afficher un maximum d'informations tout en restant fluide.
 
-Chaque framework a sa façon de faire et c’est le plus compliqué à apprendre lorsque l’on passe d’un framework à un autre, même si globalement le principe reste le même: **utiliser des variables observables** (être notifié quand elles changent de valeur afin de mettre à jour l’affichage)
+Chaque framework a sa façon de faire et c'est le plus compliqué à apprendre lorsque l'on passe d'un framework à un autre, même si globalement le principe reste le même : **utiliser des variables observables** (être notifié quand elles changent de valeur afin de mettre à jour l'affichage).
 
-> Voir [Panorama des frameworks populaires](https://www.notion.so/Panorama-des-frameworks-populaires-1b0c82462eb580258116f6b4e54b5efb?pvs=21) pour comparer les differentes implémentations de réactivité des framework.
+> Voir [Panorama des frameworks populaires](https://www.notion.so/Panorama-des-frameworks-populaires-1b0c82462eb580258116f6b4e54b5efb?pvs=21) pour comparer les différentes implémentations de réactivité des frameworks.
 
 <aside>
 💡
@@ -134,7 +134,7 @@ Chaque framework a sa façon de faire et c’est le plus compliqué à apprendre
 
 ## Principes fondamentaux
 
-On va toujours séparer les données d’état d’une application en deux types:
+On va toujours séparer les données d'état d'une application en deux types :
 
 - **État local**
   - Données propres à un composant
@@ -146,7 +146,7 @@ On va toujours séparer les données d’état d’une application en deux types
     - Single source of truth
     - Actions et mutations contrôlées
     - État prévisible
-    - Mise a jour automatique partout où la donnée est utilisée
+    - Mise à jour automatique partout où la donnée est utilisée
     - Solutions dédiées (Pinia, Redux, contexte, etc.)
 
 ```mermaid
@@ -169,25 +169,25 @@ graph LR
   - Méthodes HTTP (GET, POST, PUT, DELETE)
   - Réponses formatées (JSON)
 
-L’inconvenient d’une API REST est que le client doit systématiquement requêter le serveur pour obtenir des données à jour.
+L'inconvénient d'une API REST est que le client doit systématiquement requêter le serveur pour obtenir des données à jour.
 
 ## GraphQL
 
 GraphQL est un langage de requête et un environnement d'exécution pour les API, créé par Facebook en 2015. Contrairement aux API REST traditionnelles, GraphQL offre plusieurs avantages distinctifs :
 
-1. **Requêtes précises** : Les clients peuvent demander exactement les données dont ils ont besoin, ni plus ni moins.
-2. **Structure hiérarchique** : Les données sont organisées de manière hiérarchique, reflétant naturellement les relations entre objets.
-3. **Un seul endpoint** : Contrairement à REST qui utilise plusieurs endpoints, GraphQL utilise généralement un seul point d'entrée.
-4. **Typage fort** : GraphQL définit un schéma typé qui sert de contrat entre le client et le serveur.
-5. **Introspection** : Les clients peuvent interroger le schéma pour découvrir les capacités de l'API.
+1. **Requêtes précises** : Les clients peuvent demander exactement les données dont ils ont besoin, ni plus ni moins.
+2. **Structure hiérarchique** : Les données sont organisées de manière hiérarchique, reflétant naturellement les relations entre objets.
+3. **Un seul endpoint** : Contrairement à REST qui utilise plusieurs endpoints, GraphQL utilise généralement un seul point d'entrée.
+4. **Typage fort** : GraphQL définit un schéma typé qui sert de contrat entre le client et le serveur.
+5. **Introspection** : Les clients peuvent interroger le schéma pour découvrir les capacités de l'API.
 
-GraphQL est particulièrement utile pour les applications modernes avec des interfaces complexes et des besoins de données variables, réduisant ainsi le sur-chargement de données et améliorant les performances. Il offre aussi un système de souscription qui permet d’obtenir des mises à jour de données en temps (presque) reel (pas aussi performant que websocket)
+GraphQL est particulièrement utile pour les applications modernes avec des interfaces complexes et des besoins de données variables, réduisant ainsi le sur-chargement de données et améliorant les performances. Il offre aussi un système de souscription qui permet d'obtenir des mises à jour de données en temps (presque) réel (pas aussi performant que websocket).
 
-Un des gros avantage est que, contrairement aux API REST, qui peuvent casser les clients si le format des réponse change, le retour d’une requete GraphQL sera toujours identique.
+Un des gros avantages est que, contrairement aux API REST, qui peuvent casser les clients si le format des réponses change, le retour d'une requête GraphQL sera toujours identique.
 
-## Websocket
+## WebSocket
 
-La technologie websocket permet une communication bi-laterale entre un client et un serveur. La connection est ouverte au demarrage de l’application, et le client ou le serveur peut envoyer des informations à n’importe quel moment à l’autre partie. Cela permet d’avoir des données mises à jour en temps réel (jeux videos, plateforme de trading, chat)
+La technologie WebSocket permet une communication bidirectionnelle entre un client et un serveur. La connexion est ouverte au démarrage de l'application, et le client ou le serveur peut envoyer des informations à n'importe quel moment à l'autre partie. Cela permet d'avoir des données mises à jour en temps réel (jeux vidéo, plateforme de trading, chat).
 
 ```mermaid
 sequenceDiagram
@@ -195,7 +195,7 @@ sequenceDiagram
     participant B as Backend API
     F->>B: Requête HTTP
     B->>F: Réponse JSON
-    F<<-->>B: Websocket
+    F<<-->>B: WebSocket
     F->>F: Mise à jour État
     F->>F: Rendu UI
 

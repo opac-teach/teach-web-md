@@ -7,7 +7,7 @@ Le référencement (SEO - Search Engine Optimization) est crucial pour la visibi
 1. **Problématiques des SPA traditionnelles**
    - Contenu généré dynamiquement par JavaScript
    - Les robots des moteurs de recherche peuvent avoir du mal à indexer le contenu
-     - Comment le robot determine que tout le contenu a été chargé et est prêt à être indexé ?
+     - Comment le robot détermine que tout le contenu a été chargé et est prêt à être indexé ?
    - Temps de chargement initial potentiellement long
 2. **Impact sur la visibilité**
    - Classement dans les résultats de recherche
@@ -35,7 +35,7 @@ Le référencement (SEO - Search Engine Optimization) est crucial pour la visibi
   <!-- Contrôle du comportement des robots -->
   <meta name="robots" content="index, follow">
 
-  <!-- Image de preview sur les reseaux sociaux -->
+  <!-- Image de preview sur les réseaux sociaux -->
   <meta name="twitter:image" content="https://www.monsite.com/image.jpg">
 </html>
 ```
@@ -65,8 +65,8 @@ export default {
 - Optimisation des images et ressources
 - Temps de chargement optimisé
 
-## **Server-Side Rendering (SSR)**
+## Server-Side Rendering (SSR)
 
 Le SSR est une solution majeure pour améliorer le SEO des applications modernes.
 
-Il permettra, contrairement au CSR, de retourner instantanément toutes les données nécessaires à l’indexation. Les framework comme NextJS proposent des outils efficaces pour une generation automatique des métadonnées, images de couvertures, sitemap etc…
+Il permettra, contrairement au CSR, de retourner instantanément toutes les données nécessaires à l'indexation. Les frameworks comme NextJS proposent des outils efficaces pour une génération automatique des métadonnées, images de couverture, sitemap, etc.
