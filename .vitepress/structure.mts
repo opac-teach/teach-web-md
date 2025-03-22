@@ -35,6 +35,10 @@ export default {
             link: "/cours/dev-frontend/exercices/vuejs",
           },
           { text: "Nuxt", link: "/cours/dev-frontend/exercices/nuxt" },
+          {
+            text: "[Projet] Memecoin",
+            link: "/cours/dev-frontend/exercices/projet-memecoin",
+          },
         ],
       },
     ],
