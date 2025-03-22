@@ -18,6 +18,9 @@ features:
   - title: Développement Frontend
     details: Apprenez les fondamentaux du développement web moderne
     link: /cours/dev-frontend
+  - title: C/C++
+    details: Apprenez les fondamentaux du développement bas niveau
+    link: /cours/c-cpp
 ---
 
 ![](https://media1.giphy.com/media/InYNY6SNHRQvih7Kl4/giphy.gif?cid=7941fdc6m8433t38n597rcz884fkalpp26p3ui6rwjxyqjo5&ep=v1_gifs_search&rid=giphy.gif&ct=g)

@@ -21,8 +21,8 @@ Pour travailler sur ces exercices, vous devez forker le projet de démonstration
     - `https://nuxt-demo-blush.vercel.app/api/create-memecoin`
   - Gérer la validation des entrées dans l'interface
     - Empêcher l'envoi du formulaire si les conditions ne sont pas respectées
-    - Expliquer pourquoi quand il y a des erreurs de validation
-  - Afficher le résultat, et gérer le cas des erreurs
+    - Afficher des messages d'erreurs de validation
+  - Afficher le résultat, et gérer le cas des erreurs API
   - Rafraîchir la liste des memecoins affichée
   - Bonus : Récupérer et stocker la liste des memecoins dans un store Pinia
 
@@ -37,7 +37,7 @@ Pour travailler sur ces exercices, vous devez forker le projet de démonstration
   - Stocker le token JWT retourné dans un store Pinia
     - Stocker aussi son userId retourné
     - Injecter le token JWT dans les prochaines requêtes à l'API
-    - En profiter pour le stocker dans le localStorage pour qu'il soit chargé si on relance l'app
+    - Bonus: stocker le token dans le localStorage pour qu'il soit chargé si on relance l'app
   - Changer l'URL de la requête pour créer un memecoin vers
     - `https://nuxt-demo-blush.vercel.app/api/create-memecoin-protected`
     - Vérifier que la création fonctionne bien et que l'owner du memecoin créé est bien le nôtre

@@ -1,19 +1,15 @@
-# Vue.js
+# Nuxt
 
 ## Application de démonstration
 
-- [Démo Vue.js (CSR)](https://vuejs-demo-three.vercel.app/) _([Code source](https://github.com/opac-teach/vue-demo))_
+[Démo Nuxt (SSR)](https://nuxt-demo-blush.vercel.app/) _([Code source](https://github.com/opac-teach/nuxt-demo))_
 
 ## Lien vers la documentation officielle
 
-### Frameworks
-
-- [Vue.js](https://vuejs.org/)
+- [Nuxt.js](https://nuxt.com/)
 
 ### Outils
 
-- [Vite](https://vite.dev/)
-- [Vue Router](https://router.vuejs.org/)
 - [Pinia](https://pinia.vuejs.org/)
 - [Vitest](https://vitest.dev/api/)
 

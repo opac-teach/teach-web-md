@@ -6,9 +6,7 @@ export default {
 
   sidebar: {
     "/cours/dev-frontend": [
-      {
-        text: "Developpement Frontend",
-      },
+      { text: "Developpement Frontend" },
       {
         text: "Fondamentaux",
         items: [
@@ -24,7 +22,10 @@ export default {
       },
       {
         text: "Frameworks",
-        items: [{ text: "VueJS", link: "/cours/dev-frontend/vuejs" }],
+        items: [
+          { text: "VueJS", link: "/cours/dev-frontend/vuejs" },
+          { text: "Nuxt", link: "/cours/dev-frontend/nuxt" },
+        ],
       },
       {
         text: "Exercices",

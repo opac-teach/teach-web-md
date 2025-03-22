@@ -199,6 +199,18 @@ describe('Page d'accueil', () => {
 })
 ```
 
+## Bootstrapping
+
+La plupart des framework proposent une commande pour automatiquement démarrer et configurer un nouveau projet.
+
+Se referer à la doc officielle pour la commande à jour
+
+```sh
+npm create vue@latest
+npm create nuxt@latest
+npx create-next-app@latest
+```
+
 # Les frameworks et bibliothèques modernes
 
 ## Pourquoi utiliser un framework ?
