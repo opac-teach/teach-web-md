@@ -137,3 +137,10 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+@media print {
+  .VPNav,
+  .VPLocalNav,
+  .VPDocFooter {
+    display: none !important;
+  }
+}

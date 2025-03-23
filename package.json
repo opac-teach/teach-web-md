@@ -2,11 +2,13 @@
   "scripts": {
     "dev": "vitepress dev --port 3100 .",
     "build": "vitepress build .",
-    "preview": "vitepress preview ."
+    "preview": "vitepress preview .",
+    "export-pdf": "press-export-pdf export ."
   },
   "devDependencies": {
     "mermaid": "^11.5.0",
     "vitepress": "^1.6.3",
+    "vitepress-export-pdf": "^1.0.0",
     "vitepress-plugin-mermaid": "^2.0.17"
   }
 }
