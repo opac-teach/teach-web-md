@@ -7,7 +7,7 @@ Le référencement (SEO - Search Engine Optimization) est crucial pour la visibi
 1. **Problématiques des SPA traditionnelles**
    - Contenu généré dynamiquement par JavaScript
    - Les robots des moteurs de recherche peuvent avoir du mal à indexer le contenu
-     - Comment le robot détermine que tout le contenu a été chargé et est prêt à être indexé ?
+     - Comment le robot détermine-t-il que tout le contenu a été chargé et est prêt à être indexé ?
    - Temps de chargement initial potentiellement long
 2. **Impact sur la visibilité**
    - Classement dans les résultats de recherche
@@ -16,7 +16,7 @@ Le référencement (SEO - Search Engine Optimization) est crucial pour la visibi
 
 ## Solutions techniques
 
-**1. Métadonnées dynamiques**
+### 1. Métadonnées dynamiques
 
 ```html
 <head>
@@ -52,13 +52,13 @@ export default {
 };
 ```
 
-**2. Plan du site (Sitemap)**
+### 2. Plan du site (Sitemap)
 
 - Génération automatique du sitemap.xml
 - Mise à jour dynamique des URLs
 - Soumission aux moteurs de recherche
 
-**3. Optimisations techniques**
+### 3. Optimisations techniques
 
 - URLs propres et significatives
 - Structure HTML sémantique
@@ -69,4 +69,4 @@ export default {
 
 Le SSR est une solution majeure pour améliorer le SEO des applications modernes.
 
-Il permettra, contrairement au CSR, de retourner instantanément toutes les données nécessaires à l'indexation. Les frameworks comme NextJS proposent des outils efficaces pour une génération automatique des métadonnées, images de couverture, sitemap, etc.
+Il permettra, contrairement au CSR, de retourner instantanément toutes les données nécessaires à l'indexation. Les frameworks comme Next.js proposent des outils efficaces pour une génération automatique des métadonnées, images de couverture, sitemap, etc.

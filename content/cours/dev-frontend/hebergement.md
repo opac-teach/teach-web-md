@@ -24,9 +24,9 @@ Il faudra alors passer par une plateforme spécialement conçue pour ça, ou un 
 
 ## Plateformes d'hébergement principales
 
-Les plateformes PaaS (plateforme as a service) fourniront un service très simple tout clé en main, en général une simple commande suffit pour obtenir une application déployée et entièrement fonctionnelle. Le cloud sera lui plus complexe à mettre en place, mais avec plus de contrôle de la stack. Enfin, le bare-metal est une solution qui peut offrir de très bonnes performances avec des coûts très faibles.
+Les plateformes PaaS (Platform as a Service) fourniront un service très simple tout clé en main, en général une simple commande suffit pour obtenir une application déployée et entièrement fonctionnelle. Le cloud sera lui plus complexe à mettre en place, mais avec plus de contrôle de la stack. Enfin, le bare-metal est une solution qui peut offrir de très bonnes performances avec des coûts très faibles.
 
-- **Vercel** : créateurs de NextJS, permet de déployer très facilement la plupart des applications web full-stack sous réserve de respecter certains critères (serverless)
+- **Vercel** : créateurs de Next.js, permet de déployer très facilement la plupart des applications web full-stack sous réserve de respecter certains critères (serverless)
 - **Netlify** : Équivalent de Vercel
 - **Render** : Permet de déployer tout type d'applications assez simplement
 - **AWS** : Tout type de déploiement (complexe)

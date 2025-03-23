@@ -4,7 +4,7 @@ Ce cours a pour but d'introduire des notions fondamentales et générales autour
 
 Bien que ces connaissances soient générales et non liées à des choix de technologies particulières, le contenu est orienté autour des techniques modernes du web (en 2025).
 
-Ce contenu est bien sûr non-exhaustif, et n'est là que pour guider les étudiants vers les concepts essentiels à connaître.
+Ce contenu est bien sûr non exhaustif, et n'est là que pour guider les étudiants vers les concepts essentiels à connaître.
 
 **La documentation officielle est toujours à privilégier et il est vivement recommandé de la consulter.**
 
@@ -14,9 +14,9 @@ L'expérience utilisateur est devenue un élément central du développement fro
 
 ### Impact sur l'engagement des utilisateurs
 
-- 53% des utilisateurs abandonnent un site qui met plus de 3 secondes à charger
-- 88% des utilisateurs ne reviendront pas sur un site après une mauvaise expérience
-- Une bonne UX augmente le taux de conversion de 200% en moyenne
+- 53 % des utilisateurs abandonnent un site qui met plus de 3 secondes à charger
+- 88 % des utilisateurs ne reviendront pas sur un site après une mauvaise expérience
+- Une bonne UX augmente le taux de conversion de 200 % en moyenne
 
 ### Principes fondamentaux de l'UX en développement
 

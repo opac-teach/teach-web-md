@@ -48,7 +48,7 @@ console.log(calculate_average(object)); // 🚨 Compilation error: expected Arra
 
 ## Qualité de code
 
-**ESLint**
+### ESLint
 
 Afin de réduire au maximum les erreurs de code, on va utiliser des outils de vérification automatique de qualité de code, en temps réel dans l'IDE et aussi juste avant l'exécution des tests. Ceux-ci possèdent une liste de règles qui doivent être respectées et pointeront vers les bouts de code qui "sentent mauvais".
 
@@ -75,7 +75,7 @@ Afin de nous aider dans le développement d'applications, il existe une multitud
 
 > Historiquement, la plupart de ces outils ont été codés en JavaScript pour garder une cohérence avec le code de l'app, mais une transition vers des langages plus rapides est en train de se faire et la plupart des outils sont en train d'être portés en Rust pour une expérience de développement (DX) plus fluide. (Turbopack, SWC, etc.)
 
-La dépendance principale de tout projet web sera NodeJS https://nodejs.org/.
+La dépendance principale de tout projet web sera Node.js https://nodejs.org/.
 
 ## Gestionnaires de paquets
 
@@ -91,7 +91,7 @@ La dépendance principale de tout projet web sera NodeJS https://nodejs.org/.
   npm run SCRIPT   # Exécuter des scripts
   ```
 
-**Alternatives**
+### Alternatives
 
 NPM a été à un moment critiqué pour ses faiblesses (performances, fiabilité, fonctionnalités, etc.) et de nombreuses alternatives ont été créées, telles que Yarn, pnpm, etc.
 
@@ -99,7 +99,7 @@ Leur fonctionnement est relativement similaire et les paquets restent compatible
 
 NPM a évolué pour rattraper son retard et reste généralement suffisant pour la plupart des projets.
 
-**Le package.json**
+### Le package.json
 
 Voici un exemple détaillé d'un fichier `package.json` typique pour un projet frontend moderne :
 
@@ -201,9 +201,9 @@ describe('Page d'accueil', () => {
 
 ## Bootstrapping
 
-La plupart des framework proposent une commande pour automatiquement démarrer et configurer un nouveau projet.
+La plupart des frameworks proposent une commande pour automatiquement démarrer et configurer un nouveau projet.
 
-Se referer à la doc officielle pour la commande à jour
+Se référer à la doc officielle pour la commande à jour :
 
 ```sh
 npm create vue@latest
@@ -215,7 +215,7 @@ npx create-next-app@latest
 
 ## Pourquoi utiliser un framework ?
 
-**Avantages**
+### Avantages
 
 - **Productivité accrue**
   - Réutilisation de composants
@@ -230,7 +230,7 @@ npx create-next-app@latest
   - Gestion efficace du DOM
   - Outils de développement dédiés
 
-**Inconvénients**
+### Inconvénients
 
 - Courbe d'apprentissage initiale
 - Surcharge potentielle pour les petits projets

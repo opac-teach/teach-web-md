@@ -13,7 +13,6 @@ graph TD
     D --> F[div]
     F --> G[p]
     F --> H[button]
-
 ```
 
 ## Virtual DOM vs Real DOM
@@ -51,7 +50,6 @@ setState({ contenu: "Nouveau contenu" }); // Le framework optimise la mise à jo
 
 ::: info À lire
 [https://vuejs.org/guide/extras/rendering-mechanism](https://vuejs.org/guide/extras/rendering-mechanism)
-
 :::
 
 # Architecture orientée composant
@@ -78,32 +76,31 @@ graph TD
     C --> F[Article List]
     F --> G[Article Card]
     F --> H[Article Card]
-
 ```
 
 ## Différents types de composants
 
 À l'échelle du framework, tous les composants sont similaires. Cependant, pour maintenir un code de qualité, nous séparons les composants selon leur usage :
 
-- **App**
+### App
 
 Le composant d'application est l'unique composant principal qui va charger l'application. Il a le rôle de charger tous les modules nécessaires et c'est lui qui sera monté dans le DOM.
 
-- **Layout**
+### Layout
 
-Le(s) composant(s) de layout servent de squelette aux pages, afin que celles-ci aient un même format (header/footer/router, etc.)
+Le(s) composant(s) de layout servent de squelette aux pages, afin que celles-ci aient un même format (header/footer/router, etc.).
 
-- **Pages/Vues**
+### Pages/Vues
 
 Les pages, aussi appelées vues en Vue, servent de composant principal pour chaque route de l'application, chargées par le routeur généralement depuis le layout.
 
-- **Data-fetching**
+### Data-fetching
 
 Certains composants ont besoin de récupérer des données (via une API par exemple), et vont afficher ces données ou bien les redistribuer aux composants qu'ils utilisent, et peuvent potentiellement avoir des effets de bord (comme modifier des données via une API).
 
-- **Composants de présentation**
+### Composants de présentation
 
-Certains composants seront uniquement utiles pour créer l'interface, ne feront pas d'appels API, n'auront pas d'effets de bord et changeront uniquement en fonction des propriétés qui leur sont envoyées (exemples : Button, Input, Calendar, etc.)
+Certains composants seront uniquement utiles pour créer l'interface, ne feront pas d'appels API, n'auront pas d'effets de bord et changeront uniquement en fonction des propriétés qui leur sont envoyées (exemples : Button, Input, Calendar, etc.).
 
 ## Communication entre composants
 
@@ -157,7 +154,6 @@ graph LR
     B --> E[État Local A]
     C --> F[État Local B]
     D --> G[État Local C]
-
 ```
 
 # Communication avec le Backend
@@ -181,7 +177,7 @@ GraphQL est un langage de requête et un environnement d'exécution pour les API
 4. **Typage fort** : GraphQL définit un schéma typé qui sert de contrat entre le client et le serveur.
 5. **Introspection** : Les clients peuvent interroger le schéma pour découvrir les capacités de l'API.
 
-GraphQL est particulièrement utile pour les applications modernes avec des interfaces complexes et des besoins de données variables, réduisant ainsi le sur-chargement de données et améliorant les performances. Il offre aussi un système de souscription qui permet d'obtenir des mises à jour de données en temps (presque) réel (pas aussi performant que websocket).
+GraphQL est particulièrement utile pour les applications modernes avec des interfaces complexes et des besoins de données variables, réduisant ainsi le surchargement de données et améliorant les performances. Il offre aussi un système de souscription qui permet d'obtenir des mises à jour de données en temps (presque) réel (pas aussi performant que WebSocket).
 
 Un des gros avantages est que, contrairement aux API REST, qui peuvent casser les clients si le format des réponses change, le retour d'une requête GraphQL sera toujours identique.
 
@@ -198,6 +194,4 @@ sequenceDiagram
     F<<-->>B: WebSocket
     F->>F: Mise à jour État
     F->>F: Rendu UI
-
-
 ```

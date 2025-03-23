@@ -10,13 +10,13 @@
 
 ### Outils
 
-- [Vite](https://vite.dev/) (compilation)
+- [Vite](https://vitejs.dev/) (compilation)
 - [Vue Router](https://router.vuejs.org/) (routing)
 - [Pinia](https://pinia.vuejs.org/) (store management)
 - [Vitest](https://vitest.dev/api/) (tests unitaires)
 - [Vue Test Utils](https://test-utils.vuejs.org/) (tests unitaires pour composants Vue)
-- [cypress](https://www.cypress.io/) (tests e2e)
-- [playwright](https://playwright.dev/) (tests e2e)
+- [Cypress](https://www.cypress.io/) (tests e2e)
+- [Playwright](https://playwright.dev/) (tests e2e)
 
 ### UI
 
