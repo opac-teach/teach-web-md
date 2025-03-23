@@ -1,25 +1,25 @@
 # Styles, CSS et UI
 
-Historiquement, il a existé de nombreux outils pour aider à l'integration du design dans une page web.
+Historiquement, il a existé de nombreux outils pour faciliter l'intégration du design dans une page web.
 
-La technologie principale pour construire le style d'une page web est le CSS, mais il devient rapidement fastidieux de n'utiliser que celui-ci lorsqu'une application grandit, alors de nombreux outils ont été créés pour faciliter l'experience developpeur et garder des codes propres et maintenables.
+La technologie principale pour construire le style d'une page web est le CSS. Cependant, il devient rapidement fastidieux de n'utiliser que celui-ci lorsqu'une application grandit. C'est pourquoi de nombreux outils ont été créés pour faciliter l'expérience développeur et maintenir un code propre et maintenable.
 
-Historiquement on peut retrouver des outils comme **Bootstrap**, **Material Design**, mais aujourd'hui la norme s'est tourné vers **Tailwind** qui a été largement adopté et qui est très robuste.
-Beaucoup de librairies l'utilisent comme base, et elle permet de rapidement pouvoir changer le style d'une page de manière coherente, globale et independante.
+Historiquement, on peut retrouver des outils comme **Bootstrap** ou **Material Design**. Aujourd'hui, la norme s'est tournée vers **Tailwind**, qui a été largement adopté et qui est très robuste.
+Beaucoup de librairies l'utilisent comme base, et elle permet de modifier rapidement le style d'une page de manière cohérente, globale et indépendante.
 
-Un developpeur qui maitrisera tailwind pourra rapidement s'adapter a un projet existant qui l'utilise, et ce peu importe les autres technologies utilisées.
+Un développeur qui maîtrisera Tailwind pourra rapidement s'adapter à un projet existant qui l'utilise, et ce, peu importe les autres technologies utilisées.
 
-## UX: Style VS UI
+## UX : Style VS UI
 
-L'experience utilisateur (UX) sera determinée par deux facteurs: Le Style (CSS) et l'interface utilisateur (UI)
+L'expérience utilisateur (UX) sera déterminée par deux facteurs : le style (CSS) et l'interface utilisateur (UI).
 
-Il est important de distinguer le style de l'UI: le style determine à quoi l'application ressemble, et l'UI determine comment elle réagit.
+Il est important de distinguer le style de l'UI : le style détermine à quoi l'application ressemble, et l'UI détermine comment elle réagit.
 
-Il existe donc trois types de librairies differentes:
+Il existe donc trois types de librairies différentes :
 
-- les librairies de style pur (Tailwind)
-- les librairies d'UI pur (HeadlessUI, Radix)
-- les librairies de style + UI (Material Design, shadcn, daisyUI)
+- Les librairies de style pur (Tailwind)
+- Les librairies d'UI pur (HeadlessUI, Radix)
+- Les librairies de style + UI (Material Design, shadcn, daisyUI)
 
 ### Style
 
