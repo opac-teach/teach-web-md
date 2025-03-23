@@ -1,5 +1,5 @@
 # Teaching website
 
-Made with Vitepress
+https://teach-web-md.vercel.app/
 
-https://vitepress.dev/guide/what-is-vitepress
+Made with [Vitepress](https://vitepress.dev/guide/what-is-vitepress)

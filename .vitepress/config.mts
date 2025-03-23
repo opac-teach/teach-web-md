@@ -1,5 +1,6 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 import structure from "./structure.mts";
+
 export default withMermaid({
   title: "Pac Teaches",
   description: "A teaching Site",
@@ -7,6 +8,7 @@ export default withMermaid({
   srcDir: "content",
   lastUpdated: true,
   cleanUrls: true,
+
   themeConfig: {
     nav: [
       { text: "Accueil", link: "/" },

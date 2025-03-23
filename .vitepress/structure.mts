@@ -16,6 +16,7 @@ export default {
           { text: "Rendering", link: "/cours/dev-frontend/rendering" },
           { text: "Routing", link: "/cours/dev-frontend/routing" },
           { text: "Hebergement", link: "/cours/dev-frontend/hebergement" },
+          { text: "Styling", link: "/cours/dev-frontend/styling" },
           { text: "SEO", link: "/cours/dev-frontend/seo" },
           { text: "Approfondir", link: "/cours/dev-frontend/approfondir" },
         ],

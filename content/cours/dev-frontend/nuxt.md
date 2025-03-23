@@ -1,21 +1,19 @@
 # Nuxt
 
-## Application de démonstration
+### Application de démonstration
 
 [Démo Nuxt (SSR)](https://nuxt-demo-blush.vercel.app/) _([Code source](https://github.com/opac-teach/nuxt-demo))_
 
 ## Lien vers la documentation officielle
 
-- [Nuxt.js](https://nuxt.com/)
+- [Nuxt.js](https://nuxt.com/docs/getting-started)
 
 ### Outils
 
-- [Pinia](https://pinia.vuejs.org/)
-- [Vitest](https://vitest.dev/api/)
+- [Pinia](https://pinia.vuejs.org/) (store management)
+- [Nuxt Test Utils](https://nuxt.com/docs/getting-started/testing) (tests unitaires et e2e pour app Nuxt)
 
 ### UI
 
-- [Tailwind CSS](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
 - [shadcn-vue](https://www.shadcn-vue.com/)
 - [Nuxt UI](https://ui.nuxt.com/)
