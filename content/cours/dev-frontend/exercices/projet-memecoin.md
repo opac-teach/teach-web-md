@@ -22,13 +22,15 @@ Bien que le site web et ses fonctionnalités ressembleront à un projet web3, to
   - Le montant de ZTH dans la reserve est toujours égale au prix de vente de la totalité des tokens existant
 - Toute cette logique est déjà gérée par le backend fourni
 
+![Bonding curve preview](../assets/bonding-curve.jpg)
+
 ## Backend
 
 Un backend déjà fonctionnel vous sera fourni.
 
 La specification API est disponible à cette adresse:
 
-[https://zth.render.com/api/swagger](https://zth.opac.me/api/swagger)
+[https://zero-to-hundred-backend.onrender.com/api/swagger](https://zero-to-hundred-backend.onrender.com/api/swagger)
 
 ## Travail demandé
 
@@ -48,3 +50,7 @@ Vous devrez implementer le maximum de fonctionnalités possibles au vu de ce que
 - SEO, sitemap et metadata
 - Bonne UX
 - Utilisation stricte de Typescript
+
+### Implementation de reference
+
+https://zero-to-hundred-frontend.onrender.com
