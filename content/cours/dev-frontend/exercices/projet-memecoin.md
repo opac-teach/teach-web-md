@@ -23,6 +23,19 @@ Bien que le site web et ses fonctionnalités ressembleront à un projet web3, to
 - Toute cette logique est déjà gérée par le backend fourni
 
 ![Bonding curve preview](../assets/bonding-curve.jpg)
+![alt text](https://miro.medium.com/v2/resize%3Afit%3A1400/format%3Awebp/0%2Ayl-NRQ37gIM9bQI9.png)
+
+#### Formule de prix
+
+Pour une bonding curve linéaire, le prix P d'un token est directement proportionnel à la quantité de tokens en circulation S (supply):
+
+`P = a * S + b`
+
+Avec a (slope) et b (starting price) des constantes.
+
+Pour acheter X tokens, le cout C revient à :
+
+`C = a * ((X+S)^2 - S^2) / 2 + X * b`
 
 ## Backend
 
