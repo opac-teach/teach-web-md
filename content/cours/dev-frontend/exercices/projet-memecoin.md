@@ -33,6 +33,8 @@ Pour une bonding curve linéaire, le prix P d'un token est directement proportio
 
 Avec a (slope) et b (starting price) des constantes.
 
+Pour calculer le prix d'achat ou de vente, il faut donc calculer l'intégrale de la fonction de prix entre la quantité de tokens en circulation actuelle et la quantité de tokens en circulation après l'achat ou la vente.
+
 Pour acheter X tokens, le cout C revient à :
 
 `C = a * ((X+S)^2 - S^2) / 2 + X * b`

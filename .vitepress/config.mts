@@ -9,7 +9,10 @@ export default withMermaid({
   lastUpdated: true,
   cleanUrls: true,
 
+  head: [["link", { rel: "icon", href: "/logo.svg" }]],
   themeConfig: {
+    logo: "/logo.svg",
+
     nav: [
       { text: "Accueil", link: "/" },
       {
@@ -17,6 +20,10 @@ export default withMermaid({
         items: structure.cours,
       },
     ],
+
+    search: {
+      provider: "local",
+    },
 
     sidebar: structure.sidebar,
 
