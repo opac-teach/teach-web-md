@@ -1,7 +1,8 @@
 export default {
   cours: [
     { text: "Dev Frontend", link: "/cours/dev-frontend" },
-    { text: "C/C++", link: "/cours/c-cpp" },
+    // { text: "Dev Backend", link: "/cours/dev-backend" },
+    // { text: "C/C++", link: "/cours/c-cpp" },
   ],
 
   sidebar: {
@@ -51,6 +52,12 @@ export default {
       {
         text: "Langage C++",
         items: [{ text: "Cours", link: "/cours/c-cpp/langage-cpp" }],
+      },
+    ],
+    "/cours/dev-backend": [
+      {
+        text: "NestJS",
+        items: [{ text: "Introduction", link: "/cours/dev-backend/nestjs" }],
       },
     ],
   },

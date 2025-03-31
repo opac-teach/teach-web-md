@@ -120,12 +120,12 @@ Chaque framework a sa façon de faire et c'est le plus compliqué à apprendre l
 
 > Voir [Panorama des frameworks populaires](https://www.notion.so/Panorama-des-frameworks-populaires-1b0c82462eb580258116f6b4e54b5efb?pvs=21) pour comparer les différentes implémentations de réactivité des frameworks.
 
-<aside>
+::: info 💡
 💡
 
 [https://vuejs.org/guide/extras/reactivity-in-depth.html](https://vuejs.org/guide/extras/reactivity-in-depth.html)
 
-</aside>
+:::
 
 # Gestion de l'État (State Management)
 

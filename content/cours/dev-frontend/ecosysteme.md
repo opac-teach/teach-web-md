@@ -62,12 +62,12 @@ Les IA génératives sont aujourd'hui suffisamment performantes pour produire du
 
 Le fait que le compilateur donne des erreurs précises sur les problèmes rencontrés va aider l'IA à produire un code de qualité optimale, et réduire les hallucinations.
 
-<aside>
+::: info 💡
 ⚠️
 
 > Poussez au maximum les exigences en termes de qualité de code (typage, linting, tests, etc.), car cela ne ralentit plus la productivité aujourd'hui grâce à l'IA
 
-</aside>
+:::
 
 # Outils de développement
 

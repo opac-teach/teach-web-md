@@ -63,14 +63,14 @@
 </html>
 ```
 
-<aside>
+::: info 💡
 💡
 
 **Hydration**
 
 L'hydration fait référence au processus par lequel une application JavaScript "reprend vie" dans le navigateur après qu'un HTML initial a été généré et envoyé par le serveur. Plus précisément, c'est le processus qui permet de transformer une page HTML statique (rendue côté serveur) en une application interactive côté client, comme si elle était CSR.
 
-</aside>
+:::
 
 ![GET example.com (1).png](assets/fcp.jpg)
 

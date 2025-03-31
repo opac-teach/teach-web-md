@@ -194,7 +194,7 @@ La contrepartie est la durée de compilation : si elle est généralement instan
 
 Le compilateur le plus connu pour le C s’appelle **gcc**. Il est exécutable en ligne de commande.
 
-<aside>
+::: info 💡
 💡
 
 Ne pas confondre éditeur de code et compilateur:
@@ -203,7 +203,7 @@ L’éditeur de code (Visual Studio Code) est un simple éditeur de texte qui en
 
 Le compilateur (gcc) va transformer les fichiers texte en fichiers exécutables par l’ordinateur.
 
-</aside>
+:::
 
 Pour compiler un fichier, il faut lancer la commande suivante:
 
@@ -376,12 +376,12 @@ Sur Visual studio, vous pouvez activer l’indentation automatique.
 
 Aller dans Settings (Cmd + ,) chercher `format on save` et activer Editor Format On Save
 
-<aside>
+::: info 💡
 💡
 
 Lors des évaluations il est impératif de rendre un code propre, c’est a dire clair, bien indenté, bien commenté, sans superflu
 
-</aside>
+:::
 
 # III. Les variables
 
@@ -429,14 +429,14 @@ En C, on peut distinguer 3 classes principales de types de variables :
 
 Chaque type de variable a un usage different et surtout prendra une place différente dans la mémoire. Plus il prendra de place dans la mémoire, plus ses valeurs pourront êtres elevées.
 
-<aside>
+::: info 💡
 💡
 
 Avec 1 bit on peut compter jusqu’a 1, avec 2 bits, jusqu’à 3, 3 bits jusqu’à 7, etc…
 
 Avec X bits on peut compter jusqu’a `2^X-1`
 
-</aside>
+:::
 
 ### Signes
 
@@ -606,12 +606,12 @@ scanf("%d", &age);
 printf("Vous avez %d ans.\n", age);
 ```
 
-<aside>
+::: info 💡
 🚧
 
 Faire les exercices “Basiques”
 
-</aside>
+:::
 
 # V. Opérateurs
 
@@ -683,7 +683,7 @@ Le modulo est un opérateur qui retourne le **reste de la division euclidienne**
 
 C’est un opérateur très important en programmation et est très souvent utilisé, il est important de bien le maitriser.
 
-<aside>
+::: info 💡
 💡
 
 ### **Rappel**
@@ -696,7 +696,7 @@ Par exemple la division euclidienne de 7 par 2 donne: `7 = 2 * 3 *(quotient)* + 
 
 [_Lire plus sur wikipedia_](https://fr.wikipedia.org/wiki/Division_euclidienne)
 
-</aside>
+:::
 
 Exemples:
 
@@ -869,12 +869,12 @@ y1 = (b*2) % 4;
 y = a + (y1 > 3) + c;  // mieux en plusieurs lignes
 ```
 
-<aside>
+::: info 💡
 🚧
 
 Faire les exercices “Opérateurs”
 
-</aside>
+:::
 
 # VI. Contrôles de flux
 
@@ -931,14 +931,14 @@ Si la _condition 1_ est vraie alors on exécutera le _bloc 1_, sinon si la _cond
 
 ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/e020975a-c05f-42e9-b799-a23124ea5c49/image.png)
 
-<aside>
+::: info 💡
 ⚠️
 
 **Attention**: dans une structure `if ... else if ... else ...` **un seul des blocs sera executé**: le premier dont la condition est valide.
 
 Si il y a une condition valide (`if` ou `else if`), le prochain bloc sera executé, mais si la condition suivante (`else if` ) est valide aussi elle ne sera pas executée.
 
-</aside>
+:::
 
 _Exemples_
 
@@ -1180,12 +1180,12 @@ int main(void)
 }
 ```
 
-<aside>
+::: info 💡
 🚧
 
 Faire les exercices “Contrôles de flux”
 
-</aside>
+:::
 
 # VII. Les fonctions
 
@@ -1361,12 +1361,12 @@ Ces codes sont repéesentés par les constantes `EXIT_SUCCESS`et `EXIT_FAILURE` 
 
 Une fonction est dite récursive lorsqu’elle s’appelle elle même.
 
-<aside>
+::: info 💡
 🚧
 
 Faire les exercices “Fonctions”
 
-</aside>
+:::
 
 # VIII. Notions avancées
 
@@ -1513,6 +1513,7 @@ Instructions disponibles:
   - on écrit `<stdio.h>` pour une librairie externe
   - on écrit `“mylib.h”` pour un fichier local (chemin relatif au fichier)
 - `#define PI 3.14` : déclare une constante. A chaque utilisation de cette constante, sa valeur sera directement remplacée dans le code par le préprocesseur
+
   ```c
   #define PI 3.14
 
@@ -1521,6 +1522,7 @@ Instructions disponibles:
   // Apres le preprocesseur, le code deviendra
   int i = 3.14 * 2;
   ```
+
 - `#ifdef` : si une constante est declarée, va avec `#ifndef`, `#endif` alors le code sera integré au fichier, sinon il sera effacé
   - Cela permet de ne pas déclarer plusieurs fois la meme chose. Si on inclus un header à plusieurs endroits, sans les `#ifdef`, les déclarations qui se trouvent à l’interieur se feront plusieurs fois et la compilation échouera
 

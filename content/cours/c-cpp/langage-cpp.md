@@ -1,4 +1,4 @@
-<aside>
+::: info 💡
 ℹ️
 
 Avant d’entamer ce cours, il est nécessaire de bien connaitre les bases du langage C, qui ne seront pas revues ici.
@@ -9,7 +9,7 @@ Vous retrouverez les pré-requis ici:
 
 [Langage C: Cours avancé](https://www.notion.so/Langage-C-Cours-avanc-95acfcf250204d41ba422d3a55e464aa?pvs=21)
 
-</aside>
+:::
 
 # Du C au C++
 
