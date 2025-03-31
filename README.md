@@ -6,8 +6,7 @@ Made with [Vitepress](https://vitepress.dev/guide/what-is-vitepress)
 
 ## Cours en PDF
 
-- [dev-frontend](/pdfs/dev-frontend.pdf)
-- [c-cpp](/pdfs/c-cpp.pdf)
+[Lien vers les cours en PDF](/pdfs)
 
 ## Developpement
 
