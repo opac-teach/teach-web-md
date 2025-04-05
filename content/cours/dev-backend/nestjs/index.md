@@ -1,33 +1,33 @@
 # NestJS
 
-NestJS est un framework pour NodeJS permettant de créer des backend complets, évolutifs et scalables.
+NestJS est un framework de développement backend pour NodeJS permettant de créer des applications complètes, évolutives et performantes.
 
-Il est conçu sur unearchitecture stricte, standardisée et opiniatrée, qui permet de concevoir du code de qualité, maintenable et couvrant tous les besoin que peut avoir une application backend.
+Il repose sur une architecture stricte, standardisée et opiniâtre, facilitant la conception de code de qualité et maintenable qui répond efficacement à tous les besoins d'une application backend moderne.
 
 > [!NOTE]
-> La documentation officielle est bien évidemment la référence, cette page n’a pour but que de présenter les concepts principaux du framework.
+> La documentation officielle reste la référence principale. Cette page a pour objectif de présenter uniquement les concepts fondamentaux du framework.
 >
 > [https://docs.nestjs.com/](https://docs.nestjs.com/)
 
-# Specificités
+# Spécificités
 
-Nest a été conçu sur le principe de l'inversion de contrôle (IoC), qui est un concept de programmation orientée objet.
+Nest est fondé sur le principe de l'inversion de contrôle (IoC), un concept fondamental en programmation orientée objet.
 
-Il fonctionne selon le principe que le flot d'exécution d'un logiciel n'est plus sous le contrôle direct de l'application elle-même mais du framework ou de la couche logicielle sous-jacente.
+Ce principe stipule que le flux d'exécution d'un logiciel n'est plus directement contrôlé par l'application elle-même, mais par le framework ou la couche logicielle sous-jacente.
 
-Contrairement à la programmation procedurale, ou le developpeur produit du code qui utilisera des librairies tierces, en IoC ce sera le framework qui utilisera le code produit par le developpeur.
+Contrairement à la programmation procédurale traditionnelle où le développeur écrit du code qui utilise des bibliothèques tierces, dans l'IoC, c'est le framework qui utilise le code produit par le développeur.
 
 https://en.wikipedia.org/wiki/Inversion_of_control
 
 ## Découpage
 
-NestJS a une découpe stricte de l'application. Chaque partie à son propre rôle, et se trouve dans un dossier spécifique avec un nom specifique.
+NestJS impose une structure claire à l'application. Chaque composant a un rôle spécifique et se trouve dans un répertoire dédié avec une nomenclature précise.
 
-Pour chacune de ces parties que nous verrons par la suite, un comportement specifique sera automatiquement appliqué à ceux-ci, et ce comportement pourra être personnalisé via des décorateurs.
+Pour chacun des composants que nous aborderons par la suite, NestJS applique automatiquement un comportement spécifique, qui peut être personnalisé à l'aide de décorateurs.
 
-## Decorateurs
+## Décorateurs
 
-Les décorateurs, assez peu utilisés generalement en Javascript, sont un concept très puissant de NestJS, et sont le principal moyen d'exploiter les fonctionnalités du framework.
+Les décorateurs, bien que relativement peu utilisés en JavaScript standard, constituent un élément central dans NestJS. Ils représentent le principal moyen d'exploiter les fonctionnalités avancées du framework.
 
 ### Exemples de décorateurs
 
@@ -66,20 +66,20 @@ export class CatDto {
 
 https://docs.nestjs.com/cli/overview
 
-Nest est fourni avec un outil en ligne de commande très pratique pour developper une application, notamment pour générer des composants.
+NestJS est fourni avec un outil en ligne de commande puissant qui facilite le développement d'applications, notamment grâce à la génération automatique de composants.
 
 ```bash
-# installer la cli
+# Installer la CLI
 npm i -g @nestjs/cli
 
-# Creer un nouveau projet
+# Créer un nouveau projet
 nest new my-project
 
-# Generer une nouvelle resource
-# (genere module, controller, service, routes, dtos)
+# Générer une nouvelle ressource complète
+# (génère module, controller, service, routes, DTOs)
 nest g resource cats
 
-# Generer des composants
+# Générer des composants individuels
 nest g module cats
 nest g controller cats
 nest g service cats
@@ -88,8 +88,8 @@ nest g service cats
 nest g -h
 ```
 
-# Resources
+# Ressources
 
-- [Doc officielle](https://docs.nestjs.com/)
+- [Documentation officielle](https://docs.nestjs.com/)
 - [Projet d'exemple](https://github.com/opac-teach/nest-demo)
-- [Awesome Nest / Boilerplates d'exemples](https://github.com/nestjs/awesome-nestjs?tab=readme-ov-file#boilerplate)
+- [Awesome Nest / Exemples de boilerplates](https://github.com/nestjs/awesome-nestjs?tab=readme-ov-file#boilerplate)

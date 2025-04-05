@@ -2,19 +2,17 @@
 
 https://docs.nestjs.com/testing
 
-Il est très important de tester de manière la plus exhaustive possible les applications backend, car ce sont elles qui ont la résponsabilité de gerer et sécuriser les données, contrairement aux applications frontend.
+Tester de manière exhaustive les applications backend est crucial, car elles sont responsables de la gestion et de la sécurisation des données, contrairement aux applications frontend qui se concentrent principalement sur l'interface utilisateur.
 
-Autant il est assez complexe et fastidieux de tester programmatiquement des applications frontend, et on aura tendance à les tester manuellement, autant il sera plus compliqué de tester manuellement des applications backend, et cela peut rapidement devenir fastidieux.
+Si les tests manuels sont souvent privilégiés pour les applications frontend (où l'expérience visuelle est prépondérante), cette approche devient rapidement inefficace pour les backends. Les tests programmatiques sont donc indispensables pour garantir la fiabilité des applications backend, et sont généralement plus simples à mettre en œuvre que pour le frontend. L'intelligence artificielle peut d'ailleurs considérablement accélérer l'écriture de ces tests.
 
-Pour s'assurer que notre backend fonctionne correctement, il sera impératif de le tester programmatiquement, ce qui sera plus aisé que pour les applications frontend, nottament avec l'IA qui pourra nous aider à écrire des tests plus rapidement.
-
-NestJS propose un système de tests très simple et puissant qui nous facilitera la tache.
+NestJS intègre un système de tests robuste et intuitif qui facilite grandement cette tâche essentielle.
 
 ## Tests unitaires
 
-Les tests unitaires sont des tests qui testent une partie isolée du code.
+Les tests unitaires se concentrent sur des portions isolées du code.
 
-Ils testeront le bon fonctionnement de petites parties de l'applications, en prenant en compte les différents cas de figure qui peuvent se presenter, notamment par rapport aux differentes combinaisons d'arguments que les fonctions peuvent recevoir ou bien des differents contextes d'execution.
+Ils vérifient le bon fonctionnement de composants spécifiques de l'application, en prenant en compte différents scénarios d'utilisation, notamment les diverses combinaisons d'arguments que les fonctions peuvent recevoir et les différents contextes d'exécution possibles.
 
 ```ts
 // cat.service.spec.ts
@@ -44,7 +42,7 @@ describe("CatService", () => {
 
 ### Mocks
 
-Lorsque nous testerons des parties du code qui dépendent d'autres parties, nous devrons les mocker, c'est à dire isoler le code que nous testons du code que nous ne testons pas. Pour cela, nous modifieront le comportement des dépendances pour qu'elles se comportent comme nous le souhaitons dans le contexte de nos tests.
+Lorsque nous testons des composants qui dépendent d'autres parties du code, il est souvent nécessaire de créer des mocks. Cette technique permet d'isoler précisément le code testé en remplaçant ses dépendances par des implémentations contrôlées qui simulent le comportement attendu dans le contexte du test.
 
 ```ts
 // cat.controller.ts
@@ -59,7 +57,7 @@ export class CatController {
 }
 
 // cat.controller.spec.ts
-it("calls catService", async () => {
+it("calls catService with correct parameters", async () => {
   jest.spyOn(catService, "findAll").mockResolvedValue([]);
 
   const result = await controller.findAll();
@@ -69,13 +67,11 @@ it("calls catService", async () => {
 });
 ```
 
-## Tests d'integration (End to End)
+## Tests d'intégration (End to End)
 
-Les tests d'integration sont des tests qui testent l'ensemble du code, en lançant l'application (presque) telle qu'elle serait lancée en production, et en simulant les requetes HTTP et en testant les réponses. L'application est donc testée de bout en bout, en prenant en compte tous les composants, leurs interactions et leurs dépencances tels que les bases de données.
+Les tests d'intégration évaluent l'application dans son ensemble, en la démarrant dans un environnement proche de la production. Ils simulent des requêtes HTTP réelles et vérifient les réponses obtenues. Ces tests examinent l'application de bout en bout, incluant tous les composants, leurs interactions et les dépendances externes comme les bases de données.
 
-Ils sont très utiles pour tester l'ensemble du code, mais sont plus lents à executer et plus difficiles à écrire.
-
-On sera moins exhaustif dans les combinaisons de possibilités, mais on testera au moins les scenarios d'usage principaux et exigences de securités.
+Bien que plus complexes à élaborer et plus lents à exécuter que les tests unitaires, ils sont essentiels pour valider le comportement global de l'application. Ils se concentrent généralement sur les principaux scénarios d'utilisation et les exigences critiques de sécurité plutôt que sur une couverture exhaustive de toutes les possibilités.
 
 ```ts
 describe("AppController (e2e)", () => {
@@ -91,30 +87,35 @@ describe("AppController (e2e)", () => {
     server = app.getHttpServer();
   });
 
-  it("Health check", () => {
+  it("Health check should return OK", () => {
     request(server).get("/").expect(200).expect("OK");
   });
 
-  describe("Breed", () => {
-    it("should create and get all breeds", async () => {
+  describe("Breed API", () => {
+    it("should create a new breed and retrieve it in the list", async () => {
+      // Données de test pour la race de chat
       const inputBreed = {
         name: "Persian",
         description: "A fluffy breed",
       };
-      const res = await request(server)
+
+      // Test de création d'une race
+      const createResponse = await request(server)
         .post("/breed")
         .send(inputBreed)
         .expect(201);
 
-      const createdBreed = res.body;
+      const createdBreed = createResponse.body;
       expect(createdBreed.name).toBe(inputBreed.name);
       expect(createdBreed.description).toBe(inputBreed.description);
       expect(createdBreed.id).toBeDefined();
-      expect(createdBreed.seed).not.toBeDefined();
+      expect(createdBreed.seed).not.toBeDefined(); // Vérifie que les champs privés ne sont pas exposés
 
-      const res = await request(server).get("/breed").expect(200);
+      // Test de récupération de toutes les races
+      const getAllResponse = await request(server).get("/breed").expect(200);
 
-      expect(res.body).toContainEqual(createdBreed);
+      // Vérifie que la race créée est bien présente dans la liste
+      expect(getAllResponse.body).toContainEqual(createdBreed);
     });
   });
 });

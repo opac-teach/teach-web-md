@@ -1,15 +1,15 @@
 # API REST
 
-La fonctionnalité principale de NestJS est de permettre la création d’API REST complètes et scalables.
+L'une des fonctionnalités principales de NestJS est la création d'API REST robustes, complètes et évolutives.
 
-## Controlleurs
+## Contrôleurs
 
 https://docs.nestjs.com/controllers
 
-Les composants qui définiront les routes et recevront les requetes seront les **Controlleurs**
+Les **Contrôleurs** sont les composants qui définissent les routes et traitent les requêtes entrantes.
 
 ```ts
-@Controller("cat") // route '/cat'
+@Controller("cat") // définit la route de base '/cat'
 export class CatController {
   constructor(private catService: CatService) {}
 
@@ -38,15 +38,15 @@ export class CatController {
 }
 ```
 
-## DTOs
+## DTOs (Data Transfer Objects)
 
-Les DTOs serviront de definition de types pour toutes les données que recevra et retournera l’API.
+Les DTOs définissent la structure des données échangées par l'API, tant pour les requêtes entrantes que pour les réponses.
 
-Ils se distinguent des modèles de base de données pour définir uniquement les types de données échangés par le service.
+Ils sont distincts des modèles de base de données et se concentrent uniquement sur les données nécessaires aux échanges avec le client.
 
-[class-transformer](https://github.com/typestack/class-transformer): Utilisé pour définir des structures afin de les serialiser/deserialier, c’est à dire les transformer entre un objet et une classe.
+[class-transformer](https://github.com/typestack/class-transformer): Utilisé pour la sérialisation et désérialisation des données, c'est-à-dire la transformation entre objets JSON et instances de classes.
 
-[class-validator](https://github.com/typestack/class-validator): Permet de définir le type des proprietés d’une classe, définir les valeurs qu’elles peuvent prendre et les valider.
+[class-validator](https://github.com/typestack/class-validator): Permet de définir et valider les types et contraintes des propriétés d'une classe.
 
 ```ts
 // cat.dto.ts
@@ -77,22 +77,22 @@ class CatResponseDto {
 
 https://docs.nestjs.com/techniques/validation
 
-Une fois ques les DTOs sont définis et que les controlleurs définissent les données entrantes, on peut s'assurer qu'elles sont valides en utilisant un pipe de validation.
+Une fois les DTOs définis et utilisés dans les contrôleurs, nous pouvons valider automatiquement les données entrantes grâce à un pipe de validation.
 
 ```ts
 app.useGlobalPipes(
   new ValidationPipe({
-    whitelist: true, // will remove any properties that are not defined in the DTO
-    transform: true, // will convert incoming values to the correct types
+    whitelist: true, // supprime les propriétés non définies dans le DTO
+    transform: true, // convertit les valeurs entrantes aux types appropriés
   })
 );
 ```
 
-### Serialisation des données sortantes
+### Sérialisation des données sortantes
 
 https://docs.nestjs.com/techniques/serialization
 
-Afin de serialiser les données sortantes, on peut utiliser un intercepteur.
+Pour contrôler le format des données renvoyées par l'API, nous pouvons utiliser un intercepteur de sérialisation.
 
 ```ts
 app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
@@ -102,20 +102,20 @@ app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
 https://docs.nestjs.com/exception-filters
 
-A tout moment dans l’application, on peut stopper une requete et retourner une erreur en lancant une exception.
+À tout moment dans l'application, il est possible d'interrompre le traitement d'une requête et de renvoyer une erreur en lançant une exception.
 
 ```tsx
 throw new HttpException("Forbidden", HttpStatus.FORBIDDEN);
 throw new ForbiddenException();
 ```
 
-## OpenAPI
+## OpenAPI / Swagger
 
 https://docs.nestjs.com/openapi/introduction
 
-Tout bon backend qui se respecte doit fournir une documentation de son API, et la norme est aujourd'hui OpenAPI.
+Toute API professionnelle doit fournir une documentation complète, et la norme actuelle est OpenAPI.
 
-NestJS possède un outil très pratique pour générer une documentation OpenAPI à partir de l'application via la librairie Swagger. Il suffit d'annoter les controlleurs et les DTOs avec des decorateurs pour décrire les routes et les types de données.
+NestJS intègre nativement la génération de documentation OpenAPI via la bibliothèque Swagger. Il suffit d'annoter les contrôleurs et les DTOs avec des décorateurs spécifiques pour décrire les routes et les structures de données.
 
 ```ts
 // cat.controller.ts

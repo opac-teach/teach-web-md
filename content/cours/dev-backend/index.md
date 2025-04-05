@@ -1,5 +1,5 @@
-# Developpement Backend
+# Développement Backend
 
-Ce cours est une introduction au développement backend.
+Ce cours constitue une introduction au développement d'applications backend.
 
-Il sera presenté ici quelques notions fondamentales sur le developpement backend, principalement autour de l'ecosystème NodeJS.
+Il présente les concepts fondamentaux du développement côté serveur, en se concentrant principalement sur l'écosystème NodeJS et ses technologies associées.

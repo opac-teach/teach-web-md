@@ -21,13 +21,13 @@ Il existe donc trois types de librairies différentes :
 - Les librairies d'UI pur (HeadlessUI, Radix)
 - Les librairies de style + UI (Material Design, shadcn, daisyUI)
 
-Ces librairies pourront être spécifique à un framework (react, vue), ou bien utilisable peut importe le framework utilisé.
+Ces librairies pourront être spécifiques à un framework (react, vue), ou bien utilisables peu importe le framework utilisé.
 
 ## Design System
 
-Lorsqu'une application grandit, il est important de s'assurer que son design soit cohérent à la chartre graphique de l'entreprise. Les designers vont alors créer un design system, qui sera utilisé par les développeurs pour construire l'ensemble des composants d'interface.
+Lorsqu'une application grandit, il est important de s'assurer que son design soit cohérent à la charte graphique de l'entreprise. Les designers vont alors créer un design system, qui sera utilisé par les développeurs pour construire l'ensemble des composants d'interface.
 
-Les librairies de styles et de composant pourront être personalisés pour respecter le design system (typographie, couleurs, espacements, etc).
+Les librairies de styles et de composants pourront être personnalisées pour respecter le design system (typographie, couleurs, espacements, etc).
 
 ## Libraries
 

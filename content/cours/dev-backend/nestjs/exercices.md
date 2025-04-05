@@ -1,84 +1,109 @@
 # Exercices
 
-### Preparation
+## Préparation
 
-Ces exercices seront à réaliser par dessus le projet d'exemple.
+Ces exercices doivent être réalisés en se basant sur le projet d'exemple fourni.
 
-- Forker le [Projet NestJS](https://github.com/opac-teach/nest-demo) sur votre compte github,
-- Cloner le fork sur votre machine
-- Créer une nouvelle branche et faire vos modifications dessus.
+Pour commencer :
 
-Une fois le travail réalisé, vous pourrez creer une pull request sur le projet original.
+1. Forker le [Projet NestJS](https://github.com/opac-teach/nest-demo) sur votre compte GitHub
+2. Cloner votre fork sur votre machine locale
+3. Créer une nouvelle branche pour vos modifications
 
-### Exigences techniques
+Une fois votre travail terminé, vous pourrez créer une pull request vers le projet original.
 
-- Le code devra être propre et bien structuré.
-- Le serveur devra exposer une specification OpenAPI exhaustive.
-- Les données sensibles devront êtres securisées et masquées aux clients non-concernés.
-- Chaque fonctionnalité devra être couverte par des tests.
-- Des tests d'integration devront être réalisés sur des scenarions d'utilisations minimum
+## Exigences techniques
+
+- Le code doit être propre, bien structuré et respecter les conventions de NestJS
+- L'API doit exposer une spécification OpenAPI complète et précise
+- Les données sensibles doivent être sécurisées et masquées aux utilisateurs non autorisés
+- Chaque fonctionnalité doit être couverte par des tests unitaires appropriés
+- Des tests d'intégration doivent valider les principaux scénarios d'utilisation
 
 # Tâches
 
-> Les taches proposées ici sont des idées, vous aurez le droit de dévier des specifications proposées à votre guise, tant que les fonctionnalités principales sont présentes, fonctionnelles et que le code est de qualité.
+> Les tâches proposées ci-dessous sont des suggestions. Vous pouvez adapter les spécifications selon votre vision, tant que les fonctionnalités principales sont implémentées correctement et que la qualité du code est maintenue.
 
-## 1. Utilisateurs
+## 1. Gestion des utilisateurs
 
-Modifier le projet pour ajouter une entité utilisateur.
-Les utilisateurs pourront avoir des informations de profil de votre choix tel qu'un nom d'utilisateur ou une description.
+Étendre le projet pour intégrer une entité utilisateur complète.
 
-- Creer une relation entre les chats et les utilisateurs. Chaque chat appartient à un seul utilisateur, et les utilisateurs peuvent posseder plusieurs chats.
-- Creer les routes CRUD correspondantes.
-- Creer des routes qui permettent de rechercher des chats par proprietaire et rajouter l'utilisateur lors de la recuperation des chats.
+**Objectifs :**
 
-## 2. Authentification
+- Créer une entité utilisateur avec des informations de profil pertinentes (nom d'utilisateur, description, etc.)
+- Établir une relation entre les chats et les utilisateurs : chaque chat appartient à un seul utilisateur, et un utilisateur peut posséder plusieurs chats
+- Développer les routes CRUD pour la gestion des utilisateurs
+- Implémenter des fonctionnalités de recherche permettant de filtrer les chats par propriétaire et d'inclure les données utilisateur lors de la récupération des informations sur les chats
 
-Creer un système d'authentification pour l'application.
+## 2. Système d'authentification
 
-- Determiner les informations nécessaires pour chaque utilisateur et les ajouter à son entité.
-- Creer le systeme d'authentification, les routes et toutes autres ressources nécessaires qui permettra de securiser l'application.
-- Modifier les routes CRUD existantes pour qu'elles soient protégées par le système d'authentification, selon les besoins de chacune d'elles.
-  - Par exemple, seuls les utilisateurs peuvent modifier ou supprimer leurs propre profil, et les routes pour la gestions des chats/races doivent être accessibles aux utilisateurs authentifiés uniquement.
-  - Lorsqu'un chat est créé, il doit être associé à l'utilisateur qui crée le chat.
+Mettre en place un système d'authentification sécurisé pour l'application.
 
-## 3.Commentaires
+**Objectifs :**
 
-Ajouter la possibilité aux utilisateurs de poster des commentaires sur les chats.
+- Définir et implémenter les attributs nécessaires dans l'entité utilisateur (email, mot de passe hashé, etc.)
+- Développer le système d'authentification complet avec inscription, connexion, et gestion des jetons
+- Sécuriser les routes existantes en fonction des besoins d'authentification :
+  - Restreindre la modification ou suppression des profils aux propriétaires respectifs
+  - Limiter l'accès aux fonctionnalités de gestion des chats/races aux utilisateurs authentifiés
+  - Associer automatiquement un chat nouvellement créé à l'utilisateur authentifié qui effectue la création
 
-- Creer les relations et les routes necessaires.
-- Les commentaires doivent être associés à un utilisateur et un chat.
-- Les utilisateurs ne peuvent modifier ou supprimer que leurs propres commentaires.
+## 3. Système de commentaires
 
-## 4. Croisement de chats
+Permettre aux utilisateurs d'interagir via des commentaires sur les profils de chats.
 
-Creer une route pour faire croiser deux chats existants, qui créera un (ou plusieurs) nouveau(x) chaton(s).
+**Objectifs :**
 
-- Les deux chats doivent appartenir à l'utilisateur connecté.
-- Si les deux chats sont de la même race, le nouveau chat créé sera de cette race.
-- Si les deux chats sont de races différentes, une nouvelle race sera créée avec une seed qui est une combinaison des seeds des deux parents.
-- [OU] Si plusieurs chatons sont créés, on pourra attribuer aléatoirement une des deux races des parents à chaque chaton.
+- Concevoir l'entité commentaire avec les relations appropriées
+- Créer les routes nécessaires pour gérer les commentaires (création, lecture, modification, suppression)
+- Établir les relations entre commentaires, utilisateurs et chats
+- Implémenter les règles de sécurité pour que les utilisateurs ne puissent modifier ou supprimer que leurs propres commentaires
 
-## 5. Croisement entre utilisateurs
+## 4. Fonctionnalité de reproduction féline
 
-Augmenter le systeme de croisement pour autoriser le croisement entre chats de differents proprietaires.
+Développer un système permettant le croisement de chats pour créer de nouveaux chatons.
 
-- Determiner le système d'acceptation des croisements (demande, approbation, refus, etc.)
-- Creer les entités et les routes necessaires pour gerer les demandes de croisement et les executer.
+**Objectifs :**
 
-## 6. Modèle conceptuel de données
+- Créer une route dédiée au croisement de deux chats existants
+- Vérifier que les deux chats appartiennent à l'utilisateur connecté
+- Gérer l'hérédité des races :
+  - Si les parents sont de même race, le chaton hérite de cette race
+  - Si les parents sont de races différentes, créer une nouvelle race avec une seed dérivée des races parentales
+  - Alternativement, permettre la création de plusieurs chatons avec attribution aléatoire des races parentales
 
-Elaborer un modèle conceptuel de données pour l'application qui represente les entités et leur relations.
+## 5. Croisement inter-propriétaires
 
-Réaliser le diagramme en langage UML et l'integrer dans le projet dans un fichier Markdown.
+Enrichir le système de reproduction pour permettre des croisements entre chats de différents propriétaires.
 
-Vous pouvez vous aider de la [documentation de Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
+**Objectifs :**
 
-## 7. Rôles
+- Concevoir un système de demande et d'approbation pour les croisements (requête, acceptation, refus)
+- Développer les entités et routes nécessaires à la gestion des demandes de croisement
+- Implémenter la logique d'exécution des croisements approuvés et la gestion de la propriété des chatons résultants
 
-Creer un système de rôles pour l'application.
+## 6. Modélisation des données
 
-- Creer les rôles et les routes necessaires pour gerer les rôles des utilisateurs.
-- Modifier le système d'authentification pour qu'il utilise les rôles.
-- Creer/modifier les routes qui ne sont accessibles qu'aux utilisateurs ayant un rôle donné.
+Élaborer une représentation visuelle de l'architecture de données de l'application.
 
-Par exemple, creer un role administrateur qui aura accès à toutes les routes de modification de données, pourra gerer les autres administrateurs et modérateurs, et un role moderateur qui pourra modifier et supprimer les commentaires de n'importe quel utilisateur.
+**Objectifs :**
+
+- Créer un diagramme UML présentant les entités et leurs relations
+- Intégrer ce diagramme dans un fichier Markdown au sein du projet
+- Utiliser la syntaxe [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) pour une visualisation claire et interactive
+
+## 7. Système de rôles et permissions
+
+Implémenter un système de contrôle d'accès basé sur les rôles.
+
+**Objectifs :**
+
+- Définir différents rôles utilisateur avec leurs permissions respectives
+- Adapter le système d'authentification pour intégrer la gestion des rôles
+- Créer ou modifier les routes pour restreindre l'accès en fonction des rôles
+
+**Exemple de hiérarchie de rôles :**
+
+- **Administrateur** : accès complet à toutes les fonctionnalités, gestion des rôles utilisateur
+- **Modérateur** : capacité à modérer les commentaires de tous les utilisateurs
+- **Utilisateur standard** : accès limité aux fonctionnalités de base

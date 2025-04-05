@@ -65,6 +65,7 @@ Vous devrez implementer le maximum de fonctionnalités possibles au vu de ce que
 - SEO, sitemap et metadata
 - Bonne UX
 - Utilisation stricte de Typescript
+- Bonne couverture de test
 
 ### Implementation de reference
 

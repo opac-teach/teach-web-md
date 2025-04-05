@@ -1,26 +1,27 @@
-# Projet d'example
+# Projet d'exemple
 
-Vous retrouverez un projet d'exemple montrant la plupart des fonctionnalités de NestJS dans le depot github [nest-demo](https://github.com/opac-teach/nest-demo).
+Un projet de démonstration illustrant les principales fonctionnalités de NestJS est disponible dans le dépôt GitHub [nest-demo](https://github.com/opac-teach/nest-demo).
 
 ## Structure du projet
 
-Cette application basique gère une base de données de chats et de races de chats.
+Cette application de démonstration implémente un système de gestion de chats et de races félines, permettant de comprendre les concepts fondamentaux de NestJS dans un contexte concret.
 
-### Techniques utilisées
+### Technologies et concepts mis en œuvre
 
-- API REST
-- Données stockées dans PostgreSQL via TypeORM
-- Specification OpenAPI
-- Validation des données entrantes et serialisation des sortantes
-- Tests unitaires
-- Tests d'intégration
-- Un serveur WebSocket
-- Un Guard d'exemple qui renvoie aléatoirement une erreur
-- Un Middleware de logging
+- API REST complète avec CRUD
+- Persistance des données dans PostgreSQL via TypeORM
+- Documentation interactive avec OpenAPI/Swagger
+- Validation rigoureuse des données entrantes et sérialisation contrôlée des réponses
+- Couverture de code par tests unitaires
+- Validation fonctionnelle par tests d'intégration
+- Communication en temps réel via WebSockets
+- Démonstration des Guards avec un exemple de contrôle d'accès aléatoire
+- Middleware de journalisation des requêtes
+- Application séparée en mode microservice qui permet de calcul de la couleur des chats
 
-### Fonctionnalités
+### Fonctionnalités métier
 
-- Creer/modifier/supprimer des chats
-- Creer/modifier/supprimer des races de chats
-- Notification en temps réél de l'ajout ou modification de chats ou de races
-- Les races possèdent une seed (secrète) qui permet de generer la couleur du chat lors de sa création, les chats de la même race ayant des couleurs similaires
+- Gestion complète des chats (création, modification, suppression, consultation)
+- Gestion complète des races félines (création, modification, suppression, consultation)
+- Système de notifications en temps réel lors de l'ajout ou la modification d'entités
+- Mécanisme avancé : les races possèdent une valeur seed (non exposée dans l'API) qui détermine la génération des couleurs des chats, assurant que les chats d'une même race présentent des caractéristiques chromatiques similaires
