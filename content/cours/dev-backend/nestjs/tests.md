@@ -67,6 +67,20 @@ it("calls catService with correct parameters", async () => {
 });
 ```
 
+### Coverage
+
+Les outils de tests proposent une analyse de la couverture du code, c'est à dire le pourcentage de code qui est testé. Cela permet de rapidement découvrir les zones de code qui ne sont pas testés pour assurer que tous les scenarios possibles sont pris en compte.
+
+Pour lancer le test avec la couverture, il faut lancer la commande suivante:
+
+```bash
+npm run test:cov
+```
+
+Un dossier `coverage` sera créé contenant les rapports de couverture, avec des fichiers descriptifs pour les outils de CI et des pages html pour le developpeur.
+
+![Coverage](./assets/cov.jpg)
+
 ## Tests d'intégration (End to End)
 
 Les tests d'intégration évaluent l'application dans son ensemble, en la démarrant dans un environnement proche de la production. Ils simulent des requêtes HTTP réelles et vérifient les réponses obtenues. Ces tests examinent l'application de bout en bout, incluant tous les composants, leurs interactions et les dépendances externes comme les bases de données.
