@@ -18,6 +18,9 @@ features:
   - title: Développement Frontend
     details: Apprenez les fondamentaux du développement web moderne
     link: /cours/dev-frontend
+  - title: Développement Backend
+    details: Apprenez les fondamentaux du développement backend
+    link: /cours/dev-backend
   # - title: C/C++
   #   details: Apprenez les fondamentaux du développement bas niveau
   #   link: /cours/c-cpp
