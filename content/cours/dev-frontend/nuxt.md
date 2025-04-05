@@ -12,6 +12,7 @@
 
 - [Pinia](https://pinia.vuejs.org/) (store management)
 - [Nuxt Test Utils](https://nuxt.com/docs/getting-started/testing) (tests unitaires et e2e pour app Nuxt)
+- [Nuxt Security](https://nuxt-security.vercel.app/) (Securisation d'app facile)
 
 ### UI
 

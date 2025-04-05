@@ -46,6 +46,8 @@ const object = { n1: 10, n2: 20 };
 console.log(calculate_average(object)); // 🚨 Compilation error: expected Array<number>
 ```
 
+[Cheatsheet TypeScript](https://cheatsheets.zip/typescript)
+
 ## Qualité de code
 
 ### ESLint

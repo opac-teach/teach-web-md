@@ -1,7 +1,7 @@
 export default {
   cours: [
     { text: "Dev Frontend", link: "/cours/dev-frontend" },
-    // { text: "Dev Backend", link: "/cours/dev-backend" },
+    { text: "Dev Backend", link: "/cours/dev-backend" },
     // { text: "C/C++", link: "/cours/c-cpp" },
   ],
 
@@ -56,8 +56,43 @@ export default {
     ],
     "/cours/dev-backend": [
       {
+        text: "Generalités",
+        items: [
+          { text: "Introduction", link: "/cours/dev-backend/index" },
+          { text: "JavaScript", link: "/cours/dev-backend/js" },
+          { text: "Architectures", link: "/cours/dev-backend/architectures" },
+        ],
+      },
+      {
         text: "NestJS",
-        items: [{ text: "Introduction", link: "/cours/dev-backend/nestjs" }],
+        items: [
+          {
+            text: "Leçons",
+            items: [
+              { text: "Introduction", link: "/cours/dev-backend/nestjs" },
+              {
+                text: "Découpage",
+                link: "/cours/dev-backend/nestjs/decoupage",
+              },
+              { text: "API REST", link: "/cours/dev-backend/nestjs/api-rest" },
+              { text: "ORM", link: "/cours/dev-backend/nestjs/orm" },
+              { text: "Tests", link: "/cours/dev-backend/nestjs/tests" },
+            ],
+          },
+          {
+            text: "En pratique",
+            items: [
+              {
+                text: "Projet d'example",
+                link: "/cours/dev-backend/nestjs/project-example",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/dev-backend/nestjs/exercices",
+              },
+            ],
+          },
+        ],
       },
     ],
   },
