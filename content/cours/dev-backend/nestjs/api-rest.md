@@ -154,3 +154,5 @@ const config = new DocumentBuilder()
 const documentFactory = () => SwaggerModule.createDocument(app, config);
 SwaggerModule.setup("swagger", app, documentFactory);
 ```
+
+La documentation sera accessible à l'URL `/swagger`, et la specification OpenAPI sera disponible sous forme de JSONà l'URL `/swagger-json`.

@@ -1,6 +1,7 @@
 # Tests
 
-https://docs.nestjs.com/testing
+- https://docs.nestjs.com/testing
+- https://jestjs.io/
 
 Tester de manière exhaustive les applications backend est crucial, car elles sont responsables de la gestion et de la sécurisation des données, contrairement aux applications frontend qui se concentrent principalement sur l'interface utilisateur.
 
@@ -82,6 +83,8 @@ Un dossier `coverage` sera créé contenant les rapports de couverture, avec des
 ![Coverage](./assets/cov.jpg)
 
 ## Tests d'intégration (End to End)
+
+https://ladjs.github.io/superagent/
 
 Les tests d'intégration évaluent l'application dans son ensemble, en la démarrant dans un environnement proche de la production. Ils simulent des requêtes HTTP réelles et vérifient les réponses obtenues. Ces tests examinent l'application de bout en bout, incluant tous les composants, leurs interactions et les dépendances externes comme les bases de données.
 
