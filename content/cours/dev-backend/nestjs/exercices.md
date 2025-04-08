@@ -109,3 +109,33 @@ Implémenter un système de contrôle d'accès basé sur les rôles.
 - **Administrateur** : accès complet à toutes les fonctionnalités, gestion des rôles utilisateur
 - **Modérateur** : capacité à modérer les commentaires de tous les utilisateurs
 - **Utilisateur standard** : accès limité aux fonctionnalités de base
+
+## 8. Deplacement de chats
+
+Creer un systeme où les chats possèdent une position sur un plateau peuvent être déplacés par leur propriétaire.
+
+Ce système devra utiliser uniquement les websockets pour les communications.
+
+- Le propriétaire pourra demander à deplacer son chat
+- Tous les déplacements devront être notifiés à tous utilisateurs connectés
+- Les utilisateurs pourront demander la position actuelle de tous les chats
+
+## 9. Statistiques
+
+Creer un systeme de statistiques pour l'application sous forme de micro service (à rajouter dans le projet `/app-microservice`).
+
+Ce micro service devra réagir aux modifications effectuées en bases de données (création, modification, suppression, déplacement) des chats, et calculer des statistiques.
+
+Les statistiques doivent être enregistrées en base de données et retournées par l'API REST.
+
+Exemples de statistiques
+
+- Moyenne du nombre de chats par utilisateur
+- Moyenne de nombre de chats par race
+- Race avec le plus de chats
+- Utilisateur avec le plus de chats
+- ...
+
+# Et plus ...
+
+Si vous cherchez de nouvelles techniques à apprendre, vous pouvez regarder la [todolist du projet d'exemple](https://github.com/opac-teach/nest-demo/blob/main/app/README.md#todo) et essayer d'implémenter une ou plusieurs de ces fonctionnalités.

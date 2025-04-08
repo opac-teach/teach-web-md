@@ -77,6 +77,14 @@ export default {
               { text: "API REST", link: "/cours/dev-backend/nestjs/api-rest" },
               { text: "ORM", link: "/cours/dev-backend/nestjs/orm" },
               { text: "Tests", link: "/cours/dev-backend/nestjs/tests" },
+              {
+                text: "Microservices",
+                link: "/cours/dev-backend/nestjs/microservices",
+              },
+              {
+                text: "Websockets",
+                link: "/cours/dev-backend/nestjs/ws",
+              },
             ],
           },
           {
