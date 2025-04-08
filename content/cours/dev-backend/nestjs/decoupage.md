@@ -4,6 +4,17 @@ NestJS impose une structure modulaire précise pour organiser chaque composant d
 
 Cette architecture stricte favorise une organisation claire du code, améliore la collaboration en équipe, garantit une meilleure qualité de développement et assure une forte évolutivité du projet.
 
+```
+src/
+  |__user/
+  |      |__user.entity.ts
+  |      |__user.service.ts
+  |      |__user.controller.ts
+  |      |__user.module.ts
+  |__app.module.ts
+  |__main.ts
+```
+
 ## Modules
 
 https://docs.nestjs.com/modules

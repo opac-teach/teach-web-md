@@ -118,10 +118,11 @@ Le but d'un framework est de garantir cette mise à jour et de faire en sorte qu
 
 Chaque framework a sa façon de faire et c'est le plus compliqué à apprendre lorsque l'on passe d'un framework à un autre, même si globalement le principe reste le même : **utiliser des variables observables** (être notifié quand elles changent de valeur afin de mettre à jour l'affichage).
 
-> Voir [Panorama des frameworks populaires](https://www.notion.so/Panorama-des-frameworks-populaires-1b0c82462eb580258116f6b4e54b5efb?pvs=21) pour comparer les différentes implémentations de réactivité des frameworks.
+> Voir [Panorama des frameworks populaires](./ecosysteme#panorama-des-frameworks-populaires) pour comparer les différentes implémentations de réactivité des frameworks.
 
 ::: info 💡
-💡
+
+Il est vivement recommandé de consulter les explications sur la reactivité dans la documentation officielle du framework que vous utilisez.
 
 [https://vuejs.org/guide/extras/reactivity-in-depth.html](https://vuejs.org/guide/extras/reactivity-in-depth.html)
 

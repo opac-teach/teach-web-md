@@ -59,7 +59,7 @@ Permettre aux utilisateurs d'interagir via des commentaires sur les profils de c
 - Établir les relations entre commentaires, utilisateurs et chats
 - Implémenter les règles de sécurité pour que les utilisateurs ne puissent modifier ou supprimer que leurs propres commentaires
 
-## 4. Fonctionnalité de reproduction féline
+## 4. Croisements entre chats
 
 Développer un système permettant le croisement de chats pour créer de nouveaux chatons.
 
@@ -74,7 +74,7 @@ Développer un système permettant le croisement de chats pour créer de nouveau
 
 ## 5. Croisement inter-propriétaires
 
-Enrichir le système de reproduction pour permettre des croisements entre chats de différents propriétaires.
+Enrichir le système de croisement pour permettre des croisements entre chats de différents propriétaires.
 
 **Objectifs :**
 
