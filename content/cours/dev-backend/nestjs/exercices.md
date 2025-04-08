@@ -59,6 +59,8 @@ Permettre aux utilisateurs d'interagir via des commentaires sur les profils de c
 - Établir les relations entre commentaires, utilisateurs et chats
 - Implémenter les règles de sécurité pour que les utilisateurs ne puissent modifier ou supprimer que leurs propres commentaires
 
+> Penser à supprimer les commentaires de l'utilisateur lors de sa suppression via une transaction.
+
 ## 4. Croisements entre chats
 
 Développer un système permettant le croisement de chats pour créer de nouveaux chatons.
