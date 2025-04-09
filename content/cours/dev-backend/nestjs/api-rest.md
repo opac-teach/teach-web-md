@@ -98,6 +98,16 @@ Pour contrôler le format des données renvoyées par l'API, nous pouvons utilis
 app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 ```
 
+> **Attention**: Si un service renvoie un `Entity` alors que le controlleur renvoie un DTO, même si les deux classes sont compatibles, il faudra explicitement indiquer quelle classe doit être utilisée pour la sérialisation avec `SerializeOptions`.
+
+```ts
+@SerializeOptions({type: CatResponseDto})
+@Get()
+findAll(): Promise<CatResponseDto[]> {
+  return this.catService.findAll();
+}
+```
+
 ## Exceptions
 
 https://docs.nestjs.com/exception-filters
