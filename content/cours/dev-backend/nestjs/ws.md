@@ -6,6 +6,17 @@ Les websockets sont un protocole de communication bidirectionnel et full-duplex 
 
 Contrairement aux API REST, ou le client doit systèmatiquement requêter le serveur pour obtenir des informations à jour, les websockets permettent de maintenir une connexion persistante entre le client et le serveur, permettant ainsi de recevoir des notifications en temps réel émises par le serveur.
 
+```mermaid
+sequenceDiagram
+    participant F as Frontend
+    participant B as Backend API
+    F->>B: Requête HTTP
+    B->>F: Réponse JSON
+    F<<-->>B: WebSocket
+    F->>F: Mise à jour État
+    F->>F: Rendu UI
+```
+
 ## Implémentation
 
 https://docs.nestjs.com/websockets/gateways
