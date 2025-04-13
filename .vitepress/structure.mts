@@ -19,6 +19,7 @@ export default {
           { text: "Hebergement", link: "/cours/dev-frontend/hebergement" },
           { text: "Styling", link: "/cours/dev-frontend/styling" },
           { text: "SEO", link: "/cours/dev-frontend/seo" },
+          { text: "Sécurité", link: "/cours/dev-frontend/securite" },
           { text: "Approfondir", link: "/cours/dev-frontend/approfondir" },
         ],
       },

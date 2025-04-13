@@ -11,6 +11,8 @@
   - Peut poser des problèmes de SEO si mal implémenté
   - Consommation de ressources côté client
 
+#### Page HTML retournée par le serveur en CSR
+
 ```tsx
 <!DOCTYPE html>
 <html lang="">
@@ -40,6 +42,8 @@
 
 > React a récemment introduit le concept de server component, que Next utilise maintenant nativement.
 
+#### Page HTML retournée par le serveur en SSR
+
 ```html
 <!DOCTYPE html>
 <html lang="">
@@ -64,7 +68,6 @@
 ```
 
 ::: info 💡
-💡
 
 **Hydration**
 
@@ -100,7 +103,7 @@ Il est possible de combiner toutes ces techniques : on peut pré-rendre le conte
 
 - **Différences entre environnements** : Le code doit s'exécuter à la fois côté serveur (Node.js) et côté client (navigateur), avec des API différentes.
 - **Répartition de l'état** : L'application tourne sur deux machines en même temps (client et serveur), certaines données sont accessibles d'un côté et pas de l'autre, synchronisation des deux.
-- **Accès aux API navigateur** : Les API spécifiques au navigateur (`window`, `document`, `localStorage`, `web3`) ne sont pas disponibles côté serveur.
+- **Accès aux API navigateur** : Les API spécifiques au navigateur (`window`, `document`, `localStorage`, `web3`) ne sont pas disponibles côté serveur, et `fetch` est different.
 - **Gestion des imports conditionnels** : Nécessité de charger différents modules selon l'environnement d'exécution.
 - **Charge serveur accrue** : Génération de HTML pour chaque requête, augmentant la charge CPU et mémoire.
 - **Techniques en constante évolution** : Les façons de développer un site en SSR évoluent très vite et il est facile d'être perdu dans les mises à jour des frameworks.
