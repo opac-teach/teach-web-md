@@ -2,7 +2,7 @@ export default {
   cours: [
     { text: "Dev Frontend", link: "/cours/dev-frontend" },
     { text: "Dev Backend", link: "/cours/dev-backend" },
-    // { text: "C/C++", link: "/cours/c-cpp" },
+    { text: "C/C++", link: "/cours/c-cpp" },
   ],
 
   sidebar: {
@@ -47,11 +47,41 @@ export default {
     "/cours/c-cpp": [
       {
         text: "Langage C",
-        items: [{ text: "Cours", link: "/cours/c-cpp/langage-c" }],
+        items: [
+          {
+            text: "Bases",
+            items: [
+              { text: "Cours", link: "/cours/c-cpp/langage-c" },
+              { text: "Cheatsheet", link: "/cours/c-cpp/langage-c-cheatsheet" },
+              { text: "Exercices", link: "/cours/c-cpp/langage-c-exercices" },
+            ],
+          },
+          {
+            text: "Avancé",
+            items: [
+              { text: "Cours", link: "/cours/c-cpp/langage-c-avance" },
+              {
+                text: "Cheatsheet",
+                link: "/cours/c-cpp/langage-c-avance-cheatsheet",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/c-cpp/langage-c-avance-exercices",
+              },
+              {
+                text: "Shaders",
+                link: "/cours/c-cpp/shaders",
+              },
+            ],
+          },
+        ],
       },
       {
         text: "Langage C++",
-        items: [{ text: "Cours", link: "/cours/c-cpp/langage-cpp" }],
+        items: [
+          { text: "Cours", link: "/cours/c-cpp/langage-cpp" },
+          { text: "Exercices", link: "/cours/c-cpp/langage-cpp-exercices" },
+        ],
       },
     ],
     "/cours/dev-backend": [

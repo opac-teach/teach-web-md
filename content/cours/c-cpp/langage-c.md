@@ -1,4 +1,8 @@
+# Langage C: Bases
+
 ## Ressources
+
+https://cheatsheets.zip/c
 
 ### Cours
 
@@ -12,15 +16,12 @@ https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c
 
 https://moodle.insa-lyon.fr/course/view.php?id=5199
 
-### Comptes à suivre
-
-https://x.com/7etsuo
-
 ### Exemples en cybersecurité
 
-https://wargames.ret2.systems/
+- https://wargames.ret2.systems/
+- https://overthewire.org/wargames/
 
-## Sommaire
+##
 
 # I. Introduction au Langage C
 
@@ -32,13 +33,16 @@ L'une des raisons de la popularité du C est sa flexibilité et sa portabilité.
 
 On considère le C comme un langage “mid-level”, car il n’est pas bas niveau à proprement parler car pas directement du langage machine, mais nécessite beaucoup d’efforts notamment en terme de gestion de la mémoire, donc il n’est plus considéré comme un langage de haut niveau.
 
-![Code Assembleur “Bas Niveau”](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/0f20ea65-0f19-4a6d-a6e2-2cb874d22a7d/96d1a98b-f4a4-44a8-837d-c71340a02487.png)
-
-Code Assembleur “Bas Niveau”
-
-![Code Python “Haut niveau”](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/4f86d037-d4fa-452b-8fa2-f678fe64bcc9/775b6fd4-9c40-43c0-a833-dac4cbac9630.png)
-
-Code Python “Haut niveau”
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+<div class="flex flex-col items-center">
+<img src="./assets/asm.png" alt="Code Assembleur “Bas Niveau”" style="width: 100%;">
+<p>Code Assembleur “Bas Niveau”</p>
+</div>
+<div class="flex flex-col items-center">
+<img src="./assets/python.png" alt="Code Python “Haut niveau”" style="width: 100%;">
+<p>Code Python “Haut niveau”</p>
+</div>
+</div>
 
 ## B. Les domaines d'application du C
 
@@ -59,8 +63,7 @@ Le langage C est utilisé dans une variété de domaines en raison de sa rapidit
 N’étant pas un langage moderne et simple, le C n’est pas utilisé pour beaucoup de choses aujourd’hui. En effet, certaines choses très rapides dans certains langages peuvent rapidement devenir très fastidieux en C. Quand on peut se permettre d’utiliser plus de ressources (calcul, mémoire, pas en embarqué par exemple), les développeurs vont se porter vers des langages plus modernes tels que Python.
 
 - Applications mobiles
-- Sites Web
-- Serveurs
+- Applications Web (Frontend/Backend)
 
 ## C. Le C et la Cybersécurité
 
@@ -112,6 +115,8 @@ Pour installer les outils nécessaires, suivre les instructions sur ce site:
 
 https://code.visualstudio.com/docs/languages/cpp
 
+> **TLDR**: Pour **windows**, Allez sur [cette page](https://visualstudio.microsoft.com/downloads/#remote-tools-for-visual-studio-2022) et telechargez "Build Tools for Visual Studio 2022"
+
 Si on ne souhaite pas utiliser Visual Studio, il faut au moins un éditeur de texte et le compilateur `gcc` à disposition
 
 _Conseil_: activer l’auto save: Aller dans Settings (Cmd/Ctrl + ,) chercher `auto save` et choisir `onFocusChange`
@@ -130,12 +135,12 @@ Voici un exemple simple d’un programme:
 // Fonction principale
 int main()
 {
-		/*
-	  Afficher un message dans le terminal
-		*/
-    printf("Hello world!\n");
+  /*
+  Afficher un message dans le terminal
+  */
+  printf("Hello world!\n");
 
-    return 0;
+  return 0;
 }
 ```
 
@@ -180,13 +185,13 @@ Avec les programmes compilés, l'exécution se fait en deux étapes :
 1. Le code source est d'abord transformé en langage machine.
 2. Ensuite le code transformé est directement exécuté dans le processeur
 
-La première étape, la transformation du code source en langage machine est appelée **compilation**. La sortie de la compilation est un fichier exécutable, typiquement un fichier `.exe` sous Windows. Voici quelques exemples de languages compilés : C, C++, C#, swift, Pascal...
+La première étape, la transformation du code source en langage machine est appelée **compilation**. La sortie de la compilation est un fichier exécutable, typiquement un fichier `.exe` sous Windows. Voici quelques exemples de langages compilés : C, C++, C#, swift, Pascal...
 
 ![](https://lucidar.me/fr/c-class/files/fr-compiled-languages.png)
 
 De manière générale, les langages compilés sont plus performants, car ils sont exécutés directement dans le processeur. Pour avoir un ordre de grandeur, cette [page](https://towardsdatascience.com/how-fast-is-c-compared-to-python-978f18f474c7) présente une comparaison entre Python et C++. Le même programme dure 15 minutes en Python, contre 30 secondes en C++. Le graphique ci-dessous donne un ordre de grandeur des ratios d'exécution des différents langages. On s'aperçoit que le C est 10 fois plus rapide que PHP 7 et 40 fois plus rapide que le même programme en Python.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/74a96640-3082-476a-a929-7c88079ff7c2/image.png)
+![image.png](./assets/bench-c.png)
 
 La contrepartie est la durée de compilation : si elle est généralement instantanée, elle peut parfois être beaucoup plus longue sur de gros projets. Par exemple la compilation d'un noyau Linux peut durer une dizaine d'heure. Évidemment, si le code source n'est pas modifié, il est inutile de relancer la compilation avant chaque exécution.
 
@@ -195,7 +200,6 @@ La contrepartie est la durée de compilation : si elle est généralement instan
 Le compilateur le plus connu pour le C s’appelle **gcc**. Il est exécutable en ligne de commande.
 
 ::: info 💡
-💡
 
 Ne pas confondre éditeur de code et compilateur:
 
@@ -247,8 +251,8 @@ Si le code que l’on essaie de compiler contient des erreurs, la compilation é
 ERROR!
 /tmp/wBHb2sextG.c:6:32: error: expected ';' before 'return'
 6 |     printf("Try [programiz.pro](http://programiz.pro/)")
-|                                ^
-|                                ;
+|                                                           ^
+|                                                           ;
 7 |
 8 |     return 0;
 |     ~~~~~~
@@ -377,7 +381,6 @@ Sur Visual studio, vous pouvez activer l’indentation automatique.
 Aller dans Settings (Cmd + ,) chercher `format on save` et activer Editor Format On Save
 
 ::: info 💡
-💡
 
 Lors des évaluations il est impératif de rendre un code propre, c’est a dire clair, bien indenté, bien commenté, sans superflu
 
@@ -430,7 +433,6 @@ En C, on peut distinguer 3 classes principales de types de variables :
 Chaque type de variable a un usage different et surtout prendra une place différente dans la mémoire. Plus il prendra de place dans la mémoire, plus ses valeurs pourront êtres elevées.
 
 ::: info 💡
-💡
 
 Avec 1 bit on peut compter jusqu’a 1, avec 2 bits, jusqu’à 3, 3 bits jusqu’à 7, etc…
 
@@ -606,8 +608,7 @@ scanf("%d", &age);
 printf("Vous avez %d ans.\n", age);
 ```
 
-::: info 💡
-🚧
+::: info 🚧
 
 Faire les exercices “Basiques”
 
@@ -617,7 +618,7 @@ Faire les exercices “Basiques”
 
 Les opérateurs permettent d’effectuer des opérations mathématiques entre plusieurs valeurs, telles que des additions ou des comparaisons.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/ca88742d-be45-42cf-9058-f8d98b69c2dc/image.png)
+![image.png](./assets/operator.png)
 
 ## A. Opérations arithmétiques
 
@@ -684,7 +685,6 @@ Le modulo est un opérateur qui retourne le **reste de la division euclidienne**
 C’est un opérateur très important en programmation et est très souvent utilisé, il est important de bien le maitriser.
 
 ::: info 💡
-💡
 
 ### **Rappel**
 
@@ -869,8 +869,7 @@ y1 = (b*2) % 4;
 y = a + (y1 > 3) + c;  // mieux en plusieurs lignes
 ```
 
-::: info 💡
-🚧
+::: info 🚧
 
 Faire les exercices “Opérateurs”
 
@@ -903,7 +902,7 @@ else {
 
 Si la _condition_ est vraie alors on exécutera le _bloc 1,_ sinon le _bloc 2._
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/0a409e0a-99c5-4f2c-bf2f-044cba2899bf/image.png)
+![condition](./assets/condition.png)
 
 Il est à noter que :
 
@@ -929,10 +928,9 @@ else {
 
 Si la _condition 1_ est vraie alors on exécutera le _bloc 1_, sinon si la _condition 2_ est vraie on exécutera le _bloc 2_, sinon le _bloc 3_
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/e020975a-c05f-42e9-b799-a23124ea5c49/image.png)
+![condition else](./assets/condition2.png)
 
-::: info 💡
-⚠️
+::: info ⚠️
 
 **Attention**: dans une structure `if ... else if ... else ...` **un seul des blocs sera executé**: le premier dont la condition est valide.
 
@@ -1042,7 +1040,7 @@ Ce code affichera les valeurs de `i` entre 0 et 9
 
 La boucle `while` est généralement utilisée quand une variable peut prendre des valeurs non régulières, mais que l’ont souhaite qu’elle respecte une condition
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/c44173ad-3a79-4728-bad8-fb61ab725e33/image.png)
+![image.png](./assets/boucle.png)
 
 ### do…while
 
@@ -1180,8 +1178,7 @@ int main(void)
 }
 ```
 
-::: info 💡
-🚧
+::: info 🚧
 
 Faire les exercices “Contrôles de flux”
 
@@ -1214,7 +1211,7 @@ Comme pour les variables, il n’est pas possible de créer plusieurs fonctions 
 
 Chaque fonction a ce qu’on appelle un **prototype**. Ce prototype définira les **arguments** que prendront la fonction, et le **type** de valeur qu’elle **retournera**.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/0111d41b-dbf4-4363-a240-7f84911ea74e/c4178c80-4e60-4545-926f-5ffda1a99f63.png)
+![image.png](./assets/fn_decl.png)
 
 ```c
 float diviser(float a, float b) {
@@ -1271,6 +1268,8 @@ char fonctionChar() {
 	return a;
 }
 ```
+
+![boolstringfn.jpg](./assets/boolstringfn.jpg)
 
 Lorsqu’on utilise des structures conditionnelles, on doit faire attention a retourner une valeur **quelque soit son parcours logique**
 
@@ -1361,8 +1360,7 @@ Ces codes sont repéesentés par les constantes `EXIT_SUCCESS`et `EXIT_FAILURE` 
 
 Une fonction est dite récursive lorsqu’elle s’appelle elle même.
 
-::: info 💡
-🚧
+::: info 🚧
 
 Faire les exercices “Fonctions”
 

@@ -1,13 +1,12 @@
-::: info 💡
-ℹ️
+::: info ℹ️
 
 Avant d’entamer ce cours, il est nécessaire de bien connaitre les bases du langage C, qui ne seront pas revues ici.
 
 Vous retrouverez les pré-requis ici:
 
-[Langage C: Cours ](https://www.notion.so/Langage-C-Cours-6aefc1d7d02d46729f9c42c55da1b6e7?pvs=21)
+[Langage C: Cours ](./langage-c.md)
 
-[Langage C: Cours avancé](https://www.notion.so/Langage-C-Cours-avanc-95acfcf250204d41ba422d3a55e464aa?pvs=21)
+[Langage C: Cours avancé](./langage-c-avance.md)
 
 :::
 
@@ -26,6 +25,9 @@ Enfin son caractère **objet** sera très utile pour construire des architecture
 La documentation officielle:
 
 https://en.cppreference.com/w/
+
+Cheat sheet:
+https://cheatsheets.zip/cpp
 
 ## Compilation
 
