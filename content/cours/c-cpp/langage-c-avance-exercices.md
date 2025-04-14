@@ -39,7 +39,7 @@ Ecrire une fonction qui recoit une chaine de caractères et qui retourne 1 ou 0 
 ### Exercice 1.6
 
 - Créer une fonction qui compte combien d’espaces sont présents dans une chaine de caractère
-- Recréer les fonctions `strlen`, `strcpy`, `strcmp`
+- Recréer les fonctions `strlen`, `strcmp`
 
 ## Structures
 
@@ -74,6 +74,10 @@ Ecrire une fonction qui multiplie une variable par référence
 Ecrire une fonction qui inverse les données de deux variables avec l’utilisation des pointeurs
 
 > Si a = 1 et b = 2 alors apres l'appel de la fonction a = 2 et b = 1
+
+### Exercice 3.3
+
+Recreer la fonction `strcpy`
 
 ## Allocation dynamique
 
@@ -119,7 +123,7 @@ Corriger le programme en ajoutant des protections.
 
 Rendre les deux versions du programme dans des fichiers differents (vulnerable et protegé) et indiquer comment exploiter le programme vulnérable.
 
-## Exercice 5.2
+### Exercice 5.2
 
 Ecrire un programme qui appelle des fonctions par pointeurs. Le rendre vulnérable à un buffer overflow et l'exploiter pour changer son comportement.
 

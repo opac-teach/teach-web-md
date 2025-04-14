@@ -193,7 +193,7 @@ printf("c1 et c2 sont %s\n", strcmp(c1, c2) == 0 ? "égales" : "différentes");
 #include <stdio.h>
 #include <string.h>
 
-void inverse(char[] str, int len)
+void inverse(char str[], int len)
 {
     for (int i = 0; i < len / 2; i++)
     {
