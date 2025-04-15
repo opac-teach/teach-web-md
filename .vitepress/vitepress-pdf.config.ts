@@ -4,7 +4,13 @@ import structure from "./structure.mts";
 // Fonction pour extraire les liens d'une section
 function extractLinksFromSection(section: any): string[] {
   if (!section.items) return [];
-  return section.items.map((item: any) => item.link);
+  return section.items
+    .flatMap((item: any) => {
+      if (item.link) return [item.link];
+      else if (item.items) return extractLinksFromSection(item);
+      else return null;
+    })
+    .filter((i: any) => !!i?.link);
 }
 
 // Fonction pour extraire tous les liens d'une section de cours
