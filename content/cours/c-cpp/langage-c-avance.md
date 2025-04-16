@@ -136,12 +136,14 @@ char c2[255] = "Au revoir"; // Taille explicite
 c1[0] = 'Z'; // On peut modifier les caractères d'une chaine de caractères
 ```
 
-On peut afficher une chaine de caractères avec la fonction `printf` ou récuperer depuis l'entrée utilisateur avec `scanf` en utilisant le charactère special `%s`.
+On peut afficher une chaine de caractères avec la fonction `printf` en utilisant le charactère special `%s`.
+
+Pour récupérer une chaine de caractère, il sera préferable d'utiliser la fonction `fgets` plutot que `scanf` (scanf ne lit pas les espaces).
 
 ```c
 char c1[255] = "Inconnu";
 printf("Entrez votre nom: ");
-scanf("%s", c1);
+fgets(c1, 255, stdin);
 printf("Bonjour %s\n", c1);
 ```
 
