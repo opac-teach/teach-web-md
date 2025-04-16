@@ -356,6 +356,11 @@ int b = *p;   // déréférence  - b = 10
 
 printf("a:  %d\n", a);   // 10
 printf("*p: %d\n", *p);  // 10
+
+*p = 20;
+
+printf("a:  %d\n", a);  // 20
+printf("*p: %d\n", *p); // 20
 ```
 
 ![pointeurs memoire](./assets/pointeurs_memoire.png)
@@ -365,15 +370,6 @@ printf("*p: %d\n", *p);  // 10
 Si `p` est un **pointeur** vers un **entier**, alors `*p` est un **entier**.
 
 :::
-
-- On peut modifier la valeur stockée dans une variable en utilisant l'operateur `*` devant la variable lors de l'affectation.
-
-```c
-*p = 20;
-
-printf("a:  %d\n", a);  // 20
-printf("*p: %d\n", *p); // 20
-```
 
 ### Interet des pointeurs
 
