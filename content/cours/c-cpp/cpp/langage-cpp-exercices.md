@@ -16,7 +16,7 @@ _Exemple_
 
 Pour les élèves souhaitant revoir les bases:
 
-- [Exercices C](./langage-c-exercices.md)
+- [Exercices C](../c-bases/langage-c-exercices.md)
 
 ### Puissance
 
@@ -72,7 +72,7 @@ Avec à ces tableaux dynamiques, nous pourrons:
 
 ### Listes chainées
 
-[Cours langage C sur les listes chainées](./langage-c-avance#listes-chainees)
+[Cours langage C sur les listes chainées](../c-avance/ langage-c-avance#listes-chainees)
 
 # Intro au C++
 
@@ -273,7 +273,7 @@ S’inspirer de l’exercice vecteurs/itérateurs ou nous stockions des phrases,
 
 Partir de ce projet:
 
-[annuaire-template.zip](./assets/annuaire-template.zip)
+[annuaire-template.zip](../assets/annuaire-template.zip)
 
 Compiler avec la commande suivante:
 
@@ -347,7 +347,7 @@ Lors du chargement à partir du fichier ou de l’enregistrement, utiliser une l
 
 Telecharger cette archive, ajouter les fichiers à votre projet et utiliser ces fonctions pour le chiffrement
 
-[AES.zip](https://prod-files-secure.s3.us-west-2.amazonaws.com/9811bb53-5392-47b7-a8b3-3d26d47e8c49/073fc5fa-0e1e-448d-a3c8-e8a67327357d/AES.zip)
+[AES.zip](../assets/AES.zip)
 
 ```cpp
 #include "AES.hpp"

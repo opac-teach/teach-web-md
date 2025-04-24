@@ -1,4 +1,4 @@
 # Developpement C/C++
 
-- [Langage C](./langage-c)
-- [Langage C++](./langage-cpp)
+- [Langage C](./c-bases/langage-c)
+- [Langage C++](./cpp/langage-cpp)

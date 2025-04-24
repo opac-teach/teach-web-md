@@ -35,11 +35,11 @@ On considère le C comme un langage “mid-level”, car il n’est pas bas nive
 
 <div style="display: flex; justify-content: space-between; gap: 10px;">
 <div class="flex flex-col items-center">
-<img src="./assets/asm.png" alt="Code Assembleur “Bas Niveau”" style="width: 100%;">
+<img src="../assets/asm.png" alt="Code Assembleur “Bas Niveau”" style="width: 100%;">
 <p>Code Assembleur “Bas Niveau”</p>
 </div>
 <div class="flex flex-col items-center">
-<img src="./assets/python.png" alt="Code Python “Haut niveau”" style="width: 100%;">
+<img src="../assets/python.png" alt="Code Python “Haut niveau”" style="width: 100%;">
 <p>Code Python “Haut niveau”</p>
 </div>
 </div>
@@ -191,7 +191,7 @@ La première étape, la transformation du code source en langage machine est app
 
 De manière générale, les langages compilés sont plus performants, car ils sont exécutés directement dans le processeur. Pour avoir un ordre de grandeur, cette [page](https://towardsdatascience.com/how-fast-is-c-compared-to-python-978f18f474c7) présente une comparaison entre Python et C++. Le même programme dure 15 minutes en Python, contre 30 secondes en C++. Le graphique ci-dessous donne un ordre de grandeur des ratios d'exécution des différents langages. On s'aperçoit que le C est 10 fois plus rapide que PHP 7 et 40 fois plus rapide que le même programme en Python.
 
-![image.png](./assets/bench-c.png)
+![image.png](../assets/bench-c.png)
 
 La contrepartie est la durée de compilation : si elle est généralement instantanée, elle peut parfois être beaucoup plus longue sur de gros projets. Par exemple la compilation d'un noyau Linux peut durer une dizaine d'heure. Évidemment, si le code source n'est pas modifié, il est inutile de relancer la compilation avant chaque exécution.
 
@@ -618,7 +618,7 @@ Faire les exercices “Basiques”
 
 Les opérateurs permettent d’effectuer des opérations mathématiques entre plusieurs valeurs, telles que des additions ou des comparaisons.
 
-![image.png](./assets/operator.png)
+![image.png](../assets/operator.png)
 
 ## A. Opérations arithmétiques
 
@@ -902,7 +902,7 @@ else {
 
 Si la _condition_ est vraie alors on exécutera le _bloc 1,_ sinon le _bloc 2._
 
-![condition](./assets/condition.png)
+![condition](../assets/condition.png)
 
 Il est à noter que :
 
@@ -928,7 +928,7 @@ else {
 
 Si la _condition 1_ est vraie alors on exécutera le _bloc 1_, sinon si la _condition 2_ est vraie on exécutera le _bloc 2_, sinon le _bloc 3_
 
-![condition else](./assets/condition2.png)
+![condition else](../assets/condition2.png)
 
 ::: info ⚠️
 
@@ -1040,7 +1040,7 @@ Ce code affichera les valeurs de `i` entre 0 et 9
 
 La boucle `while` est généralement utilisée quand une variable peut prendre des valeurs non régulières, mais que l’ont souhaite qu’elle respecte une condition
 
-![image.png](./assets/boucle.png)
+![image.png](../assets/boucle.png)
 
 ### do…while
 
@@ -1211,7 +1211,7 @@ Comme pour les variables, il n’est pas possible de créer plusieurs fonctions 
 
 Chaque fonction a ce qu’on appelle un **prototype**. Ce prototype définira les **arguments** que prendront la fonction, et le **type** de valeur qu’elle **retournera**.
 
-![image.png](./assets/fn_decl.png)
+![image.png](../assets/fn_decl.png)
 
 ```c
 float diviser(float a, float b) {
@@ -1269,7 +1269,7 @@ char fonctionChar() {
 }
 ```
 
-![boolstringfn.jpg](./assets/boolstringfn.jpg)
+![boolstringfn.jpg](../assets/boolstringfn.jpg)
 
 Lorsqu’on utilise des structures conditionnelles, on doit faire attention a retourner une valeur **quelque soit son parcours logique**
 

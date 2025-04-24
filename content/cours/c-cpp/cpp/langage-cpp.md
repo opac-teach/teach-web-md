@@ -4,9 +4,9 @@ Avant d’entamer ce cours, il est nécessaire de bien connaitre les bases du la
 
 Vous retrouverez les pré-requis ici:
 
-[Langage C: Cours ](./langage-c.md)
+[Langage C: Cours bases](../c-bases/langage-c.md)
 
-[Langage C: Cours avancé](./langage-c-avance.md)
+[Langage C: Cours avancé](../c-avance/langage-c-avance.md)
 
 :::
 

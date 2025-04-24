@@ -73,21 +73,6 @@ int main(void)
     t1[3] = 6;
     printf("t1[3]: %d\n", t1[3]); //   t1[3]: 6
 
-    printf("t1[0]: %d\n", t1[0]); //   t1[0]: 1
-    printf("*t1: %d\n", *t1);     //   *t1: 1 car *t1 == t1[0]
-
-    int *t3 = t1;
-    printf("t3[0]: %d\n", t3[0]); //   t3[0]: 1
-
-    t3 = t2;
-    printf("t3[0]: %d\n", t3[0]); //   t3[0]: 10
-
-    t3[0] = 100;
-
-    printf("t1[0]: %d\n", t1[0]); //   t1[0]: 1
-    printf("t2[0]: %d\n", t2[0]); //   t2[0]: 100
-    printf("t3[0]: %d\n", t3[0]); //   t3[0]: 100
-
     printTableau(t1, 5);
 }
 ```
@@ -314,7 +299,7 @@ Lors de la compilation d'un programme, le compilateur détermine la taille des v
 
 Cette mémoire est organisée en une grille de cases, chacune de ces cases pouvant stocker une valeur, et chaque type de variable occupera une place plus ou moins grande.
 
-> Voir [Tailles des types](./langage-c#tailles-et-plages-de-valeurs)
+> Voir [Tailles des types](../c-bases/langage-c#tailles-et-plages-de-valeurs)
 
 ### Stockage des variables
 
@@ -363,7 +348,7 @@ printf("a:  %d\n", a);  // 20
 printf("*p: %d\n", *p); // 20
 ```
 
-![pointeurs memoire](./assets/pointeurs_memoire.png)
+![pointeurs memoire](../assets/pointeurs_memoire.png)
 
 ::: info
 
@@ -523,6 +508,9 @@ int *b = a;
 a == b
 a[0] == b[0]
 &a[0] == a
+
+tab[0] == *tab;
+tab[1] == *(tab + 1);
 ```
 
 Lorsqu'on passe un tableau en paramètre, on peut le considérer comme un pointeur vers le premier élément du tableau.

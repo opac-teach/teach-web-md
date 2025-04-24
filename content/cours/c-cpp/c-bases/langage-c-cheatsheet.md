@@ -264,7 +264,7 @@ Utilisable **UNIQUEMENT** dans `while` `for` `switch`
 
 # Fonctions
 
-![image.png](./assets/fn_decl.png)
+![image.png](../assets/fn_decl.png)
 
 ```c
 // Exemple

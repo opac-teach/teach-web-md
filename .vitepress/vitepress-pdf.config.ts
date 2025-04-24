@@ -13,22 +13,27 @@ function extractLinksFromSection(section: any): string[] {
     .filter((i: any) => !!i?.link);
 }
 
-// Fonction pour extraire tous les liens d'une section de cours
 function extractAllLinks(coursePath: string): string[] {
-  const sections = structure.sidebar[coursePath];
-  return sections.flatMap((section) => extractLinksFromSection(section));
+  return Object.values(structure.sidebar)
+    .flat()
+    .flatMap((section) => extractLinksFromSection(section))
+    .filter((link) => link.startsWith(`${coursePath}`));
 }
 
 const LESSON = process.env.LESSON;
+const links = extractAllLinks(`/cours/${LESSON}`).map((link) => link + ".html");
+
+if (links.length === 0) {
+  throw new Error(`No links found for ${LESSON}`);
+}
 
 // Configuration pour le cours Frontend
 const frontendConfig = defineUserConfig({
   sorter: (pageA, pageB) => {
-    const links = extractAllLinks(`/cours/${LESSON}`).map(
-      (link) => link + ".html"
-    );
     const aIndex = links.findIndex((link) => link === pageA.path);
     const bIndex = links.findIndex((link) => link === pageB.path);
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
     return aIndex - bIndex;
   },
   outFile: `pdfs/${LESSON}.pdf`,

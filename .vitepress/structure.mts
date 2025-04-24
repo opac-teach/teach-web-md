@@ -53,26 +53,32 @@ export default {
           {
             text: "Bases",
             items: [
-              { text: "Cours", link: "/cours/c-cpp/langage-c" },
-              { text: "Cheatsheet", link: "/cours/c-cpp/langage-c-cheatsheet" },
-              { text: "Exercices", link: "/cours/c-cpp/langage-c-exercices" },
+              { text: "Cours", link: "/cours/c-cpp/c-bases/langage-c" },
+              {
+                text: "Cheatsheet",
+                link: "/cours/c-cpp/c-bases/langage-c-cheatsheet",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/c-cpp/c-bases/langage-c-exercices",
+              },
             ],
           },
           {
             text: "Avancé",
             items: [
-              { text: "Cours", link: "/cours/c-cpp/langage-c-avance" },
+              { text: "Cours", link: "/cours/c-cpp/c-avance/langage-c-avance" },
               {
                 text: "Cheatsheet",
-                link: "/cours/c-cpp/langage-c-avance-cheatsheet",
+                link: "/cours/c-cpp/c-avance/langage-c-avance-cheatsheet",
               },
               {
                 text: "Exercices",
-                link: "/cours/c-cpp/langage-c-avance-exercices",
+                link: "/cours/c-cpp/c-avance/langage-c-avance-exercices",
               },
               {
                 text: "Shaders",
-                link: "/cours/c-cpp/shaders",
+                link: "/cours/c-cpp/c-avance/shaders",
               },
             ],
           },
@@ -81,8 +87,8 @@ export default {
       {
         text: "Langage C++",
         items: [
-          { text: "Cours", link: "/cours/c-cpp/langage-cpp" },
-          { text: "Exercices", link: "/cours/c-cpp/langage-cpp-exercices" },
+          { text: "Cours", link: "/cours/c-cpp/cpp/langage-cpp" },
+          { text: "Exercices", link: "/cours/c-cpp/cpp/langage-cpp-exercices" },
         ],
       },
     ],
