@@ -468,7 +468,7 @@ Ne pas oublier de libérer la mémoire allouée ! Tout oubli pourra entrainer un
 
 :::
 
-<video src="./assets/loopmalloc.mp4" autoplay loop muted></video>
+<video src="../assets/loopmalloc.mp4" autoplay loop muted></video>
 
 ### Dépassement de mémoire
 
