@@ -105,7 +105,7 @@ export default {
         text: "NestJS",
         items: [
           {
-            text: "Leçons",
+            text: "Cours",
             items: [
               { text: "Introduction", link: "/cours/dev-backend/nestjs" },
               {
@@ -129,12 +129,44 @@ export default {
             text: "En pratique",
             items: [
               {
-                text: "Projet d'example",
+                text: "Projet d'exemple",
                 link: "/cours/dev-backend/nestjs/project-example",
               },
               {
                 text: "Exercices",
                 link: "/cours/dev-backend/nestjs/exercices",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        text: "GraphQL",
+        items: [
+          {
+            text: "Cours",
+            items: [
+              { text: "Introduction", link: "/cours/dev-backend/graphql" },
+              { text: "Schemas", link: "/cours/dev-backend/graphql/schemas" },
+              { text: "Queries", link: "/cours/dev-backend/graphql/queries" },
+              { text: "Server", link: "/cours/dev-backend/graphql/server" },
+              { text: "Clients", link: "/cours/dev-backend/graphql/clients" },
+              {
+                text: "Optimisation",
+                link: "/cours/dev-backend/graphql/optimisation",
+              },
+            ],
+          },
+          {
+            text: "En pratique",
+            items: [
+              {
+                text: "Projet d'exemple",
+                link: "/cours/dev-backend/graphql/project-example",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/dev-backend/graphql/exercices",
               },
             ],
           },
