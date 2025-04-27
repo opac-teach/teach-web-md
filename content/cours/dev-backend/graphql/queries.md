@@ -64,6 +64,13 @@ Les fragments sont des ensembles réutilisables de champs.
       total
     }
   }
+  orders(userId: "123") {
+    id
+    total
+    user {
+      ...UserBasicInfo
+    }
+  }
 }
 
 fragment UserBasicInfo on User {
@@ -177,15 +184,18 @@ Lors d'une mutation, si on souhaite retourner des erreurs (validation, permissio
 Au lieu de ça, on essaiera de toujours retourner des 200 et plutôt retourner des informations de succès ou d'erreur systematiquement dans la réponse.
 
 ```graphql
-mutation Login($email: String!, $password: String!) {
-  login(email: $email, password: $password) {
+mutation CreateOrder($order: OrderInput!) {
+  createOrder(order: $order) {
     success
-    token
-    errors {
+    error {
+      code
+      message
+    }
+    validationErrors {
       field
       message
     }
-    user {
+    order {
       id
       name
     }

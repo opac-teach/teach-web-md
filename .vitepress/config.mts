@@ -8,6 +8,7 @@ export default withMermaid({
   srcDir: "content",
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: "localhostLinks",
 
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
   themeConfig: {

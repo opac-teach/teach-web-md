@@ -21,16 +21,17 @@ Pour tester les requêtes, vous pouvez utiliser le playground que vous trouverez
 - Creer une query qui renvoie tous les utilisateurs
 - Creer une query qui renvoie toutes les chansons avec l'utilisateur qui l'a créé
 - Creer une query qui renvoie un utilisateur par son id et les chansons qu'il a créé
+- Creer une mutation qui crée un utilisateur
 
 ## Songs
 
 ### Song User
 
-Ajouter un champ user dans le schema Song qui renverra l'utilisateur lié à la chanson et modifier le resolver.
+- Ajouter un champ user dans le schema Song qui renverra l'utilisateur lié à la chanson et modifier le resolver.
 
 ### Song by ID
 
-Rajouter un resolver `song(id)` qui renverra une chanson par son id.
+- Rajouter un resolver `song(id)` qui renverra une chanson par son id.
 
 ## Genre
 
@@ -40,27 +41,26 @@ Rajouter un resolver `song(id)` qui renverra une chanson par son id.
 
 ## Songs Count
 
-Ajouter un champ `songsCount` dans les schema `User` et `Genre` qui renverra le nombre de chansons liées à l'utilisateur ou au genre.
+- Ajouter un champ `songsCount` dans les schema `User` et `Genre` qui renverra le nombre de chansons liées à l'utilisateur ou au genre.
 
 ## Mutations
 
-Creer des mutation qui permettront de modifier ou supprimer un utilisateur ou une chanson. Prendre en compte l'utilisateur qui effecture l'action et ne l'autoriser à modifier ou supprimer que ses propres données.
+- Creer une mutation pour créer une chanson. N'autoriser que les utilisateurs connectés à effectuer cette action
+- Creer des mutation qui permettront de modifier ou supprimer un utilisateur ou une chanson. Prendre en compte l'utilisateur qui effecture l'action et ne l'autoriser à modifier ou supprimer que ses propres données.
 
 ## Pagination
 
-Ajouter un système de pagination sur la liste des utilisateurs et des chansons, qui permettra de limiter le nombre de données renvoyées par la requête.
+- Ajouter un système de pagination sur la liste des utilisateurs et des chansons, qui permettra de limiter le nombre de données renvoyées par la requête.
 
-Ajouter également la pagination sur les chaines de resolvers.
+- Ajouter également la pagination sur les chaines de resolvers.
 
 ## Loaders
 
-Creer une query qui recuperera toutes les chansons, et l'utilisateur associé à chacune d'elle.
+- Creer une query qui recuperera toutes les chansons, et l'utilisateur associé à chacune d'elle.
+- Observer les messages de log dans la console et repérer les appels à la base de données qui sont dupliqués.
+- Utiliser les loaders pour optimiser les requêtes et régler le probleme N+1.
 
-Observer les messages de log dans la console et repérer les appels à la base de données qui sont dupliqués.
-
-Utiliser les loaders pour optimiser les requêtes et régler le probleme N+1.
-
-## Bonus
+## [Bonus]
 
 ### Rôles
 
@@ -96,17 +96,21 @@ Ces exercices sont à faire dans le dossier `client-next` qui contient une appli
 
 ## Formulaires
 
-Ajouter des formulaires pour
+Ajouter des formulaires pour:
 
-- Ajouter une chanson et un genre
-- Au choix, modifier/supprimer des chansons, utilisateurs ou un genres ...
+- Ajouter une chanson
+- Ajouter un genre
+- Au choix: modifier/supprimer des chansons, utilisateurs ou un genres ...
 
-## Bonus
+## [Bonus]
 
-- Utiliser les subscriptions pour recevoir en temps réel les nouvelles chansons
 - Utiliser des fragments dans le frontend pour factoriser les requêtes
 - Utiliser la pagination
+- Mettre a jour le cache lors des mutations pour éviter les refetch
+- Utiliser les subscriptions pour recevoir en temps réel les nouvelles chansons
+- Creer des tests unitaires et d'integration
+
+### Next
+
 - Passer sur du rendu côté serveur (SSR) pour toutes les pages
-- Si le bonus pour les rôles a été fait dans le backend, l'implémenter dans le frontend egalement (il faudra changer un peu l'application pour envoyer le role de l'utilisateur courant ou utiliser un vrai système d'authentification)
 - Integrer le serveur GraphQL directement dans l'application Next.js
-- Utiliser Codegen dans le frontend pour générer les types de données

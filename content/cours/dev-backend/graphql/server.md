@@ -106,7 +106,7 @@ const resolvers = {
           }
         );
       }
-      return context.dataSources.database.createOrder(args);
+      return context.dataSources.database.createOrder(args, context.user);
     },
   },
 };
@@ -124,6 +124,8 @@ Lorsque l'on n'utilise pas certains arguments, on peut les ignorer avec `_` :
 ## Sandbox
 
 Les serveur GraphQL sont generalement fournis avec une sandbox pour tester les requetes, qui est une interface web permettant de consulter le schema et executer des requetes.
+
+Generalement accessible à l'url http://localhost:4000/
 
 - [Apollo Sandbox](https://studio.apollographql.com/sandbox/explorer?referrer=docs-content)
 - [GraphiQL](https://github.com/graphql/graphiql)
