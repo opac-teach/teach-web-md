@@ -82,6 +82,10 @@ Remplacer la pagination limit/offset par une pagination par curseur.
 
 Creer des tests d'integration pour les resolvers.
 
+### Validation des données
+
+Utiliser `zod` pour valider les entrées des mutations.
+
 ##
 
 # Frontend
@@ -135,3 +139,4 @@ Ce nouveau serveur devra:
 - Valider les entrées des mutations
 - Avoir un système d'authentification et proteger les routes qui en ont besoin(par ex. un utilisateur ne doit pouvoir editer que ses propres chansons)
 - Implementer la pagination par curseur
+- Supporter les subscriptions
