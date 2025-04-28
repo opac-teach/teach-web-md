@@ -19,7 +19,7 @@ Ces exercices sont à faire dans le dossier `server-apollo`.
 Pour tester les requêtes, vous pouvez utiliser le playground que vous trouverez sur l'url: http://localhost:4000/
 
 - Creer une query qui renvoie tous les utilisateurs
-- Creer une query qui renvoie toutes les chansons avec l'utilisateur qui l'a créé
+- Creer une query qui renvoie tous les utilisateurs avec leurs chansons
 - Creer une query qui renvoie un utilisateur par son id et les chansons qu'il a créé
 - Creer une mutation qui crée un utilisateur
 

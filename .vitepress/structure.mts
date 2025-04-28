@@ -109,6 +109,7 @@ export default {
                 link: "/cours/dev-backend/nestjs/decoupage",
               },
               { text: "API REST", link: "/cours/dev-backend/nestjs/api-rest" },
+              { text: "GraphQL", link: "/cours/dev-backend/nestjs/graphql" },
               { text: "ORM", link: "/cours/dev-backend/nestjs/orm" },
               { text: "Tests", link: "/cours/dev-backend/nestjs/tests" },
               {
