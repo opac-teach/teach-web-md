@@ -132,6 +132,58 @@ const resolvers = {
 };
 ```
 
+### Cursor-based
+
+La pagination par limit/offset peut souvent poser problème (changement de données entre les requetes, perte/duplication de données) et on preferera utiliser des curseurs.
+
+La pagination par curseur, au lieu d'etre définie par un nombre d'elements à retourner et le numéro de la page, se basera sur le dernier element récupéré pour récupérer la page suivante.
+
+```graphql
+input PaginationInput {
+  cursor: String
+  limit: Int = 10
+}
+```
+
+La pratique commune est de suivre la specification [Relay Cursor Connections Specification](https://relay.dev/graphql/connections.htm) avec des edges/node pour retourner les données.
+
+```graphql
+type ProductConnection {
+  edges: [ProductEdge!]!
+  pageInfo: PageInfo!
+}
+
+type ProductEdge {
+  node: Product!
+  cursor: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+```
+
+Le type de curseur dépendra de l'implémentation en base de données. En postgres, on remplacera les clauses LIMIT/OFFSET par des clauses ORDER BY et des clauses WHERE avec des curseurs.
+
+```sql
+SELECT * FROM products
+ORDER BY id
+LIMIT 10
+OFFSET 20;
+```
+
+Remplacé par:
+
+```sql
+SELECT * FROM products
+WHERE id > '20'
+ORDER BY id
+LIMIT 10;
+```
+
 ## Sécurité
 
 ### Validation des entrées

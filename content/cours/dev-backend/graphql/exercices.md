@@ -72,6 +72,16 @@ Ajouter un système de rôles, et n'autoriser que les utilisateurs avec le role 
 
 Modifier le serveur pour qu'il supporte les subscriptions et signaler aux client lors de l'ajout de nouvelles chansons.
 
+https://www.apollographql.com/docs/apollo-server/data/subscriptions
+
+### Pagination
+
+Remplacer la pagination limit/offset par une pagination par curseur.
+
+### Tests
+
+Creer des tests d'integration pour les resolvers.
+
 ##
 
 # Frontend
@@ -108,9 +118,20 @@ Ajouter des formulaires pour:
 - Utiliser la pagination
 - Mettre a jour le cache lors des mutations pour éviter les refetch
 - Utiliser les subscriptions pour recevoir en temps réel les nouvelles chansons
-- Creer des tests unitaires et d'integration
 
 ### Next
 
 - Passer sur du rendu côté serveur (SSR) pour toutes les pages
 - Integrer le serveur GraphQL directement dans l'application Next.js
+
+# NestJS
+
+Creer un nouveau projet NestJS dans le dossier `server-nestjs` et transferer le travail effectué precedement dedans.
+
+Ce nouveau serveur devra:
+
+- Implementer l'API GraphQL à la manière "code-first"
+- Stocker les données dans une base de données avec TypeORM
+- Valider les entrées des mutations
+- Avoir un système d'authentification et proteger les routes qui en ont besoin(par ex. un utilisateur ne doit pouvoir editer que ses propres chansons)
+- Implementer la pagination par curseur
