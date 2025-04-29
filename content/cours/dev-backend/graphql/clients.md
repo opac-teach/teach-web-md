@@ -48,7 +48,7 @@ function App({ children }) {
 
 https://www.apollographql.com/docs/react/data/queries
 
-Apollo client permet de faire des requêtes avec `useQuery`.
+Apollo client propose des **hooks** pour react et permet de faire des requêtes avec `useQuery`.
 
 ```javascript
 import { useQuery, gql } from "@apollo/client";

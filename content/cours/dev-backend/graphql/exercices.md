@@ -76,7 +76,7 @@ https://www.apollographql.com/docs/apollo-server/data/subscriptions
 
 ### Pagination
 
-Remplacer la pagination limit/offset par une pagination par curseur.
+Remplacer la pagination limit/offset par une pagination par curseur. Vous devrez certainement modifier le FakeORM ou bien utiliser une vraie base de données.
 
 ### Tests
 
@@ -140,3 +140,31 @@ Ce nouveau serveur devra:
 - Avoir un système d'authentification et proteger les routes qui en ont besoin(par ex. un utilisateur ne doit pouvoir editer que ses propres chansons)
 - Implementer la pagination par curseur
 - Supporter les subscriptions
+
+##
+
+# [Projet] Bibliothèque musicale
+
+Développer une application qui permettra à ses utilisateurs de consulter leur bibliothèque musicale sur les plateformes de streaming existantes (Spotify, Deezer)
+
+L'application servira de "proxy" aux differentes plateformes et proposera une API GraphQL commune pour l'ensemble des plateformes.
+
+## Fonctionnalités
+
+### En mode public (utilisateur anonyme)
+
+- Recherche de chansons, artistes, albums
+- Détails sur une chanson, artiste, album
+
+### En mode privé (utilisateur connecté)
+
+- Connexion des utilisateurs en OAuth sur les plateformes existantes
+- Récupération des playlists de l'utilsateur connecté et des chansons qu'elles contiennent
+- Ajout/supression de chansons à une playlist
+- Creation/modification/suppression de playlists
+- Synchronisation de la bibliothèque musicale des utilisateurs entre les plateformes
+
+## Implémentation
+
+- Backend: Serveur Apollo pur ou NestJS
+- Frontend: NextJS (optionnel)
