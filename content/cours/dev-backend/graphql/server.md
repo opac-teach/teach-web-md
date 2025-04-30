@@ -136,7 +136,7 @@ https://www.apollographql.com/docs/apollo-server/workflow/generate-types
 
 Lorsque l'on développe en typescript, il est necessaire d'avoir accès aux types définis par le schema GraphQL.
 
-Pour cela, il existe des librairies de codegen qui permettent de generer les types en typescript a partir du schema GraphQL.
+Pour cela, il existe des librairies de codegen qui permettent de generer automatiquement du code à partir du schema GraphQL, notamment les types Typescript.
 
 ```ts
 import type { CodegenConfig } from "@graphql-codegen/cli";

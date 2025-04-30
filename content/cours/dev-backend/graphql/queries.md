@@ -55,6 +55,8 @@ Les **alias** permettent de renommer les champs dans la réponse ou d'interroger
 **Fragments :**
 Les fragments sont des ensembles réutilisables de champs.
 
+Ils serviront dans les clients pour factoriser les requêtes et eviter la répétition de code dans les differentes requêtes.
+
 ```graphql
 {
   user(id: "123") {

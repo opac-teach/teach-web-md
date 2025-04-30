@@ -141,6 +141,8 @@ Ce nouveau serveur devra:
 - Implementer la pagination par curseur
 - Supporter les subscriptions
 
+> Si vous le souhaitez, au lieu de recréer un nouveau projet, vous pouvez reprendre le [projet NestJS](../nestjs/project-example) créé précedement et rajouter une API GraphQL qui propose les mêmes fonctionnalités que les endpoints REST existants.
+
 ##
 
 # [Projet] Bibliothèque musicale
@@ -166,5 +168,5 @@ L'application servira de "proxy" aux differentes plateformes et proposera une AP
 
 ## Implémentation
 
-- Backend: Serveur Apollo pur ou NestJS
+- Backend: Serveur Apollo+Express ou NestJS (recommandé). Base de données Redis ou PostgreSQL selon les besoins.
 - Frontend: NextJS (optionnel)
