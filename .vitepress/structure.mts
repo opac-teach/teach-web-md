@@ -103,7 +103,7 @@ export default {
           {
             text: "Cours",
             items: [
-              { text: "Introduction", link: "/cours/dev-backend/nestjs" },
+              { text: "Introduction", link: "/cours/dev-backend/nestjs/index" },
               {
                 text: "Découpage",
                 link: "/cours/dev-backend/nestjs/decoupage",
@@ -143,7 +143,7 @@ export default {
           {
             text: "Cours",
             items: [
-              { text: "Introduction", link: "/cours/dev-backend/graphql" },
+              { text: "Introduction", link: "/cours/dev-backend/graphql/index" },
               { text: "Schemas", link: "/cours/dev-backend/graphql/schemas" },
               { text: "Queries", link: "/cours/dev-backend/graphql/queries" },
               { text: "Server", link: "/cours/dev-backend/graphql/server" },
