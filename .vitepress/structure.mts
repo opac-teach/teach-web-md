@@ -143,7 +143,10 @@ export default {
           {
             text: "Cours",
             items: [
-              { text: "Introduction", link: "/cours/dev-backend/graphql/index" },
+              {
+                text: "Introduction",
+                link: "/cours/dev-backend/graphql/index",
+              },
               { text: "Schemas", link: "/cours/dev-backend/graphql/schemas" },
               { text: "Queries", link: "/cours/dev-backend/graphql/queries" },
               { text: "Server", link: "/cours/dev-backend/graphql/server" },
@@ -166,6 +169,15 @@ export default {
                 link: "/cours/dev-backend/graphql/exercices",
               },
             ],
+          },
+        ],
+      },
+      {
+        text: "Supabase",
+        items: [
+          {
+            text: "Entrainement",
+            link: "/cours/dev-backend/supabase/index",
           },
         ],
       },
