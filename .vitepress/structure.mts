@@ -41,6 +41,18 @@ export default {
           { text: "Nuxt", link: "/cours/dev-frontend/exercices/nuxt" },
         ],
       },
+      {
+        text: "React",
+        items: [
+          { text: "Introduction", link: "/cours/dev-frontend/react/index" },
+          { text: "Components", link: "/cours/dev-frontend/react/components" },
+          { text: "Hooks", link: "/cours/dev-frontend/react/hooks" },
+        ],
+      },
+      {
+        text: "Next",
+        items: [{ text: "index", link: "/cours/dev-frontend/nextjs" }],
+      },
     ],
     "/cours/c-cpp": [
       {

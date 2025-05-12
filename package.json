@@ -3,6 +3,7 @@
     "dev": "vitepress dev --port 3100 .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
+    "deploy": "vercel --prod",
     "export-pdf": "press-export-pdf export ."
   },
   "devDependencies": {

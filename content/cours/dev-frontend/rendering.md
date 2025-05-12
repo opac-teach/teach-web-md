@@ -1,3 +1,26 @@
+# Rendering
+
+La finalité de tout framework frontend est de générer du HTML. Le code des applications sont en Javascript, et les frameworks génèreront du HTML à partir de ce code. 
+
+### Code Javascript
+```jsx
+function App() {
+  const data = ['article 1', 'article 2', 'article 3']
+  return data.map((article) => (
+    <p>{article}</p>
+  ))
+}
+```
+
+### HTML
+```html
+<p>article 1</p>
+<p>article 2</p>
+<p>article 3</p>
+```
+
+Ce rendu peut être effectué aussi bien côté client (par le navigateur) que côté serveur.
+
 # Les différents types de rendu d'applications frontend
 
 ## Client-Side Rendering (CSR)
@@ -99,7 +122,7 @@ L'hydration fait référence au processus par lequel une application JavaScript 
 
 Il est possible de combiner toutes ces techniques : on peut pré-rendre le contenu au build (articles de blog) tout en gardant un site dynamique qui récupère certaines données (commentaires) à l'exécution (**_islands architecture_**).
 
-## Problèmes rencontrés en SSR
+# Problèmes rencontrés en SSR
 
 - **Différences entre environnements** : Le code doit s'exécuter à la fois côté serveur (Node.js) et côté client (navigateur), avec des API différentes.
 - **Répartition de l'état** : L'application tourne sur deux machines en même temps (client et serveur), certaines données sont accessibles d'un côté et pas de l'autre, synchronisation des deux.
