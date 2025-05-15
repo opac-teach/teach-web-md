@@ -144,6 +144,36 @@ function MyComponent() {
 
 Les contextes permettent de partager des données entre les composants sans avoir à les passer explicitement à chaque composant en tant que props.
 
+# Hooks personnalisés
+
+Il est possible de créer ses propres hooks. Pour cela, il faut suivre les règles de hooks et utiliser les hooks existants.
+
+```tsx
+
+function useCounter() {
+    const [count, setCount] = useState(0)
+
+    function increment() {
+        setCount(count + 1)
+    }
+
+    useEffect(() => {
+        console.log("count changed", count)
+    }, [count])
+
+    return [count, increment]
+}
+
+function MyComponent() {
+    const [count, increment] = useCounter();
+    return <div>
+        <p>Count is {count}</p>
+        <button onClick={increment}>Increment</button>
+    </div>
+}
+```
+
+
 # Rule of hooks
 
 Les hooks doivent impérativement être utilisés à la racine d'un composant ou d'un autre hook, c'est à dire jamais de manière conditionnelle ou imbriquée. 
@@ -167,3 +197,4 @@ function Counter() {
 
 
 https://react.dev/reference/rules/rules-of-hooks
+

@@ -27,31 +27,73 @@ export default {
       {
         text: "Frameworks",
         items: [
-          { text: "VueJS", link: "/cours/dev-frontend/vuejs" },
-          { text: "Nuxt", link: "/cours/dev-frontend/nuxt" },
-        ],
-      },
-      {
-        text: "Exercices",
-        items: [
           {
             text: "VueJS",
-            link: "/cours/dev-frontend/exercices/vuejs",
+            items: [
+              {
+                text: "Projet d'exemple",
+                link: "/cours/dev-frontend/vuejs/index",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/dev-frontend/vuejs/exercices",
+              },
+            ],
           },
-          { text: "Nuxt", link: "/cours/dev-frontend/exercices/nuxt" },
+          {
+            text: "Nuxt",
+            items: [
+              {
+                text: "Projet d'exemple",
+                link: "/cours/dev-frontend/nuxt/index",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/dev-frontend/nuxt/exercices",
+              },
+            ],
+          },
+          {
+            text: "React",
+            items: [
+              { text: "Présentation", link: "/cours/dev-frontend/react/index" },
+              {
+                text: "Components",
+                link: "/cours/dev-frontend/react/components",
+              },
+              { text: "Hooks", link: "/cours/dev-frontend/react/hooks" },
+              {
+                text: "Server Components",
+                link: "/cours/dev-frontend/react/rsc",
+              },
+              {
+                text: "Server Actions",
+                link: "/cours/dev-frontend/react/actions",
+              },
+            ],
+          },
+          {
+            text: "NextJS",
+            items: [
+              {
+                text: "Introduction",
+                link: "/cours/dev-frontend/nextjs/index",
+              },
+              {
+                text: "Projet d'exemple",
+                link: "/cours/dev-frontend/nextjs/demo",
+              },
+              {
+                text: "Exercices",
+                link: "/cours/dev-frontend/nextjs/exercices",
+              },
+              {
+                text: "Projet",
+                link: "/cours/dev-frontend/nextjs/projet",
+              },
+            ],
+          },
         ],
-      },
-      {
-        text: "React",
-        items: [
-          { text: "Introduction", link: "/cours/dev-frontend/react/index" },
-          { text: "Components", link: "/cours/dev-frontend/react/components" },
-          { text: "Hooks", link: "/cours/dev-frontend/react/hooks" },
-        ],
-      },
-      {
-        text: "Next",
-        items: [{ text: "index", link: "/cours/dev-frontend/nextjs" }],
       },
     ],
     "/cours/c-cpp": [

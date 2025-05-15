@@ -2,13 +2,16 @@
 
 Une application React est constituée de composants imbriqués. Séparer une application en composant permet de découper le code par rôle (single responsibility) et factoriser des zones réutilisables. 
 
+## JSX
+
 En React, un composant est une fonction. Pour décrire le rendu d'un composant, on utilise la syntaxe JSX, qui ressemble à du HTML mais est en réalité une extension de JavaScript.
 
 https://react.dev/learn/your-first-component
 
 Un composant peut être imbriqué dans un autre composant, et ainsi de suite.
 
-Pour afficher des données dans un composant (interpolation), on utilise la syntaxe `{data}`.
+Pour afficher des données dans un composant (interpolation), on utilise les accolades `{}`.
+
 ```tsx
 function App() {
   return (
@@ -76,10 +79,17 @@ function App() {
     const data = [0, 1, 2]
     return (
         <div>
-            <p>{1+1}</p>
-            <p>{Math.random() > 0.5 ? "Hello" : "World"}</p>
+            {/* Interpolation simple */}
             <p>{`Hello ${name}`}</p>
+            <p>{1+1}</p>
+
+            {/* Conditionnel */}
             {data[0] > 0 && <p>data[0] is greater than 0</p>}
+            
+            {/* Conditionnel ternaire */}
+            <p>{Math.random() > 0.5 ? "Hello" : "World"}</p>
+
+            {/* Rendu d'une liste */}
             <p>{data.map((item) => <span key={item}>{item}</span>)}</p>
         </div>
     )
@@ -89,9 +99,11 @@ function App() {
 Le rendu sera:
 ```html
 <div>
-    <p>2</p>
-    <p>World</p>
     <p>Hello John</p>
+    <p>2</p>
+
+    <p>World</p>
+    
     <p><span>0</span><span>1</span><span>2</span></p>
 </div>
 ```
@@ -137,3 +149,28 @@ function App() {
 ```
 
 
+
+## Typescript
+
+Il est vivement recommandé d'utiliser TypeScript pour tous les projets Javascript, nottament avec React. Les composants seront alors écrits en TSX. 
+
+Exemple de composant correctement typé:
+
+```tsx
+interface ButtonProps {
+  label: string;
+  onClick?: () => void;
+}
+
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
+
+export default Button;
+```

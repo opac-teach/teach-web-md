@@ -1,6 +1,6 @@
 # Rendering
 
-La finalité de tout framework frontend est de générer du HTML. Le code des applications sont en Javascript, et les frameworks génèreront du HTML à partir de ce code. 
+La finalité de tout framework frontend est de générer du HTML. Le code des applications sont en Javascript, et les frameworks génèreront du HTML à partir de ce code (voir exemple [ici](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/src/index.js))
 
 ### Code Javascript
 ```jsx
@@ -20,6 +20,8 @@ function App() {
 ```
 
 Ce rendu peut être effectué aussi bien côté client (par le navigateur) que côté serveur.
+
+---- 
 
 # Les différents types de rendu d'applications frontend
 

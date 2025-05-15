@@ -18,12 +18,8 @@ Créé par la même équipe que [Vercel](https://vercel.com/), il y est très bi
 ## Fonctionnalités
 
 - Routeur integré, basé sur la structure des dossiers
-- Rendu coté serveur (SSR)
-- Rendu statique (SSG)
-- Incremental Static Regeneration (ISR)
-- Rendu côté client (CSR)
+- Differentes méthodes de rendu (SSR, SSG, ISR, RSC, CSR, ...)
 - API serverless
-- Server actions
 - Optimisation des resources
 - Optimisation du SEO
 
@@ -33,57 +29,9 @@ NextJS a beaucoup évolué depuis sa création, notamment avec la migration depu
 
 > Attention quand on lit la documentation NextJS à la version sur laquelle on travaille.
 
-https://nextjs.org/docs/app/building-your-application/rendering
-https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming
-
-https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
-https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
-https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration
-
-https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming
-
-https://nextjs.org/docs/app/guides/mdx
-
-finalité de react: render
-https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/src/index.js
-
-# MISC
-
-
-### Variables d'environnement
-
-https://nextjs.org/docs/app/guides/environment-variables
-
-Les données sensibles ne doivent pas être stockées dans le code source de l'application. Elles doivent être stockées dans des variables d'environnement.
-
-Elles peuvent être définies dans le fichier `.env`, qui ne doit pas être versionné. Lors du déploiement, les variables d'environnement sont modifiables sur le dashboard de configuration. 
-
-Seules les variables prefixées par `NEXT_PUBLIC_` sont accessibles côté client.
-
-```
-DATABASE_PASSWORD=abcd // Uniquement accessible côté serveur
-NEXT_PUBLIC_API_URL=https://api.example.com // Accessible côté client
-```
-
-### Exports statiques
-
-https://nextjs.org/docs/app/guides/static-exports
-
-Il est possible de générer une version statique de l'application, qui ne necessite donc pas de serveur pour être hebergée et peut être placée simplement sur un CDN. Dans ce cas, les server component seront generés au moment du build, et ne seront pas mis à jour
-
-### Auth
-
-https://nextjs.org/docs/app/getting-started/project-structure
-
-https://nextjs.org/docs/app/getting-started/layouts-and-pages
-
-https://nextjs.org/docs/app/guides/authentication
-
-
-OpenGraph
-https://opengraph.dev/
-
 ## Structure du projet
+
+Un projet NextJS est composé dans une structure bien définie qui determine le comportement de l'application.
 
 https://nextjs.org/docs/app/getting-started/project-structure
 
@@ -93,20 +41,81 @@ https://nextjs.org/docs/app/getting-started/project-structure
 - ~~pages: dossier contenant les pages et les composants (page router)~~
 - public: fichiers statiques
 
+https://nextjs.org/docs/app/getting-started/layouts-and-pages
+
+
 Tous les dossiers définis dans le dossier `app` sont considérés comme des routes. L'url `monsite.com/a/b/c` sera rendue par le composant `/app/a/b/c/page.tsx`
 
-les routes dynamiques sont définies par des dossiers avec des crochets tel que `[id]`. Par exemple, `monsite.com/user/2134` sera rendue par le composant `/app/user/[id]/page.tsx`
+Les routes dynamiques sont définies par des dossiers avec des crochets tel que `[id]`. Par exemple, `monsite.com/user/2134` sera rendue par le composant `/app/user/[id]/page.tsx`
 
 ### Route files (.tsx)
 
-Certains noms de fichiers provoquent des comportements speciaux. Sauf pour `page`, ils ont une consequence sur toutes leur sous-routes.
+Certains noms de fichiers provoquent des comportements speciaux. 
 
-- layout: composant englobant la page
-- page: page de la route définie par l'arborescende de fichiers
-- loading: composant de chargement (rendu serveur)
-- not-found: composant de page non trouvée (dynamiques)
-- error
-- sitemap
-- opengraph-image
-- favicon
+- layout.tsx: composant englobant la page
+- page.tsx: page de la route définie par l'arborescende de fichiers
+- route.ts: route handler (API)
+- loading.tsx: composant de chargement (rendu serveur)
+- not-found.tsx: composant de page non trouvée (dynamiques)
+- error.tsx: composant d'erreur
+- sitemap.ts: fichier de sitemap
+- opengraph-image.tsx: fichier de génération d'image [OpenGraph](https://opengraph.dev/)
+- favicon.ico
 - ...
+
+Sauf pour `page` et `route`, ils ont une consequence sur toutes leur sous-routes. (`layout`, `error`, `not-found`, ...)
+
+### Variables d'environnement
+
+https://nextjs.org/docs/app/guides/environment-variables
+
+Les données sensibles ne doivent pas être stockées dans le code source de l'application mais dans des variables d'environnement.
+
+Elles peuvent être définies dans le fichier `.env`, qui ne doit pas être versionné. Lors du déploiement, les variables d'environnement sont modifiables sur le dashboard de configuration de la plateforme. 
+
+Seules les variables prefixées par `NEXT_PUBLIC_` sont accessibles côté client.
+
+```
+DATABASE_PASSWORD=abcd // Uniquement accessible côté serveur
+NEXT_PUBLIC_API_URL=https://api.example.com // Accessible côté client
+```
+
+### Hydration
+
+Lorsque NextJS est utilisé en mode server side rendering, toute la page sera generée côté serveur, pas seulement les Server Components (RSC).
+
+Cela signifie que les composants avec la directive `use client` seront d'abord generés côté serveur, puis hydratés côté client.
+
+L'hydration est le processus par lequel le client va prendre le contenu generé côté serveur, le transformer en composants React et les reconnecter au DOM. 
+
+Il est très important de faire attention au rendu initial d'un composant, et de faire en sorte qu'il soit exactement le même des deux côtés, sinon une erreur d'hydration apparaitra et l'application ne fonctionnera pas correctement.
+
+```tsx
+'use client'
+
+function MyComponent() {
+    // 🚨 La valeur initiale sera differente côté serveur et côté client
+    const [value, setValue] = useState(Math.random()); 
+    return <div>{value}</div>
+}
+```
+
+
+## A lire
+Articles importants à lire sur la documentation officielle:
+
+
+- [Rendering](https://nextjs.org/docs/app/building-your-application/rendering)
+- [Routing](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
+- [Data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
+- [Server actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
+- [Incremental Static Regeneration](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration)
+- [Authentication](https://nextjs.org/docs/app/guides/authentication)
+- [Static exports](https://nextjs.org/docs/app/guides/static-exports)
+
+### En complément
+
+- [MDX](https://nextjs.org/docs/app/guides/mdx)
+
+
+
