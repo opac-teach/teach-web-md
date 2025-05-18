@@ -10,6 +10,44 @@ Les utilisateurs peuvent gagner du ZTH (la monnaie native de la plateforme) en c
 
 > Bien que le site web et ses fonctionnalités ressembleront à un projet web3, tout se déroulera off-chain et n’utilisera aucune blockchain.
 
+### Plateforme d'exemple
+
+Une application de démonstration qui fournit les fonctionnalités demandées est disponible à l'adresse suivante:
+https://zero-to-hundred-frontend.onrender.com
+
+L'objectif est de reproduire une application similaire.
+
+## Travail demandé
+
+L'interface utilsateur devra être soignée, réactive et avec un design élégant.
+
+Vous pouvez vous inspirer de sites tels que [pump.fun](https://pump.fun/board) [memecoin.org](https://www.memecoin.org/) [deployyyyer](https://deployyyyer.io/)
+
+### Contraintes techniques
+
+- Application developpée avec NextJS v15 avec App Router
+- Optimisation de l'application, utilisation au maximum des server components et server actions
+- Optimisation des composants (~ utilisation de useMemo et useCallback)
+- Authentification sécurisée
+- Bonne gestion du SEO, sitemap et metadata
+- Utilisation stricte de Typescript
+- Utiliser à differents endroits au moins une fois chacune des methodes de data fetching suivantes:
+  - RSC pur
+  - CSR pur
+  - RSC > CSR sans streaming
+  - RSC > CSR streaming
+
+## Recommandations
+
+- Base de données: PostgreSQL avec Prisma/Drizzle
+- Style: TailwindCSS avec shadcn/ui ou équivalent
+
+## Bonus
+
+- Tests unitaires
+- Tests E2E
+- Mise à jour de l'interface en temps réel (prix, transactions, ...)
+
 ### Tokenomics
 
 - Chaque utilisateur reçoit 100 ZTH à l’inscription.
@@ -23,7 +61,6 @@ Les utilisateurs peuvent gagner du ZTH (la monnaie native de la plateforme) en c
 - Toute cette logique est déjà gérée par le backend fourni
 
 > Dans un premier temps il sera accepté de fournir une logique de trading très basique afin de se concentrer sur l'interface en elle même.
-
 
 <div class="grid-2">
   <div>
@@ -47,45 +84,6 @@ Pour calculer le prix d'achat ou de vente, il faut donc calculer l'intégrale de
 Pour acheter X tokens, le cout C revient à :
 
 `C = a * ((X+S)^2 - S^2) / 2 + X * b`
-
-
-## Travail demandé
-
-L'interface utilsateur devra être soignée, réactive et avec un design élégant.
-
-Vous pouvez vous inspirer de sites tels que [pump.fun](https://pump.fun/board) [memecoin.org](https://www.memecoin.org/) [deployyyyer](https://deployyyyer.io/)
-
-### Plateforme d'exemple
-
-Une application de démonstration qui fournit les fonctionnalités demandées est disponible à l'adresse suivante:
-https://zero-to-hundred-frontend.onrender.com
-
-L'objectif est de reproduire une application similaire.
-
-### Contraintes techniques
-
-- Application developpée avec NextJS v15 avec App Router
-- Optimisation de l'application, utilisation au maximum des server components et server actions
-- Optimisation des composants (~ utilisation de useMemo et useCallback)
-- Authentification sécurisée
-- Bonne gestion du SEO, sitemap et metadata
-- Utilisation stricte de Typescript
-- Utiliser à differents endroits au moins une fois chacune des methodes de data fetching suivantes:
-  - RSC pur
-  - CSR pur
-  - RSC > CSR sans streaming
-  - RSC > CSR streaming
-
-## Recommandations
-
-- Base de données: PostgreSQL avec Prisma
-- Style: TailwindCSS avec shadcn/ui ou équivalent
-
-## Bonus
-
-- Tests unitaires
-- Tests E2E
-- Mise à jour de l'interface en temps réel (prix, transactions, ...)
 
 
 ## Projets alternatifs

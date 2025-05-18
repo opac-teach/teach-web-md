@@ -2,8 +2,7 @@
 
 Ces exercices sont des entrainements aux concepts de bases à maitriser avant de se lancer dans un projet plus complexe.
 
-Pour travailler sur ces exercices, vous devrez forker le [projet de démonstration](https://github.com/opac-teach/nextjs-demo) et créer une nouvelle branche, puis créer une pull request sur le projet d'origine pour valider votre travail.
-
+Pour travailler sur ces exercices, vous devrez forker le [projet de démonstration](https://github.com/opac-teach/next-demo) et créer une nouvelle branche, puis créer une pull request sur le projet d'origine pour valider votre travail.
 
 ## Instructions generales
 
@@ -45,29 +44,24 @@ Pour tous les exercices, il faudra faire en sorte d'écrire des composants les p
 
 ## Authentification
 
-- Ajouter une page d'authentification
-  - Créer un formulaire qui demande juste un mot de passe
-    - `password` non vide
-  - Envoyer ce mot de passe en POST à
-    - `https://nuxt-demo-blush.vercel.app/api/login-cookie`
-    - _(le bon mot de passe est `admin123`)_
-  - Changer l'URL de la requête pour récupérer la liste des memecoins vers
-    - `https://nuxt-demo-blush.vercel.app/api/get-memecoins-protected`
-  - Changer l'URL de la requête pour créer un memecoin vers
-    - `https://nuxt-demo-blush.vercel.app/api/create-memecoin-protected`
-    - Vérifier que la création fonctionne bien et que l'owner du memecoin créé est bien le nôtre
-  - Faire évoluer l'UI en fonction de l'état connecté
-    - Si on est connecté :
-      - Afficher un bouton pour se déconnecter dans la navbar
-      - Si l'utilisateur affiche la page de login, ne pas l'afficher et rediriger ailleurs
-    - Si on est déconnecté :
-      - Afficher un bouton pour se connecter dans la navbar
-      - Ne pas afficher le formulaire de création de memecoin, mais un bouton pour se connecter à la place
+Ajouter un système d'authentification: 
 
-- Gerer l’etat connecté avec des middlewares (redirection)
-  > Par exemple, si on est connecté et qu'on essaye d'acceder à la page de login, on doit etre redirigé vers la page d'accueil. Si on accede a la page de memecoins sans etre connecté, on est redirigé vers la page de login.
+- Creer un route handler sur `/api/login` qui: 
+  - Reçoit en POST un mot de passe à définir en constante
+  - Crée un token JWT et le définit sur le client dans un cookie
+- Ajouter une page `/login` qui permet de se connecter
+- Faire évoluer l'UI en fonction de l'état connecté
+  - Si on est connecté :
+    - Afficher un bouton pour se déconnecter dans la navbar
+  - Si on est déconnecté :
+    - Afficher un bouton pour se connecter dans la navbar
+  - Creer un middleware qui redirigera l'utilisateur si il accède aux pages de login et de creation de memecoin sans etre connecté, et à la page de login si il est deja conencté
+
+## Alternatives
+
+- Choisir un composant qui récupère des données, et le dupliquer en plusieurs composants qui chacun recupèrent les données en mode RSC, CSR, ISR, SSG et streaming. 
+- Creer un composant qui affiche et stocke une donnée dans le localStorage
 
 ## Route handlers
 
-- Creer un route handler pour la route `/api/stats` qui retourne un objet JSON avec des statistiques sur les memecoins tels que le nombre total, le nombre moyen par utilisateur...
-- Afficher ces statistiques dans la page `/memecoins`
+Reproduire les routes utilisées (`https://nuxt-demo-blush.vercel.app/api/get-memecoins` etc...) dans ce projet. Commencer avec des données stockées dans des variables, puis utiliser une base de données et un ORM type prisma. 

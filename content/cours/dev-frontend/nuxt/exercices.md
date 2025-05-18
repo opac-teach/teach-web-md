@@ -4,7 +4,7 @@ Pour travailler sur ces exercices, vous devez forker le projet de démonstration
 
 https://github.com/opac-teach/nuxt-demo
 
-Nous allons maintenant refaire la meme chose que pour l'exercice [VueJS CSR](./vuejs), mais en utilisant le framework Nuxt en SSR.
+Nous allons maintenant refaire la meme chose que pour l'exercice [VueJS CSR](../vuejs/exercices), mais en utilisant le framework Nuxt en SSR.
 
 Vous pouvez copier coller une partie du travail que vous avez déjà fait, mais certaines choses doivent être changées:
 

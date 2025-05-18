@@ -5,7 +5,7 @@ https://nextjs.org/
 ::: info 
 Il est necessaire de bien comprendre les concepts de base de React pour pouvoir utiliser correctement NextJS. 
 
-[Consulter d'abord le cours sur React](../react)
+[Consulter d'abord le cours sur React](../react/index)
 :::
 
 NextJS est un framework frontend pour React. Il permet de créer des applications web performantes avec rendu coté serveur, optimisées pour les utilisateurs et le SEO.
@@ -41,12 +41,14 @@ https://nextjs.org/docs/app/getting-started/project-structure
 - ~~pages: dossier contenant les pages et les composants (page router)~~
 - public: fichiers statiques
 
-https://nextjs.org/docs/app/getting-started/layouts-and-pages
 
 
 Tous les dossiers définis dans le dossier `app` sont considérés comme des routes. L'url `monsite.com/a/b/c` sera rendue par le composant `/app/a/b/c/page.tsx`
 
 Les routes dynamiques sont définies par des dossiers avec des crochets tel que `[id]`. Par exemple, `monsite.com/user/2134` sera rendue par le composant `/app/user/[id]/page.tsx`
+
+- https://nextjs.org/docs/app/getting-started/layouts-and-pages
+- https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming
 
 ### Route files (.tsx)
 
@@ -100,18 +102,30 @@ function MyComponent() {
 }
 ```
 
+## Rendering
+
+NextJS propose plusieurs méthodes de rendu, qui déterminent le moment où les données sont récupérés. Ces méthodes peuvent être choisies independemment au niveau des composants. 
+
+Un rendu peut etre fait:
+- Une fois au moment du build (static)
+- A chaque requête, côté serveur (server side rendering)
+- A chaque requête, côté client (client side rendering, static)
+- A intervalle ou à la demande (incremental static regeneration)
+
+A lire:
+- https://nextjs.org/docs/app/getting-started/partial-prerendering
+- https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration
+- https://nextjs.org/docs/app/guides/static-exports
+
+
 
 ## A lire
 Articles importants à lire sur la documentation officielle:
 
 
-- [Rendering](https://nextjs.org/docs/app/building-your-application/rendering)
-- [Routing](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
 - [Data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
 - [Server actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
-- [Incremental Static Regeneration](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration)
 - [Authentication](https://nextjs.org/docs/app/guides/authentication)
-- [Static exports](https://nextjs.org/docs/app/guides/static-exports)
 
 ### En complément
 

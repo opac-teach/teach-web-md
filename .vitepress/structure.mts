@@ -67,8 +67,8 @@ export default {
                 link: "/cours/dev-frontend/react/rsc",
               },
               {
-                text: "Server Actions",
-                link: "/cours/dev-frontend/react/actions",
+                text: "Server Functions",
+                link: "/cours/dev-frontend/react/server-functions",
               },
             ],
           },

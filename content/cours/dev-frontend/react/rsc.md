@@ -2,7 +2,8 @@
 
 Depuis la version 18, React propose une nouvelle approche pour le rendu des composants : les Server Components (**RSC**).
 
-https://react.dev/reference/rsc/server-components
+- https://react.dev/reference/rsc/server-components
+- https://nextjs.org/docs/app/getting-started/server-and-client-components
 
 Cette approche permet de rendre des composants directement sur le serveur, ce qui permet de gagner en performance et de réduire la quantité de code JavaScript à envoyer au client. Cette technique a initialement été portée par NextJS, mais qui a maintenant été integrée diretement dans React. 
 
