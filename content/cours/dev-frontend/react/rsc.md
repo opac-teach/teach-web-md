@@ -117,3 +117,4 @@ export default function Expandable({children}) {
 Attention: tous les composants héritant d'un `Client Component` deviennent automatiquement des client components eux même. Pour palier ce problème, [il faut passer les composants](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#interleaving-server-and-client-components) en tant que `children` ou en props. 
 
 :::
+

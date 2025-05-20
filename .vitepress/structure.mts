@@ -70,6 +70,10 @@ export default {
                 text: "Server Functions",
                 link: "/cours/dev-frontend/react/server-functions",
               },
+              {
+                text: "Exercices",
+                link: "/cours/dev-frontend/react/exercices",
+              },
             ],
           },
           {

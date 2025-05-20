@@ -46,7 +46,7 @@ import { login } from './actions'
 
 function LoginForm() {
     return (
-        <form onSubmit={login}>
+        <form action={login}>
             <input type="password" name="password" />
             <button type="submit">Login</button>
         </form>
@@ -71,6 +71,28 @@ function Component() {
       <button type="submit" disabled={isPending}>Create</button>
       {state.error && <p>{state.error}</p>}
     </form>
+  )
+}
+```
+
+Les exceptions ne sont pas gérés dans cette situation. Si l'action emet une erreur, le front l'ignorera, à moins qu'un fichier `error.tsx` soit présent, dans ce cas ce composant sera affiché.
+
+Pour gérer correctement les erreurs, il est preferable d'éviter d'emetre des erreurs depuis les actions, mais plutot toujours une réponse ok avec un objet contenant des informations sur le succes de l'opération, par exemple:
+
+```tsx
+'use server'
+
+export async function login(formData: FormData) {
+  if (formData.get('password') === PASSWORD) {
+    return {
+      success: true,
+      data: user
+    }
+  } else (
+    return {
+      success: false,
+      error: 'invalid password'
+    }
   )
 }
 ```
