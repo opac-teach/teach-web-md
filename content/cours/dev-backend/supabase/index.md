@@ -19,18 +19,18 @@ Ses fonctionnalités principales sont:
 
 ## Getting started
 
+### Backend
+
+- Suivre la [procédure d'installation](https://supabase.com/docs/guides/local-development/cli/getting-started?queryGroups=access-method&access-method=studio) de la CLI
+- Initialiser le projet supabase avec la commande `supabase init` et le démarrer avec `supabase start`
+- Acceder au studio à l'addresse http://127.0.0.1:54323/
+
 ### Frontend
 
 - Creer un nouveau projet frontend en NextJS avec la commande:
 
 `npx create-next-app -e with-supabase`
 - Modifier le fichier `.env` pour inserer les informations de connexions à la base de données (voir le retour de la commande `supabase start`, API URL & ANON KEY)
-
-### Backend
-
-- Suivre la [procédure d'installation](https://supabase.com/docs/guides/local-development/cli/getting-started?queryGroups=access-method&access-method=studio) de la CLI
-- Initialiser le projet supabase avec la commande `supabase init` et le démarrer avec `supabase start`
-- Acceder au studio à l'addresse http://127.0.0.1:54323/
 
 ##
 
@@ -68,7 +68,7 @@ Si des modifications sont faites sur d'autres schema que `public` (`auth` ou `st
 
 ## NextJS
 
-Pour les exercices suivants, vous pourrez commencer par utiliser la meme methode sur toutes les pages (par ex. tout en server component avec un client supabase), puis tester les differentes méthodes de data fetching dans un second temps. 
+> Pour les exercices suivants, vous pourrez commencer par utiliser la meme methode sur toutes les pages (par ex. tout en server component avec un client supabase), puis tester les differentes méthodes de data fetching dans un second temps. 
 
 Vous pourrez réutiliser une partie du code déjà écrit pour les exercices GraphQL. 
 
@@ -99,13 +99,13 @@ Afficher toutes les chansons appartenant à ce genre sur cette page.
 
 Creer la page `/songs` qui affichera toutes les chansons et permettra de créer une nouvelle chanson via GraphQL.
 
-Cette page doit être un "client component" et doit utiliser la librairie `urql` pour récuperer et créer les chansons.
+Cette page doit être un "client component" et doit utiliser la librairie `urql` pour récuperer et créer les chansons via GraphQL.
 
 ### Song
 
 Creer la page `/songs/[id]` qui affichera une chanson.
 
-Cette page doit être un "server component" et doit utiliser la librairie `urql` pour récuperer la chanson coté serveur. 
+Cette page doit être un "server component" et doit utiliser la librairie `urql` pour récuperer la chanson coté serveur via GraphQL. 
 
 
 ## Profiles
