@@ -31,6 +31,39 @@ Access-Control-Allow-Origin: my-app.com
 
 Le CORS n'empeche pas d'acceder à la ressource en soi, mais les règles du navigateur vont interdire l'accès à la ressource si l'origine n'est pas autorisée.
 
+
+
+```mermaid
+graph LR
+    A[Browser]
+    B[Website: example.com]
+    C[API: api.example.com]
+    D[Website: thirdparty.com]
+    
+
+    B -->|Sets first-party cookie| A
+    B -->|Defines CORS policies for accepted origins| A
+    A -->|Sends cookies for example.com| B
+    A -->|Sends cookies for api.example.com| C
+    A -->|Third party website not in allowed origins, rejects request| D
+    
+
+    style A fill:#90EE90,stroke:#333,stroke-width:2px
+    style B fill:#90EE90,stroke:#333,stroke-width:2px
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#FFB6C1,stroke:#333,stroke-width:2px
+```
+
+### Origines 
+
+Une origine est définie par le protocole, le nom de domaine et le port. Les origines suivantes sont toutes différentes:
+
+- http://example.com:3000
+- https://example.com:3000
+- http://example.com
+- https://example.com
+- https://sub.example.com
+
 ### En developpement
 
 Lorsqu'on développe localement une application, on aura souvent le frontend et le backend sur des origines (port) différentes, il est fastidieux de définir correctement les origines autorisées, et on activera souvent le CORS pour toutes les origines.

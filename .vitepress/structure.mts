@@ -88,6 +88,10 @@ export default {
                 link: "/cours/dev-frontend/nextjs/demo",
               },
               {
+                text: "Authentification",
+                link: "/cours/dev-frontend/nextjs/authentification",
+              },
+              {
                 text: "Exercices",
                 link: "/cours/dev-frontend/nextjs/exercices",
               },
