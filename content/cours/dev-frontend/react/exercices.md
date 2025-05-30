@@ -1,6 +1,7 @@
-
-
 # Exercices React
+
+https://react.dev/learn
+
 
 - Creer un nouveau projet Next.js
   - `npx create-next-app@latest`

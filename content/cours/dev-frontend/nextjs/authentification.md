@@ -22,6 +22,7 @@ Dans le contexte d'une application NextJS avec rendu côté serveur, lorsque le 
 
 ```ts
 // /app/api/login/route.ts
+'use server'
 import { cookies } from 'next/headers'
  
 export async function login(request: Request) {
@@ -43,7 +44,7 @@ export async function login(request: Request) {
 // /app/page.tsx
 import { cookies } from 'next/headers'
 
-export default function Profile() {
+export default async function Profile() {
     const cookieStore = await cookies()
     const token = cookieStore.get('access_token')
     if (!token) {

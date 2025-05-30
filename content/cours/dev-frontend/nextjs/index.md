@@ -124,6 +124,7 @@ Articles importants à lire sur la documentation officielle:
 
 
 - [Data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
+- [Caching](https://nextjs.org/docs/app/deep-dive/caching)
 - [Server actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
 
 ### En complément

@@ -32,7 +32,6 @@ Access-Control-Allow-Origin: my-app.com
 Le CORS n'empeche pas d'acceder à la ressource en soi, mais les règles du navigateur vont interdire l'accès à la ressource si l'origine n'est pas autorisée.
 
 
-
 ```mermaid
 graph LR
     A[Browser]
@@ -97,6 +96,23 @@ S'être protegé de ce genre d'attaque signifie:
 
 - Ne pas interpreter les entrées des utilisateurs en tant que code potentiellement executable
 - Avoir défini sur le serveur web les origines des resources externes autorisées
+- Avoir défini les cookies avec les options `HttpOnly` et `Secure`
+
+
+
+```mermaid
+graph LR
+    A[Client]
+    D[Hacker]
+    B[Website: amazon.com <br/> without CORS origin set]
+    C[Hacker API: api.hacker.com]
+  
+
+    D -->|Inject custom code in a comment|B
+    A -->|Opens the page with the comment, execute custom code| B
+    A -->|sends sensitive data gathered from cookies/local storage| C
+```
+
 
 #### Scenario 2
 
@@ -108,3 +124,13 @@ S'être protegé de ce genre d'attaque signifie:
 
 - Le serveur tiers défini les origines autorisées dans ses headers CORS
 - Le navigateur détéctera que le site malveillant n'est pas autorisé à acceder à la ressource et refusera l'accès
+
+```mermaid
+graph LR
+    A[Client]
+    B[Phishing website: creditagriole.com]
+    C[Bank website: creditagricole.com <br/> without CORS origin set]
+  
+    A -->|Opens phishing page| B
+    A -->|Send a malicious authenticated request to the bank website| C
+```

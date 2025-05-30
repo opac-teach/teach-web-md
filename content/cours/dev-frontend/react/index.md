@@ -33,6 +33,7 @@ Voici une liste de librairies très utilisées en complément de React:
 Pour ce qui est des composants, il existe de nombreux librairies pour React:
 - Material UI: https://mui.com/
 - Shadcn: https://ui.shadcn.com/
+  - Theme builder: https://tweakcn.com/
 - Chakra UI: https://chakra-ui.com/
 
 Pour les animations, on peut utiliser:
