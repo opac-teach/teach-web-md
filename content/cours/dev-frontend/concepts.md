@@ -4,6 +4,26 @@ Le DOM (Document Object Model) est une interface de programmation qui représent
 
 ## Structure du DOM
 
+<div class="grid-2">
+<div>
+
+```html
+<html>
+    <head>
+        <title>Mon titre</title>
+    </head>
+    <body>
+        <div>
+          <p>Bonjour</p>
+          <button>Click me</button>
+        </div>
+    </body>
+</html>
+```
+
+</div>
+<div>
+
 ```mermaid
 graph TD
     A[Document] --> B[html]
@@ -14,6 +34,22 @@ graph TD
     F --> G[p]
     F --> H[button]
 ```
+</div>
+</div>
+
+### Exemple de manipulation du DOM
+
+```jsx
+// Manipulation directe (Real DOM)
+document.getElementById("monElement").innerHTML = "Nouveau contenu";
+
+// Écoute des événements
+document.getElementById("monBouton").on("click", () => alert("clic !"));
+```
+
+::: info À lire
+[https://vuejs.org/guide/extras/rendering-mechanism](https://vuejs.org/guide/extras/rendering-mechanism)
+:::
 
 ## Virtual DOM vs Real DOM
 
@@ -34,23 +70,6 @@ graph TD
    - Compare l'état précédent et nouveau
    - Met à jour uniquement les différences
    - Optimise les performances de rendu
-
-### Exemple de manipulation du DOM
-
-```jsx
-// Manipulation directe (Real DOM)
-document.getElementById("monElement").innerHTML = "Nouveau contenu";
-
-// Écoute des événements
-document.getElementById("monBouton").on("click", () => alert("clic !"));
-
-// Avec un framework utilisant le Virtual DOM (React exemple)
-setState({ contenu: "Nouveau contenu" }); // Le framework optimise la mise à jour
-```
-
-::: info À lire
-[https://vuejs.org/guide/extras/rendering-mechanism](https://vuejs.org/guide/extras/rendering-mechanism)
-:::
 
 # Architecture orientée composant
 

@@ -4,6 +4,10 @@ Pour travailler sur ces exercices, vous devez forker le projet de démonstration
 
 [https://github.com/opac-teach/vue-demo](https://github.com/opac-teach/vue-demo)
 
+##  Exercices de base
+
+Faire les exercices indiqués dans chacune des pages de l'application d'exemple
+
 ### Page Memecoin
 
 - Ajouter une page `/exercices`
