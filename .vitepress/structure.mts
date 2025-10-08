@@ -243,6 +243,15 @@ export default {
           },
         ],
       },
+      // {
+      //   text: "DevOps",
+      //   items: [
+      //     {
+      //       text: "Environnements",
+      //       link: "/cours/dev-backend/devops/environnements",
+      //     },
+      //   ],
+      // },
     ],
   },
 };
