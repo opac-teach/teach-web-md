@@ -20,4 +20,9 @@
 
 ### UI
 
+- [daisyUI](https://daisyui.com/)
 - [shadcn-vue](https://www.shadcn-vue.com/)
+
+### Data Fetching
+
+- [TanStack-Query](https://tanstack.com/query/latest/docs/framework/vue/overview)

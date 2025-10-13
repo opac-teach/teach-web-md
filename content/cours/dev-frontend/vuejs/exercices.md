@@ -4,13 +4,72 @@ Pour travailler sur ces exercices, vous devez forker le projet de démonstration
 
 [https://github.com/opac-teach/vue-demo](https://github.com/opac-teach/vue-demo)
 
-##  Exercices de base
+Une fois que vous avez ouvert le projet sur votre machine, vous pouvez lancer les commandes suivantes:
 
-Faire les exercices indiqués dans chacune des pages de l'application d'exemple
+```bash
+# Installer les dépendances du projet
+
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+```
+
+### Rendu
+
+Une fois votre travail terminé, vous devrez Commit/Push votre travail sur votre fork, et créer une pull request sur le projet d'origine pour valider votre travail.
+
+# Exercices de base
+
+Ces exercices sont à commencer dans le composant `src/components/exercices/Exercice.vue`
+
+## Fondamentaux
+
+### Boucles et conditions
+
+Creer une liste d'articles d'objets à la vente, les afficher, puis n'afficher que ceux dont le prix est supérieur à 50€
+
+### Composants
+
+Creer un composant qui affiche un seul article, et l'utiliser dans la liste precedente pour afficher chaque article en le passant en prop.
+
+### Styles
+
+Afficher en rouge le prix des objets >100€ et en vert si <100€
+
+### Lifecycle
+
+Afficher une alerte lorsque l'utilisateur quitte la page d'exercices
+
+## Routing
+
+### Pages
+
+Creer une nouvelle page et l'ajouter dans le menu de navigation
+
+### Layout
+
+Ajouter votre nom dans le Footer
+
+## State
+
+### Data fetching et filtres
+
+Récupérer les données sur le endpoint https://api.sampleapis.com/rickandmorty/characters et les afficher.
+
+Creer un menu d'options pour filtrer les personnages affichés ("All", "Human", "Alien")
+
+### Global State
+
+Créer un formulaire pour définir un nom d'utilisateur. Stocker celui-ci dans un store pinia, et l'afficher dans le menu de navigation.
+
+##
+
+# Exercices avancés
 
 ### Page Memecoin
 
-- Ajouter une page `/exercices`
+- Créer une nouvelle page `/memecoins`
 - Dans cette page, ajouter une section qui affiche une liste de memecoins
   - Récupérer la liste de memecoins depuis l'adresse
   - `https://nuxt-demo-blush.vercel.app/api/get-memecoins`
@@ -61,6 +120,6 @@ Faire les exercices indiqués dans chacune des pages de l'application d'exemple
   - Le formulaire de création de memecoin
 - Créer un test d'intégration (e2e) qui va créer un memecoin et vérifier qu'il apparaît bien dans la liste
 
-# Rendu
+## TanStack Query
 
-- Commit/Push votre travail sur votre fork, et créez une pull request sur le projet d'origine pour valider votre travail
+Remplacer les appels API pour récupérer la liste des memecoins et créer un memecoin par [TanStack Query](https://tanstack.com/query/latest/docs/framework/vue/overview).

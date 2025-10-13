@@ -18,3 +18,8 @@
 
 - [shadcn-vue](https://www.shadcn-vue.com/)
 - [Nuxt UI](https://ui.nuxt.com/)
+- [daisyUI](https://daisyui.com/)
+
+### Data Fetching
+
+- [TanStack-Query](https://tanstack.com/query/latest/docs/framework/vue/overview)
