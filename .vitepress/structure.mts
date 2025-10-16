@@ -145,7 +145,39 @@ export default {
       {
         text: "Langage C++",
         items: [
-          { text: "Cours", link: "/cours/c-cpp/cpp/langage-cpp" },
+          {
+            text: "Cours",
+            items: [
+              {
+                text: "Intro",
+                link: "/cours/c-cpp/cpp/intro",
+              },
+              {
+                text: "Types",
+                link: "/cours/c-cpp/cpp/types",
+              },
+              {
+                text: "Entrées/Sorties",
+                link: "/cours/c-cpp/cpp/io",
+              },
+              {
+                text: "Pointeurs",
+                link: "/cours/c-cpp/cpp/pointeurs",
+              },
+              {
+                text: "POO",
+                link: "/cours/c-cpp/cpp/poo",
+              },
+              {
+                text: "Organisation du code",
+                link: "/cours/c-cpp/cpp/split",
+              },
+              {
+                text: "Divers",
+                link: "/cours/c-cpp/cpp/divers",
+              },
+            ],
+          },
           { text: "Exercices", link: "/cours/c-cpp/cpp/langage-cpp-exercices" },
         ],
       },
