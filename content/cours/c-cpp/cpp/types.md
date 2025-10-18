@@ -324,11 +324,12 @@ Pour déclarer un itérateur, nous prendrons le type de son conteneur et ajouter
 
 Pour des conteneurs constants, utiliser `const_iterator`
 
-Pour créer un itérateur pointant sur le premier élément d'un conteneur, on utilise `std::begin()`
+Pour créer un itérateur pointant sur le premier élément d'un conteneur, on utilise `std::begin()` ou juste `iterateur.begin()`
 
 ```cpp
 std::vector<int> tableau = { 11, 22, 33, 44 };
 std::vector<int>::iterator tableau_iterateur = std::begin(tableau);
+std::vector<int>::iterator tableau_iterateur_bis = tableau.begin();
 
 // pour les conteneurs constants
 std::vector<float> const tableau_constant = { 50, 51, 52, 53 } ;
@@ -366,6 +367,7 @@ Attention, il ne faut surtout pas déréferencer un tel itérateur, sinon le pro
 ```cpp
 std::vector<int> tableau = { 11, 22, 33, 44 };
 std::vector<int>::iterator tableau_iterateur = std::end(tableau);
+std::vector<int>::iterator tableau_iterateur_bis = tableau.end();
 
 tableau_iterateur--;
 std::cout << *tableau_iterateur << std::endl; // 53

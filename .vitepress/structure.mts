@@ -178,7 +178,27 @@ export default {
               },
             ],
           },
-          { text: "Exercices", link: "/cours/c-cpp/cpp/langage-cpp-exercices" },
+          {
+            text: "Exercices",
+            items: [
+              {
+                text: "Remise à niveau C",
+                link: "/cours/c-cpp/cpp/exercices/remise-a-niveau",
+              },
+              {
+                text: "Bases C++",
+                link: "/cours/c-cpp/cpp/exercices/bases",
+              },
+              {
+                text: "POO",
+                link: "/cours/c-cpp/cpp/exercices/poo",
+              },
+              {
+                text: "Projet",
+                link: "/cours/c-cpp/cpp/exercices/projet",
+              },
+            ],
+          },
         ],
       },
     ],

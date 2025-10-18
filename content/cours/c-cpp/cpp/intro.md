@@ -26,6 +26,10 @@ La documentation officielle:
 
 https://en.cppreference.com/w/
 
+Autre ressource de cours en français:
+
+https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne
+
 Cheat sheet:
 https://cheatsheets.zip/cpp
 
