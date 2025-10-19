@@ -16,7 +16,7 @@ Le langage C++ est un successeur du Langage C auquel il apporte de nombreuses no
 
 Il n’est pas exactement un remplaçant, car le C, plus léger et bas niveau, reste à privilégier dans certains cas d’usages tels que les systèmes embarqués.
 
-Son compilateur principal reste **gcc**, et sa syntaxe reste compatible avec celle du C, mais de nouvelles façons d’écrire du code viennent apparaitre, qui faciliteront souvent la vie du développeur.
+Son compilateur principal reste **gcc**, et sa syntaxe reste compatible avec celle du C, mais de nouvelles façons d’écrire du code viennent apparaitre, qui faciliteront souvent la vie du développeur et permettront le developpement de programme plus poussés.
 
 Nous retrouverons notamment sa bibliothèque standard `std` qui nous fournira beaucoup d’outils pour aider à la gestion de la memoire, des tableaux, pointeurs etc…
 
@@ -35,9 +35,56 @@ https://cheatsheets.zip/cpp
 
 Pour l'environnement de travail, vous pouvez suivre [la même méthode d'installation que pour le C](/cours/c-cpp/c-bases/langage-c#coder-localement)
 
-### Ordre du cours
+## Utilisation du C++
 
-Il est difficile de voir toutes les notions à connaitre dans l'ordre, une par une, car beaucoup sont dépendantes les unes des autres. Si il ya des choses que vous ne connaissez pas dans une partie, continuez la suite et revenez plus tard sur les points manquants.
+### Systèmes d'exploitation et noyaux (OS & Kernels) :
+
+- Microsoft Windows : Noyaux et composants critiques
+- MacOS : Noyau Darwin
+- Linux : Pilotes et composants user-space
+
+### Compilateurs et outils de développement :
+
+- GCC
+- Clang/LLVM
+
+### Environnements de développement intégrés (IDE) :
+
+- Microsoft Visual Studio (pour le backend)
+
+### Bases de données :
+
+- MySQL
+- MongoDB
+
+### Applications de bureau complexes :
+
+- Microsoft Office (Word, Excel, PowerPoint)
+- Adobe Creative Suite : Photoshop, Illustrator, Premiere Pro, After Effects
+
+### Intelligence Artificielle et Machine Learning :
+
+- TensorFlow, PyTorch : Interfaces Python sur coeurs en C++
+- OpenCV
+
+### Systèmes embarqués et IoT (Internet des Objets) :
+
+Voitures connectées, drones, appareils médicaux, microcontrôleurs
+
+### Finance quantitative et trading haute fréquence :
+
+Algorithmes en temps réél
+
+### Graphismes 3D, réalité virtuelle/augmentée :
+
+- Bibliothèques graphiques (OpenGL, Vulkan, DirectX)
+- Moteurs de jeu (Unreal Engine, CryEngine)
+
+## Librairies C++ populaires:
+
+- Boost: Calculs mathématiques avancés, gestion des fichiers, programmation réseau, etc.
+- OpenGL/DirectX pour les graphismes 3D
+- Qt: Développement d'interfaces graphiques
 
 ## Compilation
 
@@ -67,7 +114,7 @@ Les versions les plus recentes incluent toutes les modifications précedentes (1
 
 Parfois en utilisant des exemples trouvé sur internet, vous verrez que votre code ne compile plus car ces exemples utiliseront probablement du code de nouvelles versions, pour laquelle la syntaxe a changé.
 
-Pour changer la version de C++ utilisée, rajouter `-std=c++17` pour la version `2017` par exemple (il existe `c++97` `c++11` `c++17` )
+Pour changer la version de C++ utilisée, rajouter `-std=c++17` pour la version `2017` par exemple (il existe `c++97` `c++11` `c++17` `c++20` `c++23`)
 
 ### Affichage dans la console
 
@@ -78,9 +125,11 @@ Avant, en C, nous utilisitons `printf`:
 ```c
 #include <stdio.h>
 
-printf("Hello World!\n");
-int var = 5;
-printf("var: %d\n", var)
+int main() {
+    printf("Hello World!\n");
+    int var = 5;
+    printf("var: %d\n", var);
+}
 ```
 
 Maintenant, en C++, nous allons utiliser `std::cout`.
@@ -93,12 +142,12 @@ L’opérateur `<<` permet de concatener des elements à afficher et `std::endl`
 int main() {
     std::cout << "Hello World!" << std::endl;
     int var = 4;
-    std::cout << "var = " << var << std::endl;
+    std::cout << "var: " << var << std::endl;
     return 0;
 }
 ```
 
-Le fonctionnement de std::cout sera expliqué en détail dans la suite du cours.
+Le fonctionnement de `std::cout` sera expliqué en détail dans la suite du cours.
 
 ## Projet de départ
 

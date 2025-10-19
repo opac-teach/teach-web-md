@@ -61,3 +61,9 @@ Avec à ces tableaux dynamiques, nous pourrons:
 ### Listes chainées
 
 Implémenter un système de [listes chainées](../../c-avance/langage-c-avance#listes-chainees)
+
+### Reflexion
+
+Comparer les avantages et inconvénients des tableaux dynamiques et des listes chainées. Etudier les differences de performances et de coûts en calculs/mémoire entre ces deux méthodes et expliquer pourquoi privilegier l’une ou l’autre dans certains cas.
+
+Reflechir à des alternatives possibles qui amélioreraient les performances.

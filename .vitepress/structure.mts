@@ -178,6 +178,7 @@ export default {
               },
             ],
           },
+          { text: "Cheatsheet", link: "https://cheatsheets.zip/cpp" },
           {
             text: "Exercices",
             items: [
