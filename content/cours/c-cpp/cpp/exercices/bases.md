@@ -26,16 +26,6 @@ Remplacer l'utilisation de `printf` et `scanf` par `std::cout` et `std::cin`
   - `char`
 - Demander à l’utilisateur de rentrer des valeurs pour les affecter à ces différents types de variables avec `std::cin`
 
-## Les pointeurs
-
-### References
-
-Ecrire une fonction qui inverse les données de deux variables avec l’utilisation de variables passées par réference (`&`)
-
-### Allocations
-
-Demander à l’utilisateur une taille et allouer un tableau d’entier de cette taille avec `new` puis liberer la mémoire pour ce tableau
-
 ## Conteneurs
 
 ### Array
@@ -88,6 +78,16 @@ Réimplementer certaines fonctions fournies par la librairie standard:
 - `compare(string1, string2)`
 
 Vous pouvez vous réferer à la documentation officielle pour connaitre le fonctionnement de ces fonctions: https://en.cppreference.com/w/cpp/algorithm
+
+## Les pointeurs
+
+### References
+
+Ecrire une fonction qui inverse les données de deux variables avec l’utilisation de variables passées par réference (`&`)
+
+### Allocations
+
+Demander à l’utilisateur une taille et allouer un tableau d’entier de cette taille avec `new` puis liberer la mémoire pour ce tableau
 
 ## Polymorphisme
 

@@ -418,7 +418,7 @@ Certaines fonctions proposées par les conteneurs pour les manipuler ne peuvent 
 std::vector<int> nombres = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 // suppression du quatrième element
 nombres.erase(std::begin(nombres) + 3);
-// suppression des elements entre le premier (inclus) et le dernier (non inclus)
+// suppression des elements entre le premier (inclus) et le troisieme (non inclus)
 nombres.erase(std::begin(nombres), std::begin(nombres) + 2);
 ```
 
