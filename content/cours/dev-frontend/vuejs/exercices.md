@@ -53,6 +53,15 @@ Ajouter votre nom dans le Footer
 
 ## State
 
+### Articles en state
+
+- Transformer la liste d'articles en variable reactive
+- Transformer le filtre sur les prix > 50€ qui etait fait avec un v-if en une nouvelle variable calculée (computed)
+
+### Ajout d'article
+
+Ajouter un formulaire pour ajouter un nouvel article à la liste.
+
 ### Data fetching et filtres
 
 Récupérer les données sur le endpoint https://api.sampleapis.com/rickandmorty/characters et les afficher.

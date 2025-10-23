@@ -125,7 +125,7 @@ Lors du chargement à partir du fichier ou de l’enregistrement, utiliser une l
 
 Telecharger cette archive, ajouter les fichiers à votre projet et utiliser ces fonctions pour le chiffrement
 
-[AES.zip](../assets/AES.zip)
+[AES.zip](../../assets/AES.zip)
 
 ```cpp
 #include "AES.hpp"
