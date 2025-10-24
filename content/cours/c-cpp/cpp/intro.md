@@ -151,7 +151,7 @@ Le fonctionnement de `std::cout` sera expliqué en détail dans la suite du cour
 
 ## Projet de départ
 
-Un exemple de projet C++ de base est [telechargeable ici](./assets/cpp_base_project.zip)
+Un exemple de projet C++ de base est [telechargeable ici](/files/cpp_base_project.zip)
 
 Vous devez avoir un compilateur et l'outil Makefile installé.
 

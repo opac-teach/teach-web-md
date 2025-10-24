@@ -46,7 +46,7 @@ Créer un programme qui gère une annuaire de numéro de telephone sous forme no
 
 Partir de ce projet:
 
-[annuaire-template.zip](../assets/annuaire-template.zip)
+[annuaire-template.zip](/files/annuaire-template.zip)
 
 Compiler avec la commande suivante:
 
@@ -125,7 +125,7 @@ Lors du chargement à partir du fichier ou de l’enregistrement, utiliser une l
 
 Telecharger cette archive, ajouter les fichiers à votre projet et utiliser ces fonctions pour le chiffrement
 
-[AES.zip](../../assets/AES.zip)
+[AES.zip](/files/AES.zip)
 
 ```cpp
 #include "AES.hpp"
