@@ -655,13 +655,18 @@ public:
 
 int main()
 {
-    Animal chienA = Chien();
+    Animal chienA = Chien();        // Chien a été tronqué en Animal
     Animal *chienB = new Chien();
     Animal *chat = new Chat();
 
     chienA.parler();    // Animal
     chienB->parler();   // chien
     chat->parler();     // chat
+
+
+    // References similaires aux pointeurs
+    Animal &refChien = chienA;
+    refChien.parler();  // chien
 
     return 0;
 }
