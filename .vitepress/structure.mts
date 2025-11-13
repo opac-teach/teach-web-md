@@ -11,17 +11,38 @@ export default {
       {
         text: "Fondamentaux",
         items: [
-          { text: "Introduction", link: "/cours/dev-frontend/index" },
-          { text: "Ecosystème", link: "/cours/dev-frontend/ecosysteme" },
-          { text: "Concepts", link: "/cours/dev-frontend/concepts" },
-          { text: "Rendering", link: "/cours/dev-frontend/rendering" },
-          { text: "Routing", link: "/cours/dev-frontend/routing" },
-          { text: "Hebergement", link: "/cours/dev-frontend/hebergement" },
-          { text: "Styling", link: "/cours/dev-frontend/styling" },
-          { text: "SEO", link: "/cours/dev-frontend/seo" },
-          { text: "Tests", link: "/cours/dev-frontend/tests" },
-          { text: "Sécurité", link: "/cours/dev-frontend/securite" },
-          { text: "Approfondir", link: "/cours/dev-frontend/approfondir" },
+          {
+            text: "Introduction",
+            link: "/cours/dev-frontend/fondamentaux/index",
+          },
+          {
+            text: "Ecosystème",
+            link: "/cours/dev-frontend/fondamentaux/ecosysteme",
+          },
+          {
+            text: "Concepts",
+            link: "/cours/dev-frontend/fondamentaux/concepts",
+          },
+          {
+            text: "Rendering",
+            link: "/cours/dev-frontend/fondamentaux/rendering",
+          },
+          { text: "Routing", link: "/cours/dev-frontend/fondamentaux/routing" },
+          {
+            text: "Hebergement",
+            link: "/cours/dev-frontend/fondamentaux/hebergement",
+          },
+          { text: "Styling", link: "/cours/dev-frontend/fondamentaux/styling" },
+          { text: "SEO", link: "/cours/dev-frontend/fondamentaux/seo" },
+          { text: "Tests", link: "/cours/dev-frontend/fondamentaux/tests" },
+          {
+            text: "Sécurité",
+            link: "/cours/dev-frontend/fondamentaux/securite",
+          },
+          {
+            text: "Approfondir",
+            link: "/cours/dev-frontend/fondamentaux/approfondir",
+          },
         ],
       },
       {
