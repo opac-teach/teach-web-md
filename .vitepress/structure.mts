@@ -121,6 +121,27 @@ export default {
                 link: "/cours/dev-frontend/nextjs/projet",
               },
             ],
+          },,
+          {
+            text: "three.js",
+            items: [
+              {
+                text: "Introduction",
+                link: "/cours/dev-frontend/threejs/index",
+              },
+              {
+                text: "Concepts",
+                link: "/cours/dev-frontend/threejs/concepts",
+              },
+              {
+                text: "Animation",
+                link: "/cours/dev-frontend/threejs/animation",
+              },
+              {
+                text: "Utiles",
+                link: "/cours/dev-frontend/threejs/utiles",
+              },
+            ],
           },
         ],
       },
