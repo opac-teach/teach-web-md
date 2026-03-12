@@ -338,6 +338,61 @@ export default {
           },
         ],
       },
+      {
+        text: "NoSQL",
+        items: [
+          {
+            text: "Intro",
+            link: "/cours/dev-backend/nosql/index",
+          },
+          {
+            text: "MongoDB",
+            items: [
+              {
+                text: "Concepts",
+                link: "/cours/dev-backend/nosql/concepts",
+              },
+              {
+                text: "Requêtes",
+                link: "/cours/dev-backend/nosql/requetes",
+              },
+              {
+                text: "Indexation",
+                link: "/cours/dev-backend/nosql/indexation",
+              },
+              {
+                text: "Aggregation",
+                link: "/cours/dev-backend/nosql/aggregation",
+              },
+              {
+                text: "ORMs",
+                link: "/cours/dev-backend/nosql/orm",
+              },
+              {
+                text: "Migrations",
+                link: "/cours/dev-backend/nosql/migrations",
+              },
+            ]
+          },
+          {
+            text: "Graphes",
+            link: "/cours/dev-backend/nosql/graphes",
+          },
+          {
+            text: "Synthese",
+            link: "/cours/dev-backend/nosql/synthese",
+          },
+          {
+            text: "En pratique",
+            items: [
+              {
+                text: "Exercices",
+                link: "/cours/dev-backend/nosql/exercices",
+              },
+            ]
+          },
+        ],
+      },
       // {
       //   text: "DevOps",
       //   items: [
