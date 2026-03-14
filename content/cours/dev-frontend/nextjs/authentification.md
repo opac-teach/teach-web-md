@@ -7,7 +7,7 @@ Il est recommandé de consulter le [guide officiel](https://nextjs.org/docs/app/
 
 Les cookies sont un espace de stockage local au navigateur qui permet d'identifier l'utilisateur auprès du serveur. C'est le serveur qui décide des cookies à créer chez le client, le navigateur les conserve et les envoiera automatiquement à chaque requête à ce serveur. 
 
-Les cookies sont stockés par [origine](../securite.md#origines), c'est à dire que chaque site web a ses propres cookies. 
+Les cookies sont stockés par [origine](../fondamentaux/securite.md#origines), c'est à dire que chaque site web a ses propres cookies. 
 
 Options des cookies:
 - `SameSite`: définit les origines qui peuvent accéder au cookie

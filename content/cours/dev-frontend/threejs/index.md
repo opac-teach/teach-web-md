@@ -52,7 +52,7 @@ Vous devez avoir installé NodeJS sur votre ordinateur.
 
 La solution la plus simple est d'utiliser Vite pour compiler votre programme ThreeJS.
 
-Vous pouvez partir de ce projet de base: [boilerplate-three-vite.zip](./assets/boilerplate-three-vite.zip)
+Vous pouvez partir de ce projet de base: [boilerplate-three-vite.zip](/files/boilerplate-three-vite.zip)
 
 **Décompressez** cette archive dans votre ordinateur, puis ouvrez le dossier dans votre éditeur de code.
 
@@ -73,7 +73,7 @@ Vous aurez un serveur web démarré qui rechargera automatiquement le code a cha
 Si vous preferez integrer Three.js dans une page web plus complexe, il est possible de l'utiliser.js avec Next.js, en utilisant les [ref de React](https://react.dev/learn/manipulating-the-dom-with-refs) pour donner l'element `canvas` à Three.js, ce qui nous permet de le placer où on le souhaite dans la page.
 
 Vous pouvez partir de ce projet de base: 
-[boilerplate-three-next.zip](./assets/boilerplate-three-next.zip)
+[boilerplate-three-next.zip](/files/boilerplate-three-next.zip)
 
 De même, installez les dépendances avec `pnpm i` et lancez le projet avec `pnpm dev`.
 

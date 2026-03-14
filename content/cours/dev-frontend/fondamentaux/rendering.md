@@ -100,7 +100,7 @@ L'hydration fait référence au processus par lequel une application JavaScript 
 
 :::
 
-![GET example.com (1).png](assets/fcp.jpg)
+![GET example.com (1).png](../assets/fcp.jpg)
 
 ## Static Site Generation (SSG)
 

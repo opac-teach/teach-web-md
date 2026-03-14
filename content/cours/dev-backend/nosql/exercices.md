@@ -10,7 +10,7 @@ Vous devez avoir NodeJS et Docker installé sur votre machine.
 
 ### Boilerplate
 
-- Telecharger le projet [boilerplate-mongo](./assets/boilerplate-mongo.zip) et l'extraire sur votre machine.
+- Telecharger le projet [boilerplate-mongo](/files/boilerplate-mongo.zip) et l'extraire sur votre machine.
 - Lancer le serveur mongo avec docker: `docker compose up -d`
 - Installer les dépendences javascript: `npm i`
 - Lancer le projet: `npm start`
