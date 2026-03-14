@@ -12,7 +12,7 @@ Vous devez avoir NodeJS et Docker installé sur votre machine.
 
 - Telecharger le projet [boilerplate-mongo](./assets/boilerplate-mongo.zip) et l'extraire sur votre machine.
 - Lancer le serveur mongo avec docker: `docker compose up -d`
-- Install[exercices.md](exercices.md)er les dépendences javascript: `npm i`
+- Installer les dépendences javascript: `npm i`
 - Lancer le projet: `npm start`
 
 
@@ -44,13 +44,20 @@ A la fin, créez une archive `.zip` avec chaque fichier `TPx.js` que vous devrez
 
 ## TP 1 — Insertion et modélisation
 
-### Contexte
+### Seed
 
-Vous commencez par peupler la base avec un catalogue de films et des comptes utilisateurs.
+Lorsque vous demarrerez, la base de données est vide. Pour la peupler avec des données d'exemple, lancez la comamnde `node seed.js`.
 
-### Exercice 1.1 — Insérer le catalogue de films
+Si vous voulez repartir sur une base vide, écrivez un script qui vide la base, ou alors supprimez et relancez le conteneur:
+```
+docker compose down
+docker compose up -d
+node seed.js
+```
 
-Insérez des films dans une collection `films`. Chaque document doit contenir :
+### Exercice 1.1 — Insérer des films
+
+Insérez des films dans la collection `films`. Chaque document doit contenir :
 - `titre` (string)
 - `annee` (number)
 - `genres` (tableau de strings)
@@ -71,21 +78,16 @@ Insérez les utilisateurs suivants dans une collection `utilisateurs`. Chaque do
 
 ### Exercice 1.3 — Insérer les visionnages
 
-Récupérez les `_id` de quelques films et utilisateurs, puis créez une collection `visionnages` pour enregistrer qui a regardé quoi.
+Récupérez les `_id` des films et utilisateurs que vous venez de creer (regarder ce que retourne `insert`), puis créez une collection `visionnages` pour enregistrer qui a regardé quoi.
 
-Par exemple:
-```javascript
-// Récupérer les ids (à adapter selon vos résultats)
-const alice = db.utilisateurs.findOne({ email: "alice@example.com" })._id
-const inception = db.films.findOne({ titre: "Inception" })._id
-
-db.visionnages.insertMany([
-  { utilisateurId: alice, filmId: inception,  date: new Date("2024-01-10"), noteUtilisateur: 9, termine: true  },
-])
-```
+La table `visionnages` doit contenir :
+- `utilisateurId` (string)
+- `filmId` (string)
+- `date` (date)
+- `noteUtilisateur` (number entre 0 et 10)
+- `termine` (boolean)
 
 ## TP 2 — Requêtes et lecture
-
 
 ### Exercice 2.1 — Requêtes simples
 
@@ -94,9 +96,6 @@ db.visionnages.insertMany([
 **b)** Trouvez tous les films réalisés par Christopher Nolan.
 
 **c)** Trouvez les films sortis entre 2010 et 2015 inclus.
-
-**d)** Trouvez les films dont la durée est inférieure à 130 minutes.
-
 
 ### Exercice 2.2 — Opérateurs logiques et tableaux
 
@@ -108,7 +107,6 @@ db.visionnages.insertMany([
 
 **d)** Trouvez les films qui ont **exactement** 2 genres.
 
-
 ### Exercice 2.3 — Projections, tri et pagination
 
 **a)** Listez uniquement le titre et la note de tous les films (sans le champ `_id`).
@@ -117,16 +115,12 @@ db.visionnages.insertMany([
 
 **c)** Affichez les films triés par année décroissante, en ignorant les 2 premiers résultats (pagination — page 2 avec 3 films par page).
 
-**d)** Trouvez les utilisateurs abonnés `"premium"`, en n'affichant que leur nom et email.
-
 
 ### Exercice 2.4 — Documents imbriqués
 
 **a)** Trouvez les utilisateurs qui ont `"sci-fi"` dans leurs préférences de genres.
 
-**b)** Trouvez les utilisateurs qui ont `"Bong Joon-ho"` dans leur liste de réalisateurs préférés.
-
-**c)** Trouvez les visionnages qui ont été terminés (`termine: true`) avec une note utilisateur supérieure ou égale à 9.
+**b)** Trouvez les visionnages qui ont été terminés (`termine: true`) avec une note utilisateur supérieure ou égale à 9.
 
 ## TP 3 — Mises à jour et suppressions
 
@@ -136,17 +130,13 @@ db.visionnages.insertMany([
 
 **b)** Ajoutez le champ `streaming: true` à tous les films de Christopher Nolan.
 
-**c)** Claire Leroy passe à un abonnement `"standard"`. Mettez à jour son document.
-
 ### Exercice 3.2 — Opérateurs de mise à jour avancés
 
 **a)** Ajoutez le genre `"classique"` au film "Pulp Fiction" (sans dupliquer s'il existe déjà).
 
-**b)** Ajoutez la langue `"espagnol"` à la liste des langues du film "Inception".
+**b)** Incrémentez de 1 le champ `nbVisionnages` pour le film "Inception". Ce champ n'existe pas encore — il doit être créé automatiquement à 1.
 
-**c)** Incrémentez de 1 le champ `nbVisionnages` pour le film "Inception". Ce champ n'existe pas encore — il doit être créé automatiquement à 1.
-
-**d)** Retirez `"action"` des genres du film "The Dark Knight".
+**c)** Retirez `"action"` des genres du film "The Dark Knight".
 
 ### Exercice 3.3 — Upsert et suppression
 
@@ -164,13 +154,45 @@ Pour chacune des requêtes suivantes, identifiez le ou les champs à indexer et 
 
 **a)** La requête la plus fréquente sur `films` est : trouver les films d'un réalisateur triés par note décroissante.
 
-**b)** On cherche souvent des utilisateurs par leur email (connexion).
+**b)** Les visionnages sont souvent filtrés par `utilisateurId` pour afficher l'historique d'un utilisateur.
 
-**c)** Les visionnages sont souvent filtrés par `utilisateurId` pour afficher l'historique d'un utilisateur.
+### Exercice 4.2 — Index et requêtes textuelles
 
-**d)** On effectue régulièrement des recherches textuelles sur le titre des films (recherche par mot-clé).
+**a)** Créez un index textuel sur le champ `titre` de la collection `films`.
 
-### Exercice 4.2 — Analyser les performances
+**b)** Recherchez tous les films dont le titre contient le mot `"dark"` ou `"mad"`.
+
+**c)** Supprimez l'index textuel que vous venez de créer.
+
+## TP 5 — Pipeline d'agrégation
+
+### Exercice 5.1 — Jointures avec `$lookup`
+
+**a)** Pour chaque visionnage, récupérez le titre et la note du film correspondant (jointure `visionnages` → `films`).
+
+**b)** Pour chaque visionnage terminé, affichez le nom de l'utilisateur et le titre du film.
+
+**c)** Calculez le nombre de visionnages par film, en affichant le titre du film. Triez par nombre de visionnages décroissant.
+
+### Exercice 5.2 — Statistiques simples
+
+**a)** Calculez la note moyenne, maximale et minimale de tous les films.
+
+**b)** Comptez le nombre de films par réalisateur, triés par nombre de films décroissant.
+
+**c)** Calculez la durée totale et la durée moyenne des films par genre. (Indice : utilisez `$unwind` pour décomposer le tableau `genres`.)
+
+### Exercice 5.3 — Filtrage dans le pipeline
+
+**a)** Listez les réalisateurs ayant au moins 2 films dans le catalogue, avec leur note moyenne.
+
+**b)** Trouvez les 3 genres les mieux notés en moyenne (parmi les genres ayant au moins 2 films).
+
+**c)** Calculez le nombre de visionnages terminés et non terminés, groupés par statut.
+
+## Bonus: Performances
+
+### Exercice 6.1 — Analyser les performances
 
 **a)** Avant de créer un index sur `note`, utilisez `explain("executionStats")` pour analyser le plan d'exécution de la requête suivante. Notez le champ `totalDocsExamined`.
 
@@ -182,54 +204,10 @@ db.films.find({ note: { $gte: 8.5 } }).explain("executionStats")
 
 **c)** Listez tous les index de la collection `films` avec `getIndexes()`.
 
-### Exercice 4.3 — Index et requêtes textuelles
-
-**a)** Créez un index textuel sur le champ `titre` de la collection `films`.
-
-**b)** Recherchez tous les films dont le titre contient le mot `"dark"` ou `"mad"`.
-
-**c)** Supprimez l'index textuel que vous venez de créer.
-
-## TP 5 — Pipeline d'agrégation
-
-### Exercice 5.1 — Statistiques simples
-
-**a)** Calculez la note moyenne, maximale et minimale de tous les films.
-
-**b)** Comptez le nombre de films par réalisateur, triés par nombre de films décroissant.
-
-**c)** Calculez la durée totale et la durée moyenne des films par genre. (Indice : utilisez `$unwind` pour décomposer le tableau `genres`.)
-
-### Exercice 5.2 — Filtrage dans le pipeline
-
-**a)** Listez les réalisateurs ayant au moins 2 films dans le catalogue, avec leur note moyenne.
-
-**b)** Trouvez les 3 genres les mieux notés en moyenne (parmi les genres ayant au moins 2 films).
-
-**c)** Calculez le nombre de visionnages terminés et non terminés, groupés par statut.
-
-### Exercice 5.3 — Jointures avec `$lookup`
-
-**a)** Pour chaque visionnage, récupérez le titre et la note du film correspondant (jointure `visionnages` → `films`).
-
-**b)** Pour chaque visionnage terminé, affichez le nom de l'utilisateur et le titre du film.
-
-**c)** Calculez le nombre de visionnages par film, en affichant le titre du film. Triez par nombre de visionnages décroissant.
-
-### Exercice 5.4 — Statistiques croisées (synthèse)
+### Exercice 6.2 — Statistiques croisées (synthèse)
 
 **a)** Quel utilisateur a la meilleure note moyenne dans ses visionnages terminés ? Affichez son nom et sa note moyenne.
 
 **b)** Pour chaque abonnement (`basic`, `standard`, `premium`), calculez : le nombre d'utilisateurs, le nombre total de visionnages et la note moyenne donnée.
 
 **c)** Construisez un rapport des films les plus populaires : pour chaque film, affichez le titre, la note officielle, le nombre de visionnages et la note moyenne donnée par les utilisateurs. Triez par note utilisateur décroissante.
-
-## Récapitulatif des compétences exercées
-
-| TP | Compétences |
-|----|-------------|
-| TP 1 | `insertOne`, `insertMany`, références entre collections |
-| TP 2 | `find`, opérateurs `$gte`, `$in`, `$all`, `$size`, notation pointée, `projection`, `sort`, `skip`, `limit` |
-| TP 3 | `updateOne`, `updateMany`, `$set`, `$unset`, `$inc`, `$push`, `$pull`, `$addToSet`, `upsert`, `deleteMany` |
-| TP 4 | `createIndex`, index simples, composés, textuels, `explain`, `getIndexes`, `dropIndex` |
-| TP 5 | `aggregate`, `$match`, `$group`, `$sort`, `$limit`, `$unwind`, `$lookup`, `$project`, `$cond` |

@@ -6,6 +6,15 @@ export default {
   ],
 
   sidebar: {
+    "/cours": [
+      {
+        items: [
+          { text: "Dev Frontend", link: "/cours/dev-frontend" },
+          { text: "Dev Backend", link: "/cours/dev-backend" },
+          { text: "C/C++", link: "/cours/c-cpp" },
+        ],
+      },
+    ],
     "/cours/dev-frontend": [
       { text: "Developpement Frontend" },
       {
@@ -255,45 +264,58 @@ export default {
         ],
       },
       {
-        text: "NestJS",
+        text: "Sujets",
         items: [
-          {
-            text: "Cours",
-            items: [
-              { text: "Introduction", link: "/cours/dev-backend/nestjs/index" },
-              {
-                text: "Découpage",
-                link: "/cours/dev-backend/nestjs/decoupage",
-              },
-              { text: "API REST", link: "/cours/dev-backend/nestjs/api-rest" },
-              { text: "GraphQL", link: "/cours/dev-backend/nestjs/graphql" },
-              { text: "ORM", link: "/cours/dev-backend/nestjs/orm" },
-              { text: "Tests", link: "/cours/dev-backend/nestjs/tests" },
-              {
-                text: "Microservices",
-                link: "/cours/dev-backend/nestjs/microservices",
-              },
-              {
-                text: "Websockets",
-                link: "/cours/dev-backend/nestjs/ws",
-              },
-            ],
-          },
-          {
-            text: "En pratique",
-            items: [
-              {
-                text: "Projet d'exemple",
-                link: "/cours/dev-backend/nestjs/project-example",
-              },
-              {
-                text: "Exercices",
-                link: "/cours/dev-backend/nestjs/exercices",
-              },
-            ],
-          },
+          { text: "NestJS", link: "/cours/dev-backend/nestjs" },
+          { text: "GraphQL", link: "/cours/dev-backend/graphql" },
+          { text: "Supabase", link: "/cours/dev-backend/supabase" },
+          { text: "NoSQL", link: "/cours/dev-backend/nosql" },
         ],
       },
+        ],
+      "/cours/dev-backend/nestjs": [
+        {
+          text: "NestJS",
+          items: [
+            {
+              text: "Cours",
+              items: [
+                { text: "Introduction", link: "/cours/dev-backend/nestjs/index" },
+                {
+                  text: "Découpage",
+                  link: "/cours/dev-backend/nestjs/decoupage",
+                },
+                { text: "API REST", link: "/cours/dev-backend/nestjs/api-rest" },
+                { text: "GraphQL", link: "/cours/dev-backend/nestjs/graphql" },
+                { text: "ORM", link: "/cours/dev-backend/nestjs/orm" },
+                { text: "Tests", link: "/cours/dev-backend/nestjs/tests" },
+                {
+                  text: "Microservices",
+                  link: "/cours/dev-backend/nestjs/microservices",
+                },
+                {
+                  text: "Websockets",
+                  link: "/cours/dev-backend/nestjs/ws",
+                },
+              ],
+            },
+            {
+              text: "En pratique",
+              items: [
+                {
+                  text: "Projet d'exemple",
+                  link: "/cours/dev-backend/nestjs/project-example",
+                },
+                {
+                  text: "Exercices",
+                  link: "/cours/dev-backend/nestjs/exercices",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      "/cours/dev-backend/graphql": [
       {
         text: "GraphQL",
         items: [
@@ -329,6 +351,8 @@ export default {
           },
         ],
       },
+      ],
+    "/cours/dev-backend/supabase": [
       {
         text: "Supabase",
         items: [
@@ -338,6 +362,8 @@ export default {
           },
         ],
       },
+    ],
+    "/cours/dev-backend/nosql": [
       {
         text: "NoSQL",
         items: [
@@ -377,6 +403,10 @@ export default {
           {
             text: "Graphes",
             link: "/cours/dev-backend/nosql/graphes",
+          },
+          {
+            text: "Déploiement",
+            link: "/cours/dev-backend/nosql/deploiement",
           },
           {
             text: "Synthese",

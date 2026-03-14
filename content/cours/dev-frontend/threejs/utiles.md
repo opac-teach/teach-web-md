@@ -59,7 +59,7 @@ mixer.update(delta);
 ## Controls
 
 Three.js integre differents Controls qui permettent un deplacement de la caméra selon le type de gameplay voulu.
-Par exemple, **PointerLockControls** est idéal pour les jeux types FPS, **OrbitControls** pour les jeux qui necessitent un déplacement en trois dimensions.
+Par exemple, **PointerLockControls** est idéal pour les jeux types FPS, **OrbitControls** pour pour du TPS.
 
 ### Pointer Lock
 
