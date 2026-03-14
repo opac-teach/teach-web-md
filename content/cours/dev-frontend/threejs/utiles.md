@@ -13,7 +13,7 @@ Télechargez de preference les modèles sous le format `gltf`
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const modelLoader = new GLTFLoader();
-const gltf = await modelLoader.loadAsync("./models/hovercar/scene.gltf");
+const gltf = await modelLoader.loadAsync("/assets/models/hovercar/scene.gltf");
 scene.add(gltf.scene);
 ```
 
@@ -22,10 +22,16 @@ scene.add(gltf.scene);
 
 ```jsx
 const textureLoader = new THREE.TextureLoader();
-const texture = await textureLoader.loadAsync("./textures/block/dirt.png");
+const texture = await textureLoader.loadAsync("/assets/textures/block/dirt.png");
 
 const material = new THREE.MeshBasicMaterial({ map: texture });
 ```
+
+### Distribution des assets
+
+Les modeles et textures sont chargés au moment de l'execution du code par le client, pas par le serveur ou par le compilateur. Il est donc necessaire que les resources soient disponibles par le navigateur. 
+
+En general, (avec Vite et Next), vous pouvez placer les assets dans le dossier `public`, qui rendra les fichiers qui sont dedans accessibles à l'url `/`.
 
 # Notions utiles
 
@@ -44,7 +50,7 @@ texture.colorSpace = THREE.SRGBColorSpace;
 scene.background = texture;
 ```
 
-## Animation
+## Animation des modèles
 
 Certains modèles 3D possèdent une animation pour les faire bouger dans le temps. Pour cela, il est necessaire d'utilier un **AnimationMixer** et de le mettre à jour à chaque frame.
 ```jsx
@@ -88,7 +94,8 @@ raycaster.setFromCamera( new Vector2(0, 0), camera );
 // definir origine/direction manuellement
 raycaster.set(origin, direction);
 
-const intersects = raycaster.intersectObjects( objectsList, true );
+// Detecter les collisions avec une liste d'objets
+const intersects = raycaster.intersectObjects( objectsList, true ); // true indique qu'il doit aussi tester les descendants de ces objets.
 ```
 
 ### Intersection
@@ -123,24 +130,8 @@ window.addEventListener("resize", () => {
 });
 ```
 
-# Déploiement
+## GUI
 
-Vous pouvez deployer votre projet sur Vercel.
+Vous pouvez utiliser des librairies qui vous permettent de modifier des parametres de votre programme en temps reel:
 
-Si vous utilisez un projet de base avec juste Vite:
-
-
-- Creer un fichier `vite.config.js` a la racine de votre projet et inserer le code suivant dedans:
-
-```jsx
-export default {
-  build: {
-    target: "esnext", //browsers can handle the latest ES features
-  },
-};
-```
-
-- Déplacer toutes les ressources (modeles, textures…) dans un dossier appelé `public` a la racine du projet
-- Tester que ces ressources fonctionnent encore en local
-- Lancer la commande `npx vercel`
-    - Se connecter si necessaire puis accepter les réponses par defaut a toutes les questions
+https://github.com/georgealways/lil-gui

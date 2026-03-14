@@ -20,3 +20,6 @@ Export PDF
 ```bash
 LESSON=dev-frontend npm run export-pdf
 ```
+```bash
+LESSON=dev-backend/nosql npm run export-pdf
+```

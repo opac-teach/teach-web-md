@@ -70,6 +70,18 @@ En threejs, les angles sont éxprimés en **Radians**.
 `360° = 2*PI radians`
 ::: 
 
+### Groupes
+
+Un Object3D peut contenir d'autres Object3D (decendants), ce qui permet de créer des groupes et sous groupes d'objets. Grâce à cela, déplacer l'objet parent fera déplacer de la même façon tous ses descendants. 
+
+
+```js
+const person = new THREE.Object3D();
+person.add(head);   
+person.add(legs);
+person.position.x += 2; // déplacera la tête et les pieds.
+console.log(person.children); // 2 objets
+```
 ## Scene
 
 [https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene](https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene)
@@ -131,7 +143,7 @@ Le renderer est le moteur de rendu. C’est lui qui se chargera d’assimiler to
 
 Le renderer threejs va creer un element HTML de type `canva` qu’il faudra ajouter au DOM
 
-Nous devrons demander au renderer de faire un rendu a chaque fois que l’on veut une nouvelle image, et celui ci prendra en entrée notre scene et notre camera.
+Nous devrons demander au renderer de faire un rendu a chaque fois que l’on veut une nouvelle image, et celui ci prendra en entrée notre **scene** et notre **camera**.
 
 ```c
 const renderer = new THREE.WebGLRenderer();
@@ -142,6 +154,10 @@ renderer.render(scene, camera);
 ```
 
 
-## Conclusion
+:::warning Important
 
 Pour afficher quelque chose à l'ecran, il faut au minumum un **Mesh** (composé d'une **Geometry** et d'un **Material**), une **Camera**, une **Light**, une **Scene** et un **Renderer**.
+:::
+
+### Schema d'une scene
+![scene](./assets/scene.webp)

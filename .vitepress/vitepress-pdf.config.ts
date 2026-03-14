@@ -47,6 +47,7 @@ const frontendConfig = defineUserConfig({
       bottom: "20mm",
       left: "20mm",
     },
+    scale: 0.7,
   },
 });
 

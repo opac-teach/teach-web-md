@@ -83,3 +83,8 @@ De même, installez les dépendances avec `pnpm i` et lancez le projet avec `pnp
 - `app/three-app.tsx`: Un composent `client` qui va charger notre jeu et le placer dans le DOM de manière responsive, c'est à dire que le rendu se redimensionnera automatiquement si la fenetre du navigateur change de taille.
 - `game/index.ts`: Notre moteur de jeu qui initialisera Three.js et notre scène.
 
+## SSR ?
+
+Attention, three.js est un programme javascript **uniquement** destiné aux navigateurs (il utilise WebGL, pas disponible dans NodeJS)
+
+Si vous l'utilisez dans un framework front tel que Next.js, vous ne pourrez l'integrer que dans des composants **client-side** (`"use client"`).
