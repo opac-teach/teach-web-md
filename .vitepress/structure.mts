@@ -159,6 +159,10 @@ export default {
               text: "Physique",
               link: "/cours/dev-frontend/threejs/physique",
             },
+            {
+              text: "Exercices",
+              link: "/cours/dev-frontend/threejs/exercices",
+            },
           ],
       },
     ],

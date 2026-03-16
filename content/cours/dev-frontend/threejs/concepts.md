@@ -82,16 +82,6 @@ person.add(legs);
 person.position.x += 2; // déplacera la tête et les pieds.
 console.log(person.children); // 2 objets
 ```
-## Scene
-
-[https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene](https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene)
-
-Une scene est un ensemble d’objets que l’on va vouloir afficher à l'écran.
-
-```c
-const scene = new THREE.Scene();
-scene.add(mesh); // Ajout de notre cube a la scene
-```
 
 ## Light
 
@@ -134,6 +124,17 @@ const camera = new THREE.PerspectiveCamera(
 ```
 
 ![image.png](./assets/image-1.webp)
+
+## Scene
+
+[https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene](https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene)
+
+Une scene est un ensemble d’objets que l’on va vouloir afficher à l'écran.
+
+```c
+const scene = new THREE.Scene();
+scene.add(mesh); // Ajout de notre cube a la scene
+```
 
 ## Renderer
 

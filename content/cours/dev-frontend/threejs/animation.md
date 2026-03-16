@@ -8,7 +8,7 @@ La fonction `renderer.render(scene, camera);` effectue un rendu de la scène du 
 
 Pour que notre scène affichée évolue, il va falloir appeler cette fonction pour chaque image rendue.
 
-Il n'est pas possible d'appeler nous même cette fonction de rendu quand on le désire. Seulement le navigateur peut vous proposer de faire cela. Cela permet d'adapter la fréquence de rendu à la machine qui va executer votre programme (60 images par secondes sur la plupart des appareils), et aussi d'économiser des ressources quand c'est possible (le rendu ne sera pas effectué si l'onglet est caché par exemple). 
+Il n'est pas possible d'appeler nous même cette fonction de rendu quand on le désire. Seulement le navigateur peut vous proposer de faire cela, via [requestAnimationFrame](https://developer.mozilla.org/fr/docs/Web/API/Window/requestAnimationFrame). Cela permet d'adapter la fréquence de rendu à la machine qui va executer votre programme (60 images par secondes sur la plupart des appareils), et aussi d'économiser des ressources quand c'est possible (le rendu ne sera pas effectué si l'onglet est caché par exemple). 
 
 La fonction `setAnimationLoop` sert à indiquer quelle fonction appelée dès que le navigateur peut afficher une nouvelle image.
 

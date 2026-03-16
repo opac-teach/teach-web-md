@@ -9,6 +9,8 @@ Il a été conçue pour être simple à utiliser et performant, beaucoup de site
 
 Il exploite WebGL et le DOM, ce n’est donc utilisable que dans le contexte d’un navigateur, pas dans NodeJS.
 
+Attention, Three.js n'est pas un moteur de **jeu**, il s'occupe uniquement du rendu d'images 3D, a l'inverse de moteurs comme Unreal Engine ou Unity, qui gèrent aussi tout ce dont un jeu peut avoir besoin (physique, collisions, audio, networking, ...). 
+
 ## Supports d’information
 
 ### ThreeJS
