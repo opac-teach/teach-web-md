@@ -28,15 +28,17 @@ Ici on décide de déplacer et touner le cube de 0.01 a chaque image (normalemen
 Etant donné que nous ne connaissons pas à l'avance la frequence de rafraichissement au moment du rendu, et que cela peut évoluer, si on veut un déplacement constant il faut savoir combien de temps s'est écoulé depuis le dernier rendu. On peut faire ça manuallement en utilisant `Date.now()`, mais la fonction animate prend aussi un paramètre qui indique quand s'est effectué le dernier rendu (par rapport au demarrage de l'application).
 
 ```js
-function animate(lastRenderTime) {
-  const now = Date.now(); // En millisecondes
-  const delta = (now - lastRenderTime) / 1000; // conversion en secondes
+let lastRenderTime = 0;
+function animate(renderTime) {
+  const delta = (renderTime - lastRenderTime) / 1000; // conversion en secondes
   cube.position.x += 1 * delta;
-  cube.rotation.y += 1 * delta;
+  lastRenderTime = renderTime;
 }
 ```
 
-Ainsi, on peut garantir que le cube se déplacera de manière constante peut importe les fluctuations de rendu (1 par seconde)
+Ainsi, on peut garantir que le cube se déplacera de manière constante peut importe les fluctuations de rendu (1 par seconde).
+
+Pour un usage plus avancé, on pourra également utiliser la classe [Clock](https://threejs.org/docs/?q=clock#Clock)
 ##
 
 # Interactivité
