@@ -10,6 +10,9 @@ export default withMermaid({
   cleanUrls: true,
   ignoreDeadLinks: "localhostLinks",
 
+  markdown: {
+    math: true
+  },
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
   themeConfig: {
     logo: "/logo.svg",

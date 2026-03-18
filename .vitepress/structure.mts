@@ -160,6 +160,10 @@ export default {
               link: "/cours/dev-frontend/threejs/physique",
             },
             {
+              text: "Glossaire",
+              link: "/cours/dev-frontend/threejs/glossaire",
+            },
+            {
               text: "Exercices",
               link: "/cours/dev-frontend/threejs/exercices",
             },
