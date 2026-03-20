@@ -117,3 +117,7 @@ function poll() {
     }
 }
 ```
+
+Pour connaitre quelles touches/axes correspondent à votre manette vous pouvez utiliser les sites suivants:
+- https://hardwaretester.com/gamepad
+- https://luser.github.io/gamepadtest/

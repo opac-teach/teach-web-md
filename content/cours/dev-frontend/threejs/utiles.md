@@ -130,6 +130,25 @@ window.addEventListener("resize", () => {
 });
 ```
 
+## 2D
+
+Il est parfois utile d'afficher des elements 2D sur votre image, comme du texte ou des images, pour faire un **HUD** par exemple. 
+
+Pour cela, il est souvent plus simple d'utiliser directement du HTML/CSS superposé à votre `canvas`, mais certains outils existent quand meme en threejs. 
+### Sprites
+
+Les sprites sont des surfaces planes qui font **toujours** face à la caméra, il n'y a pas de projection 3D qui y sont appliqués. 
+```js
+const texture = new THREE.TextureLoader().load("/assets/textures/block/dirt.png");
+const material = new THREE.SpriteMaterial({ map:texture });
+const sprite = new THREE.Sprite(material);
+sprite.position.set(0,-5,0);
+```
+
+### Texte
+
+https://threejs.org/manual/?q=text#en/creating-text
+
 ## GUI
 
 Vous pouvez utiliser des librairies qui vous permettent de modifier des parametres de votre programme en temps reel:
