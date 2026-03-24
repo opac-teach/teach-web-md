@@ -28,7 +28,7 @@ Un SGBDR classique stocke ses données sur un seul serveur (architecture *scale-
 La scalabilité horizontale consiste à ajouter des machines bon marché plutôt que d'améliorer une seule machine. Les SGBDR relationnels sont difficiles à distribuer horizontalement car :
 
 - Les jointures entre tables nécessitent que toutes les données soient accessibles simultanément
-- Les transactions ACID imposent une coordination forte entre nœuds
+- Les transactions [ACID](https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID) imposent une coordination forte entre nœuds
 - Le partitionnement des données (sharding) est complexe à mettre en œuvre
 
 **Données non structurées**
@@ -252,6 +252,8 @@ user_id:42 → { name: "Alice", email: "alice@...", created_at: "2024-01-01" }
 - Courbe d'apprentissage si l'on ne pense pas nativement en graphes
 
 **Cas d'usage** : réseaux sociaux, détection de fraude, moteurs de recommandation, graphes de connaissances.
+
+Exemple: [Three and a half degrees of separation](https://research.facebook.com/blog/2016/2/three-and-a-half-degrees-of-separation/)
 
 ---
 

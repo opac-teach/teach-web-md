@@ -161,3 +161,5 @@ db.setProfilingLevel(1, { slowms: 100 })
 // Consulter les requêtes lentes enregistrées
 db.system.profile.find().sort({ ts: -1 }).limit(5)
 ```
+
+## TODO sharding

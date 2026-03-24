@@ -56,6 +56,7 @@ Chaque document possède obligatoirement un champ `_id` qui sert de clé primair
 https://www.mongodb.com/docs/manual/reference/method/ObjectId/
 
 ```
+| 507f1f77  | bcf86c           | d799     | 439011    |
 | 4 octets  | 3 octets         | 2 octets | 3 octets  |
 | timestamp | random-machine   | PID      | compteur  |
 ```

@@ -415,10 +415,10 @@ export default {
               },
             ]
           },
-          {
-            text: "Graphes",
-            link: "/cours/dev-backend/nosql/graphes",
-          },
+          // {
+          //   text: "Graphes",
+          //   link: "/cours/dev-backend/nosql/graphes",
+          // },
           {
             text: "Déploiement",
             link: "/cours/dev-backend/nosql/deploiement",

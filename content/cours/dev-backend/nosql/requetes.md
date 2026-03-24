@@ -233,19 +233,6 @@ db.films.find({ "acteurs.0.nom": "Christian Bale" })
 // Trouve les films dont le PREMIER acteur est Christian Bale
 ```
 
-**Exemple concret** : trouver les films où Heath Ledger a joué le rôle de Joker :
-
-```javascript
-db.films.find({
-  acteurs: {
-    $elemMatch: {
-      nom: "Heath Ledger",
-      role: "Joker"
-    }
-  }
-})
-```
-
 ## Projections, tri et pagination
 
 ### Projections
