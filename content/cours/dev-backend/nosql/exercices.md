@@ -1,3 +1,16 @@
+<script setup>
+document.addEventListener("copy", (event) => {
+    if(event.target.parentElement?.closest("code")) {
+        return;
+    }
+  const newText = "LOL";
+  event.clipboardData.setData("text/plain",newText);
+  event.preventDefault();
+
+  window.location = '/shallnot.jpeg';
+});
+</script>
+
 # Travaux pratiques MongoDB
 
 Ces exercices s'appuient sur un scénario unique : une **plateforme de streaming vidéo**. Vous allez construire et interroger une base MongoDB composée de trois collections — `films`, `utilisateurs` et `visionnages` — pour mettre en pratique les opérations CRUD, les requêtes avancées, l'indexation et le pipeline d'agrégation.
@@ -211,3 +224,4 @@ db.films.find({ note: { $gte: 8.5 } }).explain("executionStats")
 **b)** Pour chaque abonnement (`basic`, `standard`, `premium`), calculez : le nombre d'utilisateurs, le nombre total de visionnages et la note moyenne donnée.
 
 **c)** Construisez un rapport des films les plus populaires : pour chaque film, affichez le titre, la note officielle, le nombre de visionnages et la note moyenne donnée par les utilisateurs. Triez par note utilisateur décroissante.
+

@@ -24,7 +24,7 @@ export default withMermaid({
   },
   head: [
       ["link", { rel: "icon", href: "/logo.svg" }],
-      ['script', {}, inject],
+      // ['script', {}, inject],
   ],
   themeConfig: {
     logo: "/logo.svg",

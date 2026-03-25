@@ -27,7 +27,7 @@ db.films.createIndex({ annee: -1 })
 db.films.getIndexes()
 
 // Supprimer un index
-db.films.dropIndex({ note: 1 })
+db.films.dropIndex("note")
 ```
 
 > L'index `_id` est créé automatiquement et ne peut pas être supprimé.
