@@ -147,7 +147,7 @@ La table `visionnages` doit contenir :
 
 **a)** Ajoutez le genre `"classique"` au film "Pulp Fiction" (sans dupliquer s'il existe déjà).
 
-**b)** Incrémentez de 1 le champ `nbVisionnages` pour le film "Inception". Ce champ n'existe pas encore — il doit être créé automatiquement à 1.
+**b)** Incrémentez de 1 le champ `likes` pour le film "Inception". Ce champ n'existe pas encore — il doit être créé automatiquement à 1.
 
 **c)** Retirez `"action"` des genres du film "The Dark Knight".
 
