@@ -126,7 +126,7 @@ La table `visionnages` doit contenir :
 
 **b)** Affichez les 3 films les mieux notés (titre + note uniquement).
 
-**c)** Affichez les films triés par année décroissante, en ignorant les 2 premiers résultats (pagination — page 2 avec 3 films par page).
+**c)** Affichez les films triés par année décroissante, en affichant la page 2 avec 3 films par page.
 
 
 ### Exercice 2.4 — Documents imbriqués
